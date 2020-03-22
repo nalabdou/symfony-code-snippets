@@ -121,7 +121,7 @@ set | `{% set varName = value %}` | Tag
 show | `{{  }}` | Null
 slice | `slice(start, length)` | Filter
 source | `{{ source('fileName.html.twig') }}` | Tag
-spaceless | `{% spaceless %}{% endspaceless %}` Tag
+spaceless | `{% spaceless %}{% endspaceless %}` | Tag
 split | `split('')` | Filter
 self | `_self` | Null
 template | `{{ include(template_from_string("strings")) }}` | Function
