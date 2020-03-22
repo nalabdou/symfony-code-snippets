@@ -96,7 +96,7 @@ flush | `{% flush %}` | Tag
 for | `{% for row in array %}{% endfor %}` | Tag
 for else | `{% for row in array %}{% else %}{% endfor %}` | Tag
 for if else | `{% for row in array if condition %}{% else %}{% endfor %}` | Tag
-format | format() | Filter
+format | `format()` | Filter
 formTwig | `{{form_start(form)}}{{form_widget(form)}}{{form_end(form)}}` | Function
 if | `{% if condition %}{% endif %}` | Tag
 if else | `{% if condition %}{% else %}{% endif %}` | Tag
@@ -127,7 +127,7 @@ self | `_self` | Null
 template | `{{ include(template_from_string("strings")) }}` | Function
 trim | `trim('')` | Filter
 use | `{% use "fileName.html.twig" %}` | Tag
-verbatim | `{% verbatim %}{% endverbatim %}` Tag
+verbatim | `{% verbatim %}{% endverbatim %}` | Tag
 
 ## Source
 
