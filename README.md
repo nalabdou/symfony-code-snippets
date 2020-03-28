@@ -92,12 +92,12 @@ formRest | `{{ form_rest(form) }}` | Symfony
 formTheme | `{% form_theme form resourcesPath %}` | Symfony
 absolute_url |`{{ absolute_url(${path}) }}` | Symfony
 relative_path | `{{ relative_path(${path}) }}` | Symfony
-humanize | `|humanize` | Symfony
+humanize | `humanize` | Symfony
 yaml_encode | `yaml_encode()` | Symfony
 yaml_dump | `yaml_dump()` | Symfony
-abbr_class | `|abbr_class` | Symfony
-abbr_method | `|abbr_method` | Symfony
-format_args | `|format_args` | Symfony
+abbr_class | `abbr_class` | Symfony
+abbr_method | `abbr_method` | Symfony
+format_args | `format_args` | Symfony
 format_args_as_text | `|format_args_as_text` | Symfony
 encoreJs | `{{ encore_entry_scropt_tags('app') }}` | Symfony
 encoreCss | `{{ encore_entry_link_tags('app') }}` | Symfony
@@ -195,7 +195,7 @@ syProvider | symfony main fierwall for add the provider and login logout path
 - Add mini yaml support by [@nalabdou](https://github.com/nalabdou).
 - fix bug  #1 by [@nalabdou](https://github.com/nalabdou).
 
-## [0.1.3] - 2020-03-30
+## [0.1.3] - 2020-03-29
 
 ### Twig Reference from Symfony added
 
