@@ -284,5 +284,12 @@
         ],
         "prefix": "syManager",
         "description": "use this snippet to generate the var $manager to reacte with the database "
+    },
+    "symfony route": {
+        "body": [
+            "@Route(\"/${path}\",name=\"${name}\")$0"
+        ],
+        "prefix": "syRoute",
+        "description": "use this snippet to get the @Route of symfony"
     }
 }

@@ -1375,7 +1375,7 @@
             <key>twig-keywords</key>
             <dict>
                 <key>match</key>
-                <string>(?&lt;=\s)((?:end)?(?:autoescape|block|embed|filter|for|if|macro|raw|sandbox|set|spaceless|trans|verbatim)|as|do|else|elseif|extends|flush|from|ignore missing|import|include|only|use|with|path|form_start|form_end|form_widget|form_row|asset|encore_entry_link_tags|encore_entry_script_tags)(?=\s)</string>
+                <string>(?&lt;=\s)((?:end)?(?:autoescape|form_theme|humanize|yaml_encode|yaml_dump|abbr_class|abbr_method|format_args|format_args_as_text|absolute_url|relative_path|block|embed|filter|for|if|macro|raw|sandbox|set|spaceless|trans|verbatim)|as|do|else|elseif|extends|flush|from|ignore missing|import|include|only|use|with|path|render|csrf_token|url|controller|form_errors|form_rest|form_start|form_end|form_widget|form_row|asset|encore_entry_link_tags|encore_entry_script_tags)(?=\s)</string>
                 <key>name</key>
                 <string>keyword.control.twig</string>
             </dict>
@@ -1383,7 +1383,7 @@
             <key>twig-functions-warg</key>
             <dict>
                 <key>begin</key>
-                <string>(?&lt;=[\s\(\[\{:,])(attribute|block|constant|cycle|date|divisible by|dump|include|max|min|parent|path|form_start|form_end|form_widget|form_row|asset|encore_entry_link_tags|encore_entry_script_tags|random|range|same as|source|template_from_string)(\()</string>
+                <string>(?&lt;=[\s\(\[\{:,])(attribute|form_theme|humanize|yaml_encode|yaml_dump|abbr_class|abbr_method|format_args|format_args_as_text|absolute_url|relative_path|block|constant|cycle|date|divisible by|dump|include|max|min|parent|path|render|csrf_token|url|controller|form_errors|form_rest|form_start|form_end|form_widget|form_row|asset|encore_entry_link_tags|encore_entry_script_tags|random|range|same as|source|template_from_string)(\()</string>
                 <key>beginCaptures</key>
                 <dict>
                     <key>1</key>

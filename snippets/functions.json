@@ -126,8 +126,8 @@
         "prefix": "asset",
         "description": ""
     },
-    "form twig  start": {
-        "body":"{{ form_start(form) }}",
+    "form twig start": {
+        "body": "{{ form_start(form) }}",
         "prefix": "formStart",
         "description": "snippet to generate form start "
     },
@@ -142,5 +142,88 @@
         ],
         "prefix": "formEnd",
         "description": "snippet to genarete form end twig"
+    },
+    "function twig render": {
+        "body": [
+            "{{ render(${uri}, {${options}}) }}"
+        ],
+        "prefix": "render",
+        "description": [
+            "Makes a request to the given internal URI or controller and returns the result.\r",
+            "The render strategy can be specified in the strategy key of the options\r"
+        ]
+    },
+    "function twig controller": {
+        "body": "{{ controller(${controller}, {${attributes}}, {${query}}) }}",
+        "prefix": "controller",
+        "description": "Returns an instance of ControllerReference to be used with functions like render()"
+    },
+    "twig csrf_token": {
+        "body": [
+            "{{ csrf_token(${intention}) }}"
+        ],
+        "prefix": "csrf",
+        "description": "Renders a CSRF token. Use this function if you want CSRF protection in a regular HTML form not managed by the Symfony Form component."
+    },
+    "twig is_granted": {
+        "body": [
+            "{% if is_granted('${ROLE_ADMIN}',${object},${field}) %}\r",
+            "\r",
+            "{% endif %}"
+        ],
+        "prefix": "isGranted",
+        "description": [
+            "Returns true if the current user has the given role.",
+            " If several roles are passed in an array, true is returned if the user has at least one of them."
+        ]
+    },
+    "twig url": {
+        "body": [
+            "{{ url(${route_name},{${options}}) }}"
+        ],
+        "prefix": "url",
+        "description": "Returns the absolute URL (with scheme and host) for the given route. If schemeRelative is enabled, it'll create a scheme-relative URL."
+    },
+    "twig form errors": {
+        "body": [
+            "{{ form_errors(form) }}"
+        ],
+        "prefix": "formErrors",
+        "description": "Renders the HTML widget of a given field. If you apply this to an entire form or collection of fields, each underlying form row will be rendered."
+    },
+    "twig  form row": {
+        "body": [
+            "{{ form_row(form.name) }}"
+        ],
+        "prefix": "formRow",
+        "description": "The second argument to form_row() is an array of variables. The templates provided in Symfony only allow to override the label "
+    },
+    "twig form rest": {
+        "body": [
+            "{{ form_rest(form) }}"
+        ],
+        "prefix": "formRest",
+        "description": "This renders all fields that have not yet been rendered for the given form. It's a good idea to always have this somewhere inside your form as it'll render hidden fields for you and make any fields you forgot to render easier to spot (since it'll render the field for you)."
+    },
+    "twig function form_theme": {
+        "body": [
+            "{% form_theme form ${resources} %}"
+        ],
+        "prefix": "formTheme",
+        "description": "Sets the resources to override the form theme for the given form view instance. You can use _self as resources to set it to the current resource."
+    },
+    "twig function absoulute_url": {
+        "body": [
+            "{{ absolute_url(${path}) }}"
+        ],
+        "prefix": "absolute_url",
+        "description": "Returns the absolute URL (with scheme and host) from the passed relative path. Combine it with the asset() function to generate absolute URLs for web assets"
+    },
+    "twig function relative_path": {
+        "body": [
+            "{{ relative_path(${path}) }}"
+        ],
+        "prefix": "relative_path",
+        "description": "Returns the relative path from the passed absolute URL. For example, assume you're on the following page in your app: http://example.com/products/hover-board."
     }
 }

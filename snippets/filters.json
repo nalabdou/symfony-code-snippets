@@ -1,5 +1,4 @@
 {
-
     "abs": {
         "text": "abs",
         "body": "abs",
@@ -53,7 +52,7 @@
         "body": "format($0)",
         "text": "format()",
         "description": "filter formats a given string by replacing the placeholders (placeholders follows the sprintf notation)",
-        "example":"{% set foo = \"foo\" %}\n{{ \"I like %s and %s.\"|format(foo, \"bar\") }}\n\n{# outputs I like foo and bar #}"
+        "example": "{% set foo = \"foo\" %}\n{{ \"I like %s and %s.\"|format(foo, \"bar\") }}\n\n{# outputs I like foo and bar #}"
     },
     "join": {
         "prefix": "join",
@@ -172,6 +171,54 @@
         "text": "url_encode",
         "body": "url_encode",
         "description": "filter percent encodes a given string as URL segment or an array as query string"
+    },
+    "filter humanize": {
+        "body": [
+            "humanize"
+        ],
+        "prefix": "humanize",
+        "description": "Makes a technical name human readable (i.e. replaces underscores by spaces or transforms camelCase text like helloWorld to hello world and then capitalizes the string)."
+    },
+    "twig yaml encode": {
+        "body": [
+            "yaml_encode($0)"
+        ],
+        "prefix": "yaml_encode",
+        "description": "Transforms the input into YAML syntax."
+    },
+    "twig yaml_dump": {
+        "body": [
+            "yaml_dump($0)"
+        ],
+        "prefix": "yaml_dump",
+        "description": "Does the same as yaml_encode(), but includes the type in the output."
+    },
+    "twig filter abbr_class": {
+        "body": [
+            "abbr_class"
+        ],
+        "prefix": "abbr_class",
+        "description": "Generates an <abbr> element with the short name of a PHP class (the FQCN will be shown in a tooltip when a user hovers over the element)."
+    },
+    "twig filter abbr_method": {
+        "body": [
+            "abbr_method"
+        ],
+        "prefix": "abbr_method",
+        "description": "Generates an <abbr> element using the FQCN::method() syntax. If method is Closure, Closure will be used instead and if method doesn't have a class name, it's shown as a function (method())."
+    },
+    "twig filter format_args": {
+        "body": [
+            "format_args"
+        ],
+        "prefix": "format_args",
+        "description": "Generates a string with the arguments and their types (within <em> elements)."
+    },
+    "twig filter format_args_as_text": {
+        "body": [
+            "format_args_as_text"
+        ],
+        "prefix": "format_args_as_text",
+        "description": "Equal to the format_args filter, but without using HTML tags."
     }
-    
 }

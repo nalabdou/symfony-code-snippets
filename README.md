@@ -72,6 +72,36 @@ syhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallba
 syPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
 syRoute | use this snippet to get the @Route of symfony
 
+## Symfony Twig Snippets 
+
+Trigger | Twig Code | Type
+---|---|---
+asset | `{{ asset('') }}` | Symfony
+formStart | `{{ form_start(form) }}` | Symfony
+formWidget | `{{ form_widget(form) }}` | Symfony
+formEnd | `{{ form_end(form) }}` | Symfony
+path | `{{ path(route) }}` | Symfony
+render | `{{ render(uri, {options}) }}` | Symfony
+controller | `{{ controller(controller, {attributes}, {query}) }}` |Symfony
+csrf | `{{ csrf_token(intention) }}` | Symfony
+isGranted | `{% if is_granted('ROLE_NAME',object,field) %} {% endif %}` |Symfony
+url | `{{ url(route_name,{options}) }}` | Symfony
+formErrors | `{{ form_errors(form) }}` | Symfony
+formRow | `{{ form_row(form.name) }}` | Symfony
+formRest | `{{ form_rest(form) }}` | Symfony
+formTheme | `{% form_theme form resourcesPath %}` | Symfony
+absolute_url |`{{ absolute_url(${path}) }}` | Symfony
+relative_path | `{{ relative_path(${path}) }}` | Symfony
+humanize | `|humanize` | Symfony
+yaml_encode | `yaml_encode()` | Symfony
+yaml_dump | `yaml_dump()` | Symfony
+abbr_class | `|abbr_class` | Symfony
+abbr_method | `|abbr_method` | Symfony
+format_args | `|format_args` | Symfony
+format_args_as_text | `|format_args_as_text` | Symfony
+encoreJs | `{{ encore_entry_scropt_tags('app') }}` | Symfony
+encoreCss | `{{ encore_entry_link_tags('app') }}` | Symfony
+
 ### Syntaxes Twig
 
 Trigger | Twig Code | Type
@@ -89,8 +119,6 @@ date_modify | `date_modify("+1 day")` | Function
 default | `default('defaultValue')` | Function
 dump | `<pre>{{ dump(array) }}</pre>` | Function
 do | `{% do someOp %}` | Tag
-encoreCss | `{{ encore_entry_link_tags('app') }}` | Function
-encoreJs | `{{ encore_entry_scropt_tags('app') }}` | Function
 else | `{% else %}` | Tag
 else if | `{% elseif condition %}` | Tag
 embed | `{% embed "fileName.html.twig" %}{% endembed  %}` | Tag
@@ -133,10 +161,6 @@ template | `{{ include(template_from_string("strings")) }}` | Function
 trim | `trim('')` | Filter
 use | `{% use "fileName.html.twig" %}` | Tag
 verbatim | `{% verbatim %}{% endverbatim %}` | Tag
-asset | `{{asset('')}}` | Symfony
-formStart | `{{form_start(form)}}` | Symfony
-formWidget | `{{form_widget(form)}}` | Symfony
-formEnd | `{{form_end(form)}}` | Symfony
 
 ### Yaml Snippets
 
@@ -169,11 +193,17 @@ syProvider | symfony main fierwall for add the provider and login logout path
 ### Yaml Support added
 
 - Add mini yaml support by [@nalabdou](https://github.com/nalabdou).
-- fix bug  #1 [@nalabdou](https://github.com/nalabdou).
+- fix bug  #1 by [@nalabdou](https://github.com/nalabdou).
+
+## [0.1.3] - 2020-03-30
+
+### Twig Reference from Symfony added
+
+- Add twig reference from symfony by  [@nalabdou](https://github.com/nalabdou).
 
 #### Future Goals
 
-- Add Twig Reference from Symfony (Working)
-- Add Support For Symfony Yaml file Syntaxes And Snippets (working)
+- Add Twig Reference from Symfony (Done 80%)
+- Add Support For Symfony Yaml file Syntaxes And Snippets (working 10%)
 - Add More Symfony Php Code Snippets
 - Add Custom Snippets
