@@ -98,7 +98,7 @@ yaml_dump | `yaml_dump()` | Symfony
 abbr_class | `abbr_class` | Symfony
 abbr_method | `abbr_method` | Symfony
 format_args | `format_args` | Symfony
-format_args_as_text | `|format_args_as_text` | Symfony
+format_args_as_text | `format_args_as_text` | Symfony
 encoreJs | `{{ encore_entry_scropt_tags('app') }}` | Symfony
 encoreCss | `{{ encore_entry_link_tags('app') }}` | Symfony
 
@@ -129,7 +129,7 @@ flush | `{% flush %}` | Tag
 for | `{% for row in array %}{% endfor %}` | Tag
 for else | `{% for row in array %}{% else %}{% endfor %}` | Tag
 for if else | `{% for row in array if condition %}{% else %}{% endfor %}` | Tag
-format | format() | Filter
+format | `format()` | Filter
 formTwig | `{{form_start(form)}}{{form_widget(form)}}{{form_end(form)}}` | Function
 if | `{% if condition %}{% endif %}` | Tag
 if else | `{% if condition %}{% else %}{% endif %}` | Tag
