@@ -18,13 +18,17 @@ For Twig Just Type the Tag name and you will get AutoCompletion.
 
 ![Image-of-Snippets-comments](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/in-comments.gif)
 
-### You Can Use It In The PHP Code
+### You Can Use It In The PHP Code :elephant:
 
 ![Image-of-Snippets-php-code](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/Controller.gif)
 
-### You Can Use It In Twig Files ♥
+### You Can Use It In Twig Files :green_heart:
 
 ![Image-of-Snippets-twig](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/twig.gif)
+
+### You Can Use It In Yaml Files :zap:
+
+![Image-of-Snippets-yaml](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/yaml.png)
 
 ## Snippets Symfony
 
@@ -66,8 +70,9 @@ syGreaterThan | use this snippet to generate the assert GreaterThan in the symfo
 syUniqueEntity | use this snippent to generate uniqueEntity to make sure that the fields are uniques.
 syhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity.
 syPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
+syRoute | use this snippet to get the @Route of symfony
 
-### Snippets Twig
+### Syntaxes Twig
 
 Trigger | Twig Code | Type
 ---|---|---
@@ -96,7 +101,7 @@ flush | `{% flush %}` | Tag
 for | `{% for row in array %}{% endfor %}` | Tag
 for else | `{% for row in array %}{% else %}{% endfor %}` | Tag
 for if else | `{% for row in array if condition %}{% else %}{% endfor %}` | Tag
-format | `format()` | Filter
+format | format() | Filter
 formTwig | `{{form_start(form)}}{{form_widget(form)}}{{form_end(form)}}` | Function
 if | `{% if condition %}{% endif %}` | Tag
 if else | `{% if condition %}{% else %}{% endif %}` | Tag
@@ -128,7 +133,47 @@ template | `{{ include(template_from_string("strings")) }}` | Function
 trim | `trim('')` | Filter
 use | `{% use "fileName.html.twig" %}` | Tag
 verbatim | `{% verbatim %}{% endverbatim %}` | Tag
+asset | `{{asset('')}}` | Symfony
+formStart | `{{form_start(form)}}` | Symfony
+formWidget | `{{form_widget(form)}}` | Symfony
+formEnd | `{{form_end(form)}}` | Symfony
 
-## Source
+### Yaml Snippets
 
-[Github](https://github.com/nalabdou/Symfony-code-snippets)
+Trigger | Description
+--- | ---
+syBootstrap | yaml snippet to add the bootstrap theme to our form display form_themes
+syEncoder | snippet to generate encoder password in yaml file
+syNewProvider | new provider for your user
+syProvider | symfony main fierwall for add the provider and login logout path
+
+## Changelog
+
+## [0.0.1] - 2020-03-22
+
+### Symfony Support added
+
+- Add Main Symfony Function By [@nalabdou](https://github.com/nalabdou).
+- Add The Support For The Symfony Annotations By [@nalabdou](https://github.com/nalabdou).
+
+## [0.1.1] - 2020-03-23
+
+### Twig Support added
+
+- Add Full Support For Twig Syntaxes Highlighting By [@nalabdou](https://github.com/nalabdou).
+- Add All Twig Snippets(Tags,Filters,Functions,Tests) By [@nalabdou](https://github.com/nalabdou).
+- Add Configration Rules By [@nalabdou](https://github.com/nalabdou).
+
+## [0.1.2] - 2020-03-28
+
+### Yaml Support added
+
+- Add mini yaml support by [@nalabdou](https://github.com/nalabdou).
+- fix bug  #1 [@nalabdou](https://github.com/nalabdou).
+
+#### Future Goals
+
+- Add Twig Reference from Symfony (Working)
+- Add Support For Symfony Yaml file Syntaxes And Snippets (working)
+- Add More Symfony Php Code Snippets
+- Add Custom Snippets

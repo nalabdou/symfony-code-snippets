@@ -53,7 +53,7 @@
     "filter": {
         "prefix": "filter",
         "body": [
-            "{% filter ${filter name} %}",
+            "{% filter ${filterName} %}",
             "\t$0",
             "{% endfilter  %}"
         ],

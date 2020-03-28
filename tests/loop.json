@@ -1,0 +1,28 @@
+{
+
+    "index": {
+        "description": "(property) The current iteration of the loop. (1 indexed)"
+    },
+    "index0": {
+        "description": "(property) The current iteration of the loop. (0 indexed)"
+    },
+    "revindex": {
+        "description": "(property) The number of iterations from the end of the loop (1 indexed)"
+    },
+    "revindex0": {
+        "description": "(property) The number of iterations from the end of the loop (0 indexed)"
+    },
+    "first": {
+        "description": "(property) True if first iteration"
+    },
+    "last": {
+        "description": "(property) True if last iteration"
+    },
+    "length": {
+        "description": "(property) The number of items in the sequence"
+    },
+    "parent": {
+        "description": "(property) The parent context"
+    }
+    
+}

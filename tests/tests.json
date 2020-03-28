@@ -1,0 +1,40 @@
+{
+
+    "constant": {
+        "description": "(test) checks if a variable has the exact same value as a constant. You can use either global constants or class constants"
+    },
+    "defined": {
+        "description": "(test) checks if a variable is defined in the current context. This is very useful if you use the strict_variables option"
+    },
+    "divisible": {
+        "prefix": "divisible by",
+        "body": "divisible by($1)",
+        "text": "divisible by(2)",
+        "description": "(test) checks if a variable is divisible by a number"
+    },
+    "empty": {
+        "description": "(test) checks if a variable is null, false, an empty array, or the empty string\n"
+    },
+    "even": {
+        "description": "(test) checks if the given number is even"
+    },
+    "iterable": {
+        "description": "(test) checks if a variable is an array or a traversable object"
+    },
+    "null": {
+        "description": "(test) checks if the variable is null"
+    },
+    "odd": {
+        "description": "(test) "
+    },
+    "same as": {
+        "prefix": "divisible by",
+        "body": "same as($1)",
+        "text": "same as(false)",
+        "description": "(test) checks if a variable is the same as another variable. This is the equivalent to === in PHP"
+    },
+    "not": {
+        "description": "(statement) Negates"
+    }
+    
+}

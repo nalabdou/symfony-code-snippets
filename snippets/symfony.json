@@ -21,8 +21,6 @@
     },
     "Symfoy Form HandleRequest": {
         "body": [
-            "// DO NOT FORGOT TO INJECT THE REQUEST CLASS IN THIS FUNCTION PARAMETERS AND IMPORT IT\r",
-            "// N'OUBLIEZ PAS D'INJECTER LA CLASSE  REQUEST DANS LES PARAMÈTRES DE CETTE FONCTION ET DE L'IMPORTER\r",
             "\\$form->handleRequest(\\$${requestVar});",
             "",
             "if (\\$form->isSubmitted() && \\$form->isValid()) { \r",
@@ -34,8 +32,6 @@
     },
     "Symfony manager persist and Flush": {
         "body": [
-            "// EN DO NOT FORGOT TO INJECT THE ENTITYMANAGERITERFACE CLASS IN THIS FUNCTION PARAMETERS AND IMPORT IT\r",
-            "// FR N'OUBLIEZ PAS D'INJECTER LA CLASSE ENTITYMANAGERITERFACE DANS LES PARAMÈTRES DE CETTE FONCTION ET DE L'IMPORTER\r",
             "\\$manager->persist(\\$${varName});",
             "\\$manager->flush();"
         ],
@@ -51,12 +47,6 @@
     },
     "Symfony generate the function to hash the users password": {
         "body": [
-            "/**\r",
-            "* EN\r",
-            "* THIS SNIPPET REQUIRES TO SETUP THE ENCODER TYPE IN THE security.yaml FILE\r",
-            "* FR\r",
-            "* CE SNIPPET NÉCESSITE DE CONFIGURER LE TYPE D'ENCODEUR DANS LE FICHIER security.yaml\r",
-            "*/\r",
             "\\$passwordHash = \\$encoder->encodePassword(\\$${userClassName}, \\$${userClassName}->getPassword());\r",
             "\\$${userClassName}->setPassword($passwordHash);"
         ],
@@ -78,19 +68,6 @@
             "*/\r",
             "public function logout()\r",
             "{\r",
-            "/** EN\r",
-            "* THE LOGOUT IS HANDLED BY SYMFONY YOU NEED JUST TO SETUP THE PROVIDER IN THE FILE \r",
-            "* security.yaml WITH THIS SETTINGS\r",
-            "*  logout:\r",
-            "*       path: logout\r",
-            "*       target: home\r",
-            "* FR\r",
-            "* LA DÉCONNEXION EST GÉRÉE PAR SYMFONY, VOUS AVEZ BESOIN DE CONFIGURER LE PROVIDER DANS LE FICHIER\r",
-            "* security.yaml AVEC CES PARAMÈTRES\r",
-            "*  logout:\r",
-            "*       path: logout\r",
-            "*       target: home\r",
-            "*/\r",
             "}"
         ],
         "prefix": "syLogout",
@@ -98,10 +75,6 @@
     },
     "Symfony add flash messages": {
         "body": [
-            "/** \r",
-            "* EN you need to setup the display settings in the file base.html.twig\r",
-            "* FR vous devez configurer les paramètres d'affichage dans le fichier base.html.twig\r",
-            "*/\r",
             "\\$this->addFlash(\r",
             "'\t${type}',\r",
             "'\t${flashMessage}'\r",
@@ -112,10 +85,6 @@
     },
     "Symfony findAll from one repository": {
         "body": [
-            "/**\r",
-            "* EN YOU NEED TO INJECT THE Repository THAT YOU WANT IN THIS FUNCTION PARAMETERS\r",
-            "* FR VOUS DEVEZ INJECTER LE Repository QUE VOUS VOULEZ DANS CETTE FONCTION PARAMÈTRES\r",
-            "*/\r",
             "\t\\$${VarName} = \\$repo->findAll();"
         ],
         "prefix": "syFindAll",
@@ -123,10 +92,6 @@
     },
     "Symfony generate the function findOneBy": {
         "body": [
-            "/**\r",
-            "* EN YOU NEED TO INJECT THE Repository THAT YOU WANT IN THIS FUNCTION PARAMETERS\r",
-            "* FR VOUS DEVEZ INJECTER LE Repository QUE VOUS VOULEZ DANS CETTE FONCTION PARAMÈTRES\r",
-            "*/\r",
             "\\$${VarName} = findOneBy(['${property}' => '${value}']);"
         ],
         "prefix": "syFindOneBy",
@@ -134,10 +99,6 @@
     },
     "Symfony generate the function findOne": {
         "body": [
-            "/**\r",
-            "* EN YOU NEED TO INJECT THE Repository THAT YOU WANT IN THIS FUNCTION PARAMETERS\r",
-            "* FR VOUS DEVEZ INJECTER LE Repository QUE VOUS VOULEZ DANS CETTE FONCTION PARAMÈTRES\r",
-            "*/\r",
             "\\$${VarName} = findOn(${id});"
         ],
         "prefix": "syFindOne",
@@ -145,10 +106,6 @@
     },
     "Symfony generate the function findBy ": {
         "body": [
-            "/**\r",
-            "* EN YOU NEED TO INJECT THE Repository THAT YOU WANT IN THIS FUNCTION PARAMETERS\r",
-            "* FR VOUS DEVEZ INJECTER LE Repository QUE VOUS VOULEZ DANS CETTE FONCTION PARAMÈTRES\r",
-            "*/\r",
             "\\$$VarName = findBy(['${property}'=>${value}]);"
         ],
         "prefix": "syFindBy",
@@ -179,8 +136,6 @@
     },
     "Symfony generate the remove function for the manager": {
         "body": [
-            "// EN DO NOT FORGOT TO INJECT THE ENTITYMANAGERITERFACE CLASS IN THIS FUNCTION PARAMETERS AND IMPORT IT\r",
-            "// FR N'OUBLIEZ PAS D'INJECTER LA CLASSE ENTITYMANAGERITERFACE DANS LES PARAMÈTRES DE CETTE FONCTION ET DE L'IMPORTER\r",
             "\\$manager->remove(\\$${varName});\r",
             "\\$manager->flush();"
         ],
@@ -210,12 +165,6 @@
     },
     "Symfony CreateQueryBuilder in the repos": {
         "body": [
-            "/**\r",
-            "* EN\r",
-            "* @param mixed param the param for the query you can add many params\r",
-            "* FR\r",
-            "* @param mixed param le param pour la requête vous pouvez ajouter plusieurs params\r",
-            "*/\r",
             "public function ${findByExampleField}(\\$value)\r",
             "{\r",
             "\treturn \\$this->createQueryBuilder('a')\r",

@@ -1,6 +1,6 @@
 {
     "name": "symfony-code-snippets",
-    "displayName": "Symfony code snippets And Twig Support",
+    "displayName": "Symfony code snippets And Twig Support & Yaml",
     "icon": "icon.png",
     "description": "Over 50 Symfony Code Snippets for PhP code And Over 50 Twig Code Snippets.\r Just type the letters 'sy' to get a list of all available Symfony Code Snippets.\rFor Twig Just Type the Tag name and you will get AutoCompletion. ",
     "publisher": "nadim-vscode",
@@ -15,7 +15,7 @@
         "url": "https://github.com/nalabdou/Symfony-code-snippets"
     },
     "bugs": "https://github.com/nalabdou/Symfony-code-snippets/issues",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "engines": {
         "vscode": "^1.43.0"
     },
@@ -55,6 +55,10 @@
             {
                 "language": "php",
                 "path": "./snippets/symfony.json"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/yaml.json"
             }
         ],
         "languages": [
