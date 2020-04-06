@@ -34,6 +34,7 @@ For Twig Just Type the Tag name and you will get AutoCompletion.
 
 Trigger | Description
 --- | ---
+syFun | you can use this snippet to genarate public function statment just like that
 syControllerFunction | use this snippets to generate function in the controller with Route,RouteName,FunctionName,Template for rendering in twig.
 syFormGen | use this snippet to generate $form variable into the controller function change the formtype and the entity.
 syHandleRequest | use this snippet to Generate handleRequest Function change the RequestVar with your requestvar name.
@@ -63,16 +64,46 @@ syQueryBuilder | use this snippt to create querybuilder in the repos to get data
 syEqualTo | use this snippet to generate the assert equalto in the symfony Annotations.
 syLength | use this snippet to generate the assert Length in the symfony Annotations.
 syNotBlank | use this snippet to generate the assert NotBlank in the symfony Annotations.
+syNotNull | use this snippet to generate the assert NotNull in the symfony Annotations.
+syBlank | use this snippet to generate the assert Blank in the symfony Annotations.
+syIsNull | use this snippet to generate the assert IsNull in the symfony Annotations.
+syTrue | use this snippet to generate the assert IsTrue in the symfony Annotations.
+syFalse | use this snippet to generate the assert IsFalse in the symfony Annotations.
+syType | use this snippet to generate the assert Type in the symfony Annotations.
+syRegex | use this snippet to generate the assert Regex in the symfony Annotations.
+syIp | use this snippet to generate the assert Ip in the symfony Annotations.
+syAJson | use this snippet to generate the assert Json in the symfony Annotations.
+syUuid | use this snippet to generate the assert Uuid in the symfony Annotations.
+syUserPassword | use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations.
 syEmail | use this snippet to generate the assert Email in the symfony Annotations.
 syUrl | use this snippet to generate the assert Url in the symfony Annotations.
-syNotEqualTo | use this snippet to generate the assert notequalto in the symfony Annotations.
+syNotEqualTo | use this snippet to generate the assert notEqualto in the symfony Annotations.
+syIdenticalTo | use this snippet to generate the assert IdenticalTo in the symfony Annotations.
+syNotIdenticalTo | use this snippet to generate the assert NotIdenticalTo in the symfony Annotations.
 syGreaterThan | use this snippet to generate the assert GreaterThan in the symfony Annotations.
+syGreaterThanOrEqual | use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations.
+syLessThan | use this snippet to generate the assert LessThan in the symfony Annotations.
+syLessThanOrEqual | use this snippet to generate the assert LessThanOrEqual in the symfony Annotations.
+syRange | use this snippet to generate the assert Range in the symfony Annotations.
+syDivisibleBy | use this snippet to generate the assert DivisibleBy in the symfony Annotations.
+syUnique | use this snippet to generate the assert Unique in the symfony Annotations.
+syPositive | use this snippet to generate the assert Positive in the symfony Annotations.
+syPositiveOrZero | use this snippet to generate the assert PositiveOrZero in the symfony Annotations.
+syNegative | use this snippet to generate the assert Negative in the symfony Annotations.
+syNegativeOrZero | use this snippet to generate the assert NegativeOrZero in the symfony Annotations.
+syDate | use this snippet to generate the assert Date in the symfony Annotations.
+syDateTime | use this snippet to generate the assert DateTime in the symfony Annotations.
+syTime | use this snippet to generate the assert Time in the symfony Annotations.
+syTimezone | use this snippet to generate the assert Timezone in the symfony Annotations.
+syLanguage | use this snippet to generate the assert Language in the symfony Annotations.
+syLocale | use this snippet to generate the assert Locale in the symfony Annotations.
+syCountry | use this snippet to generate the assert Country in the symfony Annotations.
 syUniqueEntity | use this snippent to generate uniqueEntity to make sure that the fields are uniques.
 syhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity.
 syPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
 syRoute | use this snippet to get the @Route of symfony
 
-## Symfony Twig Snippets 
+## Symfony Twig Snippets
 
 Trigger | Twig Code | Type
 ---|---|---

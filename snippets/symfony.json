@@ -2,11 +2,12 @@
     "Symfony Generate Symfony Controller Function": {
         "body": [
             "/**\r",
-            "* @Route(\"${Route}\", name=\"${RouteName}\")\r",
-            "*/\r",
+            " * @Route(\"${Route}\", name=\"${RouteName}\")\r",
+            " * @IsGranted(\"${ROLE_ADMIN}\")",
+            " */\r",
             "public function ${FunctionName}()\r",
             "{\r",
-            "     return \\$this->render('$0.html.twig', []);\r",
+            "    return \\$this->render('$0.html.twig', []);\r",
             "}"
         ],
         "prefix": "syControllerFunction",
@@ -237,7 +238,7 @@
     },
     "Symfony Assert Url": {
         "body": [
-            "@Assert\\Url"
+            "@Assert\\Url()"
         ],
         "prefix": "syUrl",
         "description": "use this snippet to generate the assert Url in the symfony Annotations"
@@ -291,5 +292,218 @@
         ],
         "prefix": "syRoute",
         "description": "use this snippet to get the @Route of symfony"
+    },
+    "public function": {
+        "body": [
+            "public function ${FunctionName}(${Type} $$var = ${null})\r",
+            "{\r",
+            "    # code...$0\r",
+            "}"
+        ],
+        "prefix": "syFun",
+        "description": "you can use this snippet to genarate public function statment just like that"
+    },
+    "symfony assert blank": {
+        "body": [
+            "@Assert\\Blank(message=\"must be blank\")"
+        ],
+        "prefix": "syBlank",
+        "description": "use this snippet to genarete Assert blank type = Blank"
+    },
+    "symfony assert notnull": {
+        "body": [
+            "@Assert\\NotNull(message=\"can not be null :/\")"
+        ],
+        "prefix": "syNotNull",
+        "description": "use this snippet to generate the assert NotNull in the symfony Annotations."
+    },
+    "symfony asset isnull": {
+        "body": [
+            "@Assert\\IsNull(message=\"is null\")"
+        ],
+        "prefix": "syIsNull",
+        "description": "use this snippet to generate the assert IsNull in the symfony Annotations"
+    },
+    "symfony assert istrue": {
+        "body": [
+            "@Assert\\IsTrue(message = \"The token is invalid.\")"
+        ],
+        "prefix": "syTrue",
+        "description": "use this snippet to generate the assert IsTrue in the symfony Annotations"
+    },
+    "symfony assert isFalse": {
+        "body": [
+            " @Assert\\IsFalse(message = \"You've entered an invalid state.\")"
+        ],
+        "prefix": "syFalse",
+        "description": ""
+    },
+    "symfony assert type": {
+        "body": [
+            "@Assert\\Type(type=\"${integer}\",message=\"The value {{ value }} is not a valid {{ type }}.\""
+        ],
+        "prefix": "syType",
+        "description": "use this snippet to generate the assert Type in the symfony Annotations."
+    },
+    "symfony assert regex": {
+        "body": [
+            "@Assert\\Regex(pattern=\"${/\\d/}\",match=false,message=\"Your name cannot contain a number\")"
+        ],
+        "prefix": "syRegex",
+        "description": "use this snippet to generate the assert Regex in the symfony Annotations."
+    },
+    "symfony assert ip": {
+        "body": [
+            "@Assert\\Ip()"
+        ],
+        "prefix": "syIp",
+        "description": "use this snippet to generate the assert Ip in the symfony Annotations."
+    },
+    "symfony assert json": {
+        "body": [
+            "@Assert\\Json(message = \"You've entered an invalid Json.\")"
+        ],
+        "prefix": "syAJson",
+        "description": "use this snippet to generate the assert Json in the symfony Annotations."
+    },
+    "symfony assert uuid": {
+        "body": [
+            "@Assert\\Uuid(message=\"\")"
+        ],
+        "prefix": "syUuid",
+        "description": "use this snippet to generate the assert Uuid in the symfony Annotations."
+    },
+    "symfony securty assert userpassword": {
+        "body": [
+            "@SecurityAssert\\UserPassword(message = \"Wrong value for your current password\")"
+        ],
+        "prefix": "syUserPassword",
+        "description": "use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations."
+    },
+    "symfony assert identicalto": {
+        "body": [
+            "@Assert\\IdenticalTo(propertyPath=\"$0\")"
+        ],
+        "prefix": "syIdenticalTo",
+        "description": "use this snippet to generate the assert IdenticalTo in the symfony Annotations."
+    },
+    "symfony assert lessThanOrEqual": {
+        "body": [
+            "@Assert\\LessThanOrEqual($0)"
+        ],
+        "prefix": "syLessThanOrEqual",
+        "description": "use this snippet to generate the assert LessThanOrEqual in the symfony Annotations."
+    },
+    "symfony assert lessthan": {
+        "body": [
+            "@Assert\\LessThan($0)"
+        ],
+        "prefix": "syLessThan",
+        "description": "use this snippet to generate the assert LessThan in the symfony Annotations."
+    },
+    "symfony GreaterThanOrEqual": {
+        "body": [
+            "@Assert\\GreaterThanOrEqual($0)"
+        ],
+        "prefix": "syGreaterThanOrEqual",
+        "description": "use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations."
+    },
+    "symfony assert range": {
+        "body": [
+            "@Assert\\Range(min = $1,max = $2,minMessage = \"You must be at least {{ limit }}cm tall to enter\",maxMessage = \"You cannot be taller than {{ limit }}cm to enter\")"
+        ],
+        "prefix": "syRange",
+        "description": "use this snippet to generate the assert Range in the symfony Annotations."
+    },
+    "symfony DivisibleBy": {
+        "body": [
+            "@Assert\\DivisibleBy($0)"
+        ],
+        "prefix": "syDivisibleBy",
+        "description": "use this snippet to generate the assert DivisibleBy in the symfony Annotations."
+    },
+    "symfony Unique": {
+        "body": [
+            "@Assert\\Unique(message=\"$0\")"
+        ],
+        "prefix": "syUnique",
+        "description": "use this snippet to generate the assert Unique in the symfony Annotations."
+    },
+    "symfony Positive": {
+        "body": [
+            "@Assert\\Positive(message=\"$0\")"
+        ],
+        "prefix": "syPositive",
+        "description": "use this snippet to generate the assert Positive in the symfony Annotations."
+    },
+    "symfony assert PositiveOrZero": {
+        "body": [
+            "@Assert\\PositiveOrZero(message=\"$0\")"
+        ],
+        "prefix": "syPositiveOrZero",
+        "description": "use this snippet to generate the assert PositiveOrZero in the symfony Annotations."
+    },
+    "symfony Negative": {
+        "body": [
+            "@Assert\\Negative(message=\"$0\")"
+        ],
+        "prefix": "syNegative",
+        "description": "use this snippet to generate the assert Negative in the symfony Annotations."
+    },
+    "symfony NegativeOrZero": {
+        "body": [
+            "@Assert\\NegativeOrZero(message=\"$0\")"
+        ],
+        "prefix": "syNegativeOrZero",
+        "description": "use this snippet to generate the assert NegativeOrZero in the symfony Annotations."
+    },
+    "symfony Date": {
+        "body": [
+            "@Assert\\Date(message=\"$0\")"
+        ],
+        "prefix": "syDate",
+        "description": "use this snippet to generate the assert Date in the symfony Annotations."
+    },
+    "symfony DateTime": {
+        "body": [
+            "@Assert\\DateTime(message=\"$0\")"
+        ],
+        "prefix": "syDateTime",
+        "description": "use this snippet to generate the assert DateTime in the symfony Annotations."
+    },
+    "symfony Time": {
+        "body": [
+            "@Assert\\Time(message=\"$0\")"
+        ],
+        "prefix": "syTime",
+        "description": "use this snippet to generate the assert Time in the symfony Annotations."
+    },
+    "symfony Timezone": {
+        "body": [
+            "@Assert\\Timezone(message=\"$0\")"
+        ],
+        "prefix": "syTimezone",
+        "description": "use this snippet to generate the assert Timezone in the symfony Annotations."
+    },
+    "symfony Language": {
+        "body": [
+            "@Assert\\Language(message=\"$0\")"
+        ],
+        "prefix": "syLanguage",
+        "description": "use this snippet to generate the assert Language in the symfony Annotations."
+    },
+    "symfony ": {
+        "body": [
+            "@Assert\\Locale(canonicalize = true)"
+        ],
+        "prefix": "syLocale",
+        "description": "use this snippet to generate the assert Locale in the symfony Annotations."
+    },
+    "symfony Country": {
+        "body": [
+            "@Assert\\Country(message=\"$0\")"
+        ],
+        "prefix": "syCountry",
+        "description": "use this snippet to generate the assert Country in the symfony Annotations."
     }
 }
