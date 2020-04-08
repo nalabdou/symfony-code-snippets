@@ -288,7 +288,7 @@
     },
     "symfony route": {
         "body": [
-            "@Route(\"/${path}\",name=\"${name}\")$0"
+            "@Route(\"/${path}\",name=\"${name}\")"
         ],
         "prefix": "syRoute",
         "description": "use this snippet to get the @Route of symfony"

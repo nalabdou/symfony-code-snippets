@@ -1,6 +1,6 @@
 /node_modules
 /tests00
 .jshintrc
-./vscode/**
-.vscode
+./.vscode/**
+/.vscode
 /test00

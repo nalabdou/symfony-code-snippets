@@ -7,13 +7,13 @@
     },
     "constant": {
         "prefix": "constant",
-        "body": "{{ constant('${constName}') }}$0",
+        "body": "{{ constant('${constName}') }}",
         "description": "constant returns the constant value for a given string",
         "example": "{{ some_date|date(constant('DATE_W3C')) }}\n{{ constant('Namespace\\Classname::CONSTANT_NAME') }}"
     },
     "cycle": {
         "prefix": "cycle",
-        "body": "{{ cycle(${array}, ${position}) }}$0",
+        "body": "{{ cycle(${array}, ${position}) }}",
         "description": "The cycle function cycles on an array of values",
         "example": ""
     },
@@ -66,7 +66,7 @@
     },
     "range set": {
         "prefix": "range set",
-        "body": "{% set ${result} = range(${low}, ${high}, ${step}) %}$0",
+        "body": "{% set ${result} = range(${low}, ${high}, ${step}) %}",
         "description": "(function) Returns an array of elements from low to high, inclusive",
         "example": "{% set result = range(0, 6, 2) %}\n{% dump(result) %}\n{# output: array(0, 2, 4, 6) #}"
     },
@@ -78,13 +78,13 @@
     },
     "source": {
         "prefix": "source",
-        "body": "{{ source('${templateName}.html.twig') }}$0",
+        "body": "{{ source('${templateName}.html.twig') }}",
         "description": "(function) returns the content of a template without rendering it",
         "example": ""
     },
     "template_from_string": {
         "prefix": "template_from_string",
-        "body": "{{ include(template_from_string(\"$1\")) }}$2",
+        "body": "{{ include(template_from_string(\"$0\")) }}",
         "description": "(function) loads a template from a string",
         "example": "{{ include(template_from_string(\"Hello {{ name }}\")) }}"
     },
