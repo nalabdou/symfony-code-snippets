@@ -898,7 +898,7 @@
                             </dict>
                         </dict>
                         <key>match</key>
-                        <string>(?&lt;=\s)((?:!|=)=|&lt;=?|&gt;=?|(?:not )?in|is(?: not)?|(?:ends|starts) with|matches)(?=\s)</string>
+                        <string>(?&lt;=\s)((?:!|=)=|&lt;=?|&gt;=?|(?:not )?in|is(?: not)?|(?:ends|starts) with|matches)(?=\s)|%</string>
                     </dict>
 
                     <!-- LOGICAL -->

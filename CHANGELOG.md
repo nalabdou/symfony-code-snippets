@@ -36,9 +36,14 @@
 - Add 60% of Symfony Validation Assert Annotations ⚡️ [@nalabdou](https://github.com/nalabdou).
 - Fix Yaml Snippets
 
+## [0.2.2] 2020-04-10
+
+### Fix Twig Comments {# text #}
+
+- Fix Comments [@nalabdou](https://github.com/nalabdou).
+
 #### Future Goals
 
-- Add Twig Reference from Symfony (Done)
 - Add Support For Symfony Yaml file Syntaxes And Snippets (working 10%)
-- Add More Symfony Php Code Snippets
+- Add More Symfony Php Code Snippets (working 20%)
 - Add Custom Snippets

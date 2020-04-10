@@ -2,7 +2,7 @@
     "name": "symfony-code-snippets",
     "displayName": "Symfony code snippets And Twig Support & Yaml",
     "icon": "icon.png",
-    "description": "Over 50 Symfony Code Snippets for PhP code And Over 50 Twig Code Snippets.\r Just type the letters 'sy' to get a list of all available Symfony Code Snippets.\rFor Twig Just Type the Tag name and you will get AutoCompletion. ",
+    "description": "Over 80 Symfony Code Snippets for PhP code And Over 80 Twig Code Snippets.\r Just type the letters 'sy' to get a list of all available Symfony Code Snippets.\rFor Twig Just Type the Tag name and you will get AutoCompletion. ",
     "publisher": "nadim-vscode",
     "author": {
         "name": "Nadim Al Abdou",
@@ -15,7 +15,7 @@
         "url": "https://github.com/nalabdou/Symfony-code-snippets"
     },
     "bugs": "https://github.com/nalabdou/Symfony-code-snippets/issues",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "engines": {
         "vscode": "^1.43.0"
     },
@@ -32,7 +32,8 @@
         "completion",
         "template",
         "symfony",
-        "php"
+        "php",
+        "yaml"
     ],
     "activationEvents": [
         "*"
@@ -75,18 +76,6 @@
         ],
         "languages": [
             {
-                "id": "html",
-                "aliases": [
-                    "HTML",
-                    "twig"
-                ],
-                "extensions": [
-                    ".twig",
-                    ".html"
-                ],
-                "configuration": "./twig.configuration.json"
-            },
-            {
                 "id": "twig",
                 "aliases": [
                     "HTML (twig)",
@@ -96,17 +85,29 @@
                     ".twig",
                     ".html.twig"
                 ],
-                "configuration": "./twig.configuration.json"
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "html",
+                "aliases": [
+                    "twig",
+                    "HTML (twig)"
+                ],
+                "extensions": [
+                    ".html.twig",
+                    ".twig"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "html",
+                "language": "twig",
                 "scopeName": "text.html.twig",
                 "path": "./syntaxes/twig.tmLanguage"
             },
             {
-                "language": "twig",
+                "language": "html",
                 "scopeName": "text.html.twig",
                 "path": "./syntaxes/twig.tmLanguage"
             }
