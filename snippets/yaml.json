@@ -37,5 +37,16 @@
         ],
         "prefix": "syProvider",
         "description": "symfony main fierwall for add the provider and login logout path"
+    },
+    "symfonyMappingsVich": {
+        "body": [
+            "mappings:\r",
+            "\t${mapping_name}:\r",
+            "\t\turi_prefix: /${path}/${to}/${folder}\r",
+            "\t\tupload_destination: '%kernel.project_dir%/public/${path}/${to}/${folder}'\r",
+            "\t\tnamer: Vich\\UploaderBundle\\Naming\\SmartUniqueNamer\r"
+        ],
+        "prefix": "syMappingsVich",
+        "description": "yaml snippet to add vich uploader configration"
     }
 }

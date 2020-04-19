@@ -16,19 +16,19 @@ For Twig Just Type the Tag name and you will get AutoCompletion.
 
 ### You Can Use It In The Annotations Comments
 
-![Image-of-Snippets-comments](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/in-comments.gif)
+![Image-of-Snippets-comments](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/in-comments.gif)
 
 ### You Can Use It In The PHP Code :elephant:
 
-![Image-of-Snippets-php-code](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/Controller.gif)
+![Image-of-Snippets-php-code](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/Controller.gif)
 
 ### You Can Use It In Twig Files :green_heart:
 
-![Image-of-Snippets-twig](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/twig.gif)
+![Image-of-Snippets-twig](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/twig.gif)
 
 ### You Can Use It In Yaml Files :zap:
 
-![Image-of-Snippets-yaml](https://rawcdn.githack.com/nalabdou/Symfony-code-snippets/master/images/yaml.png)
+![Image-of-Snippets-yaml](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/yaml.png)
 
 ## Snippets Symfony
 
@@ -102,6 +102,20 @@ syUniqueEntity | use this snippent to generate uniqueEntity to make sure that th
 syhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity.
 syPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
 syRoute | use this snippet to get the @Route of symfony
+syVichUploadable | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\Uploadable
+syVichField | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\UploadableField(...)
+
+# Twig 
+## Add these lines to your VS Code settings to get emmet working and also to associate HTML files as twig syntax.
+
+```json
+"files.associations": {
+    "*.html": "twig"
+},
+"emmet.includeLanguages": {
+    "twig": "html"
+},
+```
 
 ## Symfony Twig Snippets
 
@@ -201,3 +215,23 @@ syBootstrap | yaml snippet to add the bootstrap theme to our form display form_t
 syEncoder | snippet to generate encoder password in yaml file
 syNewProvider | new provider for your user
 syProvider | symfony main fierwall for add the provider and login logout path
+syMappingsVich | yaml snippet to add vich uploader configration
+<hr>
+## Author
+<hr>
+👤 **Nadim Al Abdou**
+
+* Github: [@nalabdou](https://github.com/nalabdou)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/nalabdou/Symfony-code-snippets/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you !
+
+## 📝 License
+
+Copyright © 2020 [Nadim Al Abdou](https://github.com/nalabdou).<br />
+This project is [GPL3](https://github.com/nalabdou/Symfony-code-snippets/blob/master/LICENSE) licensed.

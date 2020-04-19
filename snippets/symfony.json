@@ -505,5 +505,19 @@
         ],
         "prefix": "syCountry",
         "description": "use this snippet to generate the assert Country in the symfony Annotations."
+    },
+    "Symfony Generate Vich Annotation uploader": {
+        "body": [
+            "* @Vich\\Uploadable"
+        ],
+        "prefix": "syVichUploadable",
+        "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle @Uploadable"
+    },
+    "Symfony Generate Vich Annotation uploader field": {
+        "body": [
+            "* @Vich\\UploadableField(mapping = \"${mapping_name}\", fileNameProperty = \"${imageName}\", size = \"${imageSize}\")"
+        ],
+        "prefix": "syVichField",
+        "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle UploadableField"
     }
 }

@@ -124,12 +124,6 @@
     "slice": {
         "prefix": "slice",
         "body": "slice(${start}, ${length})",
-        "text": "slice(start, length)",
-        "description": "filter extracts a slice of a sequence, a mapping, or a string"
-    },
-    "slice [] notation": {
-        "prefix": "slice",
-        "body": "[${start}:${length}]",
         "description": "filter extracts a slice of a sequence, a mapping, or a string"
     },
     "sort": {
