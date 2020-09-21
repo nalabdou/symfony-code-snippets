@@ -10,14 +10,14 @@
             "    return \\$this->render('$0.html.twig', []);\r",
             "}"
         ],
-        "prefix": "syControllerFunction",
+        "prefix": "sfControllerFunction",
         "description": "use this snippets to gereate function in the controller with Route,RouteName,FunctionName,Template for rendering in twig"
     },
     "Symfony Generate $form variable": {
         "body": [
             "\\$form = \\$this->createForm(${FormType}::class,\\$${Entity});"
         ],
-        "prefix": "syFormGen",
+        "prefix": "sfFormGen",
         "description": "use this snippet to generate form variable into the controller function change the formtype and the entity"
     },
     "Symfoy Form HandleRequest": {
@@ -28,7 +28,7 @@
             "\t$0",
             "}"
         ],
-        "prefix": "syHandleRequest",
+        "prefix": "sfHandleRequest",
         "description": "use this snippet to Generate handleRequest Function change the RequestVar with your requestvar name"
     },
     "Symfony manager persist and Flush": {
@@ -36,14 +36,14 @@
             "\\$manager->persist(\\$${varName});",
             "\\$manager->flush();"
         ],
-        "prefix": "syPersist",
+        "prefix": "sfPersist",
         "description": "use this snippet to generate $manager persist "
     },
     "Symfony RedirectToRoute": {
         "body": [
             "return \\$this->redirectToRoute('${RouteName}');"
         ],
-        "prefix": "syRedirectToRoute",
+        "prefix": "sfRedirectToRoute",
         "description": "use this snippet to generate return to redirecttoroute name change the routeName with the Your RouteName"
     },
     "Symfony generate the function to hash the users password": {
@@ -51,14 +51,14 @@
             "\\$passwordHash = \\$encoder->encodePassword(\\$${userClassName}, \\$${userClassName}->getPassword());\r",
             "\\$${userClassName}->setPassword($passwordHash);"
         ],
-        "prefix": "syUserHash",
+        "prefix": "sfUserHash",
         "description": "use this function to generate function for hashing the users password don not forgot to setup the file security.yaml"
     },
     "Symfony Send the Form var to the twig": {
         "body": [
             "'form' => \\$form->createView(),"
         ],
-        "prefix": "syTwigForm",
+        "prefix": "sfTwigForm",
         "description": "use this function to send the form var to the frontend using twig "
     },
     "Symfony Generate Logout function": {
@@ -71,7 +71,7 @@
             "{\r",
             "}"
         ],
-        "prefix": "syLogout",
+        "prefix": "sfLogout",
         "description": "use this snippet to generate logout function withe symfony you just need to setup the file security.yaml"
     },
     "Symfony add flash messages": {
@@ -81,42 +81,42 @@
             "'\t${flashMessage}'\r",
             ");"
         ],
-        "prefix": "syAddFlash",
+        "prefix": "sfAddFlash",
         "description": "use this snippet to generate flash message you need to setup the display code in the file base.html.twig"
     },
     "Symfony findAll from one repository": {
         "body": [
             "\t\\$${VarName} = \\$repo->findAll();"
         ],
-        "prefix": "syFindAll",
+        "prefix": "sfFindAll",
         "description": "use this snippet to generate the function findAll from one repository you need to inject the repo you want in the function parameters"
     },
     "Symfony generate the function findOneBy": {
         "body": [
             "\\$${VarName} = findOneBy(['${property}' => '${value}']);"
         ],
-        "prefix": "syFindOneBy",
+        "prefix": "sfFindOneBy",
         "description": "use this snippet to generate the function findOneBy to get one value from repo do not forgot to inject the repository in this function parameters"
     },
     "Symfony generate the function findOne": {
         "body": [
             "\\$${VarName} = findOn(${id});"
         ],
-        "prefix": "syFindOne",
+        "prefix": "sfFindOne",
         "description": "use this snippet to generate the function findOne you need to inject the repo in this function parameters"
     },
     "Symfony generate the function findBy ": {
         "body": [
             "\\$$VarName = findBy(['${property}'=>${value}]);"
         ],
-        "prefix": "syFindBy",
+        "prefix": "sfFindBy",
         "description": "use this function to generate the function findBy from one repo do not forgot to incject the repo you want in this function parameters"
     },
     "Symfony passe the vars to twig": {
         "body": [
             "'${varName}' => ${value},"
         ],
-        "prefix": "syTwigVar",
+        "prefix": "sfTwigVar",
         "description": "use this snippet to send the vars to twig via the function render"
     },
     "Symfony Render function to render view in twig": {
@@ -125,14 +125,14 @@
             "\t$0\r",
             "]);"
         ],
-        "prefix": "syRender",
+        "prefix": "sfRender",
         "description": "use this snippet to generate render function to send the view into twig"
     },
     "Symfony get the current conected user on the site": {
         "body": [
             "\\$user = \\$this->getUser();"
         ],
-        "prefix": "syGetUser",
+        "prefix": "sfGetUser",
         "description": "use this snippet to get the current conected user "
     },
     "Symfony generate the remove function for the manager": {
@@ -140,28 +140,28 @@
             "\\$manager->remove(\\$${varName});\r",
             "\\$manager->flush();"
         ],
-        "prefix": "syRemove",
+        "prefix": "sfRemove",
         "description": "use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters"
     },
     "Symfony redirect to url": {
         "body": [
             "return \\$this->redirect('${url}',200);"
         ],
-        "prefix": "syRedirect",
+        "prefix": "sfRedirect",
         "description": "use this snippet to return the redirection to url"
     },
     "Symfony dump elements": {
         "body": [
             "dump(\\$${var});"
         ],
-        "prefix": "syDump",
+        "prefix": "sfDump",
         "description": "use this snippet to generate the dump function in symfony"
     },
     "Symfony return json response": {
         "body": [
             "return \\$this->json(['${property}'=>'${value}'],200);"
         ],
-        "prefix": "syJson",
+        "prefix": "sfJson",
         "description": "use this snippet to generate return json in symfony controller"
     },
     "Symfony CreateQueryBuilder in the repos": {
@@ -177,7 +177,7 @@
             "\t\t->getResult();\r",
             "}"
         ],
-        "prefix": "syQueryBuilder",
+        "prefix": "sfQueryBuilder",
         "description": "use this snippt to create querybuilder in the repos to get data from the database"
     },
     "Symfony getSalt to make it work the UserInterFace": {
@@ -186,7 +186,7 @@
             "{\r",
             "}"
         ],
-        "prefix": "syGetSalt",
+        "prefix": "sfGetSalt",
         "description": "use this snippet to generate the function getSalt for the user entity when you implaments the UserInterFace"
     },
     "Symfony getUsername to make it work the UserInterFace": {
@@ -196,7 +196,7 @@
             "\treturn \\$this->${property};",
             "}"
         ],
-        "prefix": "syGetUsername",
+        "prefix": "sfGetUsername",
         "description": "use this snippet to generate the function getUsername for the user entity when you implaments the UserInterFace"
     },
     "Symfony eraseCredentials to make it work the UserInterFace": {
@@ -205,70 +205,70 @@
             "{\r",
             "}"
         ],
-        "prefix": "syEraseCredentials",
+        "prefix": "sfEraseCredentials",
         "description": "use this snippet to generate the function eraseCredentials for the user entity when you implaments the UserInterFace"
     },
     "Symfony Assert EqualTo": {
         "body": [
             "@Assert\\EqualTo(propertyPath=\"${propertyName}\", message=\"${errorMessage}\")"
         ],
-        "prefix": "syEqualTo",
+        "prefix": "sfEqualTo",
         "description": "use this snippet to generate the assert equalto in the symfony Annotations"
     },
     "Symfony Assert Length": {
         "body": [
             "@Assert\\Length(min=${10},max=${50}, minMessage=\"${minErrorMessage}\",maxMessage=\"${MaxErrorMessage}\")"
         ],
-        "prefix": "syLength",
+        "prefix": "sfLength",
         "description": "use this snippet to generate the assert Length in the symfony Annotations"
     },
     "Symfony Assert NotBlank": {
         "body": [
             "@Assert\\NotBlank"
         ],
-        "prefix": "syNotBlank",
+        "prefix": "sfNotBlank",
         "description": "use this snippet to generate the assert NotBlank in the symfony Annotations"
     },
     "Symfony Assert Email": {
         "body": [
             "@Assert\\Email(message = \"The email  is not a valid email.\")"
         ],
-        "prefix": "syEmail",
+        "prefix": "sfEmail",
         "description": "use this snippet to generate the assert Email in the symfony Annotations"
     },
     "Symfony Assert Url": {
         "body": [
             "@Assert\\Url()"
         ],
-        "prefix": "syUrl",
+        "prefix": "sfUrl",
         "description": "use this snippet to generate the assert Url in the symfony Annotations"
     },
     "Symfony Assert NotEqualTo": {
         "body": [
             "@Assert\\NotEqualTo(value=\"${value}\", message=\"${errorMessage}\")"
         ],
-        "prefix": "syNotEqualTo",
+        "prefix": "sfNotEqualTo",
         "description": "use this snippet to generate the assert notequalto in the symfony Annotations"
     },
     "Symfony Assert GreaterThan": {
         "body": [
             "@Assert\\GreaterThan(\"today\")"
         ],
-        "prefix": "syGreaterThan",
+        "prefix": "sfGreaterThan",
         "description": "use this snippet to generate the assert GreaterThan in the symfony Annotations"
     },
     "Symfony UniqueEntity on entity": {
         "body": [
             "@UniqueEntity(fields = {\"${field1},${field2}\"},message =\"${errorMessage}\")"
         ],
-        "prefix": "syUniqueEntity",
+        "prefix": "sfUniqueEntity",
         "description": "use this snippent to generate uniqueEntity to make sure that the fields"
     },
     "Symfony Orm HaslifecycleCallbacks": {
         "body": [
             "@ORM\\HasLifecycleCallbacks()"
         ],
-        "prefix": "syhasLife",
+        "prefix": "sfhasLife",
         "description": "use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity"
     },
     "Symfony generate the prepresist and preudate": {
@@ -276,21 +276,21 @@
             "@ORM\\PrePersist\r",
             "@ORM\\PreUpdate "
         ],
-        "prefix": "syPre",
+        "prefix": "sfPre",
         "description": "use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate "
     },
     "Symfony get the manager from doctrine": {
         "body": [
             "\\$manager = \\$this->getDoctrine()->getManager();"
         ],
-        "prefix": "syManager",
+        "prefix": "sfManager",
         "description": "use this snippet to generate the var $manager to reacte with the database "
     },
     "symfony route": {
         "body": [
             "@Route(\"/${path}\",name=\"${name}\")"
         ],
-        "prefix": "syRoute",
+        "prefix": "sfRoute",
         "description": "use this snippet to get the @Route of symfony"
     },
     "public function": {
@@ -300,224 +300,224 @@
             "    # code...$0\r",
             "}"
         ],
-        "prefix": "syFun",
+        "prefix": "sfFun",
         "description": "you can use this snippet to genarate public function statment just like that"
     },
     "symfony assert blank": {
         "body": [
             "@Assert\\Blank(message=\"must be blank\")"
         ],
-        "prefix": "syBlank",
+        "prefix": "sfBlank",
         "description": "use this snippet to genarete Assert blank type = Blank"
     },
     "symfony assert notnull": {
         "body": [
             "@Assert\\NotNull(message=\"can not be null :/\")"
         ],
-        "prefix": "syNotNull",
+        "prefix": "sfNotNull",
         "description": "use this snippet to generate the assert NotNull in the symfony Annotations."
     },
     "symfony asset isnull": {
         "body": [
             "@Assert\\IsNull(message=\"is null\")"
         ],
-        "prefix": "syIsNull",
+        "prefix": "sfIsNull",
         "description": "use this snippet to generate the assert IsNull in the symfony Annotations"
     },
     "symfony assert istrue": {
         "body": [
             "@Assert\\IsTrue(message = \"The token is invalid.\")"
         ],
-        "prefix": "syTrue",
+        "prefix": "sfTrue",
         "description": "use this snippet to generate the assert IsTrue in the symfony Annotations"
     },
     "symfony assert isFalse": {
         "body": [
             " @Assert\\IsFalse(message = \"You've entered an invalid state.\")"
         ],
-        "prefix": "syFalse",
+        "prefix": "sfFalse",
         "description": ""
     },
     "symfony assert type": {
         "body": [
             "@Assert\\Type(type=\"${integer}\",message=\"The value {{ value }} is not a valid {{ type }}.\""
         ],
-        "prefix": "syType",
+        "prefix": "sfType",
         "description": "use this snippet to generate the assert Type in the symfony Annotations."
     },
     "symfony assert regex": {
         "body": [
             "@Assert\\Regex(pattern=\"${/\\d/}\",match=false,message=\"Your name cannot contain a number\")"
         ],
-        "prefix": "syRegex",
+        "prefix": "sfRegex",
         "description": "use this snippet to generate the assert Regex in the symfony Annotations."
     },
     "symfony assert ip": {
         "body": [
             "@Assert\\Ip()"
         ],
-        "prefix": "syIp",
+        "prefix": "sfIp",
         "description": "use this snippet to generate the assert Ip in the symfony Annotations."
     },
     "symfony assert json": {
         "body": [
             "@Assert\\Json(message = \"You've entered an invalid Json.\")"
         ],
-        "prefix": "syAJson",
+        "prefix": "sfAJson",
         "description": "use this snippet to generate the assert Json in the symfony Annotations."
     },
     "symfony assert uuid": {
         "body": [
             "@Assert\\Uuid(message=\"\")"
         ],
-        "prefix": "syUuid",
+        "prefix": "sfUuid",
         "description": "use this snippet to generate the assert Uuid in the symfony Annotations."
     },
     "symfony securty assert userpassword": {
         "body": [
             "@SecurityAssert\\UserPassword(message = \"Wrong value for your current password\")"
         ],
-        "prefix": "syUserPassword",
+        "prefix": "sfUserPassword",
         "description": "use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations."
     },
     "symfony assert identicalto": {
         "body": [
             "@Assert\\IdenticalTo(propertyPath=\"$0\")"
         ],
-        "prefix": "syIdenticalTo",
+        "prefix": "sfIdenticalTo",
         "description": "use this snippet to generate the assert IdenticalTo in the symfony Annotations."
     },
     "symfony assert lessThanOrEqual": {
         "body": [
             "@Assert\\LessThanOrEqual($0)"
         ],
-        "prefix": "syLessThanOrEqual",
+        "prefix": "sfLessThanOrEqual",
         "description": "use this snippet to generate the assert LessThanOrEqual in the symfony Annotations."
     },
     "symfony assert lessthan": {
         "body": [
             "@Assert\\LessThan($0)"
         ],
-        "prefix": "syLessThan",
+        "prefix": "sfLessThan",
         "description": "use this snippet to generate the assert LessThan in the symfony Annotations."
     },
     "symfony GreaterThanOrEqual": {
         "body": [
             "@Assert\\GreaterThanOrEqual($0)"
         ],
-        "prefix": "syGreaterThanOrEqual",
+        "prefix": "sfGreaterThanOrEqual",
         "description": "use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations."
     },
     "symfony assert range": {
         "body": [
             "@Assert\\Range(min = $1,max = $2,minMessage = \"You must be at least {{ limit }}cm tall to enter\",maxMessage = \"You cannot be taller than {{ limit }}cm to enter\")"
         ],
-        "prefix": "syRange",
+        "prefix": "sfRange",
         "description": "use this snippet to generate the assert Range in the symfony Annotations."
     },
     "symfony DivisibleBy": {
         "body": [
             "@Assert\\DivisibleBy($0)"
         ],
-        "prefix": "syDivisibleBy",
+        "prefix": "sfDivisibleBy",
         "description": "use this snippet to generate the assert DivisibleBy in the symfony Annotations."
     },
     "symfony Unique": {
         "body": [
             "@Assert\\Unique(message=\"$0\")"
         ],
-        "prefix": "syUnique",
+        "prefix": "sfUnique",
         "description": "use this snippet to generate the assert Unique in the symfony Annotations."
     },
     "symfony Positive": {
         "body": [
             "@Assert\\Positive(message=\"$0\")"
         ],
-        "prefix": "syPositive",
+        "prefix": "sfPositive",
         "description": "use this snippet to generate the assert Positive in the symfony Annotations."
     },
     "symfony assert PositiveOrZero": {
         "body": [
             "@Assert\\PositiveOrZero(message=\"$0\")"
         ],
-        "prefix": "syPositiveOrZero",
+        "prefix": "sfPositiveOrZero",
         "description": "use this snippet to generate the assert PositiveOrZero in the symfony Annotations."
     },
     "symfony Negative": {
         "body": [
             "@Assert\\Negative(message=\"$0\")"
         ],
-        "prefix": "syNegative",
+        "prefix": "sfNegative",
         "description": "use this snippet to generate the assert Negative in the symfony Annotations."
     },
     "symfony NegativeOrZero": {
         "body": [
             "@Assert\\NegativeOrZero(message=\"$0\")"
         ],
-        "prefix": "syNegativeOrZero",
+        "prefix": "sfNegativeOrZero",
         "description": "use this snippet to generate the assert NegativeOrZero in the symfony Annotations."
     },
     "symfony Date": {
         "body": [
             "@Assert\\Date(message=\"$0\")"
         ],
-        "prefix": "syDate",
+        "prefix": "sfDate",
         "description": "use this snippet to generate the assert Date in the symfony Annotations."
     },
     "symfony DateTime": {
         "body": [
             "@Assert\\DateTime(message=\"$0\")"
         ],
-        "prefix": "syDateTime",
+        "prefix": "sfDateTime",
         "description": "use this snippet to generate the assert DateTime in the symfony Annotations."
     },
     "symfony Time": {
         "body": [
             "@Assert\\Time(message=\"$0\")"
         ],
-        "prefix": "syTime",
+        "prefix": "sfTime",
         "description": "use this snippet to generate the assert Time in the symfony Annotations."
     },
     "symfony Timezone": {
         "body": [
             "@Assert\\Timezone(message=\"$0\")"
         ],
-        "prefix": "syTimezone",
+        "prefix": "sfTimezone",
         "description": "use this snippet to generate the assert Timezone in the symfony Annotations."
     },
     "symfony Language": {
         "body": [
             "@Assert\\Language(message=\"$0\")"
         ],
-        "prefix": "syLanguage",
+        "prefix": "sfLanguage",
         "description": "use this snippet to generate the assert Language in the symfony Annotations."
     },
     "symfony ": {
         "body": [
             "@Assert\\Locale(canonicalize = true)"
         ],
-        "prefix": "syLocale",
+        "prefix": "sfLocale",
         "description": "use this snippet to generate the assert Locale in the symfony Annotations."
     },
     "symfony Country": {
         "body": [
             "@Assert\\Country(message=\"$0\")"
         ],
-        "prefix": "syCountry",
+        "prefix": "sfCountry",
         "description": "use this snippet to generate the assert Country in the symfony Annotations."
     },
     "Symfony Generate Vich Annotation uploader": {
         "body": [
             "* @Vich\\Uploadable"
         ],
-        "prefix": "syVichUploadable",
+        "prefix": "sfVichUploadable",
         "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle @Uploadable"
     },
     "Symfony Generate Vich Annotation uploader field": {
         "body": [
             "* @Vich\\UploadableField(mapping = \"${mapping_name}\", fileNameProperty = \"${imageName}\", size = \"${imageSize}\")"
         ],
-        "prefix": "syVichField",
+        "prefix": "sfVichField",
         "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle UploadableField"
     }
 }

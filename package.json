@@ -15,7 +15,7 @@
         "url": "https://github.com/nalabdou/Symfony-code-snippets"
     },
     "bugs": "https://github.com/nalabdou/Symfony-code-snippets/issues",
-    "version": "0.2.2",
+    "version": "0.2.4",
     "engines": {
         "vscode": "^1.43.0"
     },

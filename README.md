@@ -1,7 +1,7 @@
 # Symfony Code Snippets And Twig Support
 
 Over 50 Symfony Code Snippets for PhP code And Over 50 Twig Code Snippets.
-Just type the letters 'sy' to get a list of all available Symfony Code Snippets.
+Just type the letters 'sf' to get a list of all available Symfony Code Snippets.
 For Twig Just Type the Tag name and you will get AutoCompletion.
 
 ## For using the snippets in the Annotations Comments you need to add this Code To Your Settings.json File
@@ -34,76 +34,76 @@ For Twig Just Type the Tag name and you will get AutoCompletion.
 
 Trigger | Description
 --- | ---
-syFun | you can use this snippet to genarate public function statment just like that
-syControllerFunction | use this snippets to generate function in the controller with Route,RouteName,FunctionName,Template for rendering in twig.
-syFormGen | use this snippet to generate $form variable into the controller function change the formtype and the entity.
-syHandleRequest | use this snippet to Generate handleRequest Function change the RequestVar with your requestvar name.
-syRemove  | use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters
-syRedirectToRoute | use this snippet to generate return to redirecttoroute name change the routeName with  Your RouteName.
-syRedirect | use this snippet to return the redirection to url
-syUserHash | use this function to generate function for hashing the users password don not forgot to setup the file security.yaml.
-syTwigForm | use this function to send the $form var to the frontend using twig.
-syLogout | use this snippet to generate logout function withe symfony you just need to setup the file security.yaml.
-syAddFlash | use this snippet to generate flash message you need to setup the display code in the file base.html.twig.
-syTwigVar | use this snippet to send the vars to twig via the function render.
-syRender | use this snippet to generate render function to send the view into twig.
-syGetUser | use this snippet to get the current conected user.
-syDump | use this snippet to generate the dump function in symfony.
-syJson | use this snippet to generate return json in symfony controller.
-syFindAll | use this snippet to generate the function findAll from one repository you need to inject the repo you want in the function parameters.
-syFindOneBy | use this snippet to generate the function findOneBy to get one value from repo do not forgot to inject the repository in this function parameters.
-syFindOne | use this snippet to generate the function findOne you need to inject the repo in this function parameters.
-syFindBy | use this function to generate the function findBy from one repo do not forgot to incject the repo you want in this function parameters.
-syManager | use this snippet to generate the var $manager to reacte with the database.
-syRepo | use this snippet to generate the $repo var ex $repo = $this->getDoctrine()->getRepository(Product::class);.
-syPersist | use this snippet to generate $manager persist.
-syGetSalt | use this snippet to generate the function getSalt for the user entity when you implaments the UserInterFace.
-syGetUsername | use this snippet to generate the function getUsername for the user entity when you implaments the UserInterFace.
-syEraseCredentials | use this snippet to generate the function eraseCredentials for the user entity when you implaments the UserInterFace.
-syQueryBuilder | use this snippt to create querybuilder in the repos to get data from the database.
-syEqualTo | use this snippet to generate the assert equalto in the symfony Annotations.
-syLength | use this snippet to generate the assert Length in the symfony Annotations.
-syNotBlank | use this snippet to generate the assert NotBlank in the symfony Annotations.
-syNotNull | use this snippet to generate the assert NotNull in the symfony Annotations.
-syBlank | use this snippet to generate the assert Blank in the symfony Annotations.
-syIsNull | use this snippet to generate the assert IsNull in the symfony Annotations.
-syTrue | use this snippet to generate the assert IsTrue in the symfony Annotations.
-syFalse | use this snippet to generate the assert IsFalse in the symfony Annotations.
-syType | use this snippet to generate the assert Type in the symfony Annotations.
-syRegex | use this snippet to generate the assert Regex in the symfony Annotations.
-syIp | use this snippet to generate the assert Ip in the symfony Annotations.
-syAJson | use this snippet to generate the assert Json in the symfony Annotations.
-syUuid | use this snippet to generate the assert Uuid in the symfony Annotations.
-syUserPassword | use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations.
-syEmail | use this snippet to generate the assert Email in the symfony Annotations.
-syUrl | use this snippet to generate the assert Url in the symfony Annotations.
-syNotEqualTo | use this snippet to generate the assert notEqualto in the symfony Annotations.
-syIdenticalTo | use this snippet to generate the assert IdenticalTo in the symfony Annotations.
-syNotIdenticalTo | use this snippet to generate the assert NotIdenticalTo in the symfony Annotations.
-syGreaterThan | use this snippet to generate the assert GreaterThan in the symfony Annotations.
-syGreaterThanOrEqual | use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations.
-syLessThan | use this snippet to generate the assert LessThan in the symfony Annotations.
-syLessThanOrEqual | use this snippet to generate the assert LessThanOrEqual in the symfony Annotations.
-syRange | use this snippet to generate the assert Range in the symfony Annotations.
-syDivisibleBy | use this snippet to generate the assert DivisibleBy in the symfony Annotations.
-syUnique | use this snippet to generate the assert Unique in the symfony Annotations.
-syPositive | use this snippet to generate the assert Positive in the symfony Annotations.
-syPositiveOrZero | use this snippet to generate the assert PositiveOrZero in the symfony Annotations.
-syNegative | use this snippet to generate the assert Negative in the symfony Annotations.
-syNegativeOrZero | use this snippet to generate the assert NegativeOrZero in the symfony Annotations.
-syDate | use this snippet to generate the assert Date in the symfony Annotations.
-syDateTime | use this snippet to generate the assert DateTime in the symfony Annotations.
-syTime | use this snippet to generate the assert Time in the symfony Annotations.
-syTimezone | use this snippet to generate the assert Timezone in the symfony Annotations.
-syLanguage | use this snippet to generate the assert Language in the symfony Annotations.
-syLocale | use this snippet to generate the assert Locale in the symfony Annotations.
-syCountry | use this snippet to generate the assert Country in the symfony Annotations.
-syUniqueEntity | use this snippent to generate uniqueEntity to make sure that the fields are uniques.
-syhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity.
-syPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
-syRoute | use this snippet to get the @Route of symfony
-syVichUploadable | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\Uploadable
-syVichField | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\UploadableField(...)
+sfFun | you can use this snippet to genarate public function statment just like that
+sfControllerFunction | use this snippets to generate function in the controller with Route,RouteName,FunctionName,Template for rendering in twig.
+sfFormGen | use this snippet to generate $form variable into the controller function change the formtype and the entity.
+sfHandleRequest | use this snippet to Generate handleRequest Function change the RequestVar with your requestvar name.
+sfRemove  | use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters
+sfRedirectToRoute | use this snippet to generate return to redirecttoroute name change the routeName with  Your RouteName.
+sfRedirect | use this snippet to return the redirection to url
+sfUserHash | use this function to generate function for hashing the users password don not forgot to setup the file security.yaml.
+sfTwigForm | use this function to send the $form var to the frontend using twig.
+sfLogout | use this snippet to generate logout function withe symfony you just need to setup the file security.yaml.
+sfAddFlash | use this snippet to generate flash message you need to setup the display code in the file base.html.twig.
+sfTwigVar | use this snippet to send the vars to twig via the function render.
+sfRender | use this snippet to generate render function to send the view into twig.
+sfGetUser | use this snippet to get the current conected user.
+sfDump | use this snippet to generate the dump function in symfony.
+sfJson | use this snippet to generate return json in symfony controller.
+sfFindAll | use this snippet to generate the function findAll from one repository you need to inject the repo you want in the function parameters.
+sfFindOneBy | use this snippet to generate the function findOneBy to get one value from repo do not forgot to inject the repository in this function parameters.
+sfFindOne | use this snippet to generate the function findOne you need to inject the repo in this function parameters.
+sfFindBy | use this function to generate the function findBy from one repo do not forgot to incject the repo you want in this function parameters.
+sfManager | use this snippet to generate the var $manager to reacte with the database.
+sfRepo | use this snippet to generate the $repo var ex $repo = $this->getDoctrine()->getRepository(Product::class);.
+sfPersist | use this snippet to generate $manager persist.
+sfGetSalt | use this snippet to generate the function getSalt for the user entity when you implaments the UserInterFace.
+sfGetUsername | use this snippet to generate the function getUsername for the user entity when you implaments the UserInterFace.
+sfEraseCredentials | use this snippet to generate the function eraseCredentials for the user entity when you implaments the UserInterFace.
+sfQueryBuilder | use this snippt to create querybuilder in the repos to get data from the database.
+sfEqualTo | use this snippet to generate the assert equalto in the symfony Annotations.
+sfLength | use this snippet to generate the assert Length in the symfony Annotations.
+sfNotBlank | use this snippet to generate the assert NotBlank in the symfony Annotations.
+sfNotNull | use this snippet to generate the assert NotNull in the symfony Annotations.
+sfBlank | use this snippet to generate the assert Blank in the symfony Annotations.
+sfIsNull | use this snippet to generate the assert IsNull in the symfony Annotations.
+sfTrue | use this snippet to generate the assert IsTrue in the symfony Annotations.
+sfFalse | use this snippet to generate the assert IsFalse in the symfony Annotations.
+sfType | use this snippet to generate the assert Type in the symfony Annotations.
+sfRegex | use this snippet to generate the assert Regex in the symfony Annotations.
+sfIp | use this snippet to generate the assert Ip in the symfony Annotations.
+sfAJson | use this snippet to generate the assert Json in the symfony Annotations.
+sfUuid | use this snippet to generate the assert Uuid in the symfony Annotations.
+sfUserPassword | use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations.
+sfEmail | use this snippet to generate the assert Email in the symfony Annotations.
+sfUrl | use this snippet to generate the assert Url in the symfony Annotations.
+sfNotEqualTo | use this snippet to generate the assert notEqualto in the symfony Annotations.
+sfIdenticalTo | use this snippet to generate the assert IdenticalTo in the symfony Annotations.
+sfNotIdenticalTo | use this snippet to generate the assert NotIdenticalTo in the symfony Annotations.
+sfGreaterThan | use this snippet to generate the assert GreaterThan in the symfony Annotations.
+sfGreaterThanOrEqual | use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations.
+sfLessThan | use this snippet to generate the assert LessThan in the symfony Annotations.
+sfLessThanOrEqual | use this snippet to generate the assert LessThanOrEqual in the symfony Annotations.
+sfRange | use this snippet to generate the assert Range in the symfony Annotations.
+sfDivisibleBy | use this snippet to generate the assert DivisibleBy in the symfony Annotations.
+sfUnique | use this snippet to generate the assert Unique in the symfony Annotations.
+sfPositive | use this snippet to generate the assert Positive in the symfony Annotations.
+sfPositiveOrZero | use this snippet to generate the assert PositiveOrZero in the symfony Annotations.
+sfNegative | use this snippet to generate the assert Negative in the symfony Annotations.
+sfNegativeOrZero | use this snippet to generate the assert NegativeOrZero in the symfony Annotations.
+sfDate | use this snippet to generate the assert Date in the symfony Annotations.
+sfDateTime | use this snippet to generate the assert DateTime in the symfony Annotations.
+sfTime | use this snippet to generate the assert Time in the symfony Annotations.
+sfTimezone | use this snippet to generate the assert Timezone in the symfony Annotations.
+sfLanguage | use this snippet to generate the assert Language in the symfony Annotations.
+sfLocale | use this snippet to generate the assert Locale in the symfony Annotations.
+sfCountry | use this snippet to generate the assert Country in the symfony Annotations.
+sfUniqueEntity | use this snippent to generate uniqueEntity to make sure that the fields are uniques.
+sfhasLife | use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity.
+sfPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
+sfRoute | use this snippet to get the @Route of symfony
+sfVichUploadable | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\Uploadable
+sfVichField | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\UploadableField(...)
 
 # Twig 
 ## Add these lines to your VS Code settings to get emmet working and also to associate HTML files as twig syntax.
@@ -211,14 +211,14 @@ verbatim | `{% verbatim %}{% endverbatim %}` | Tag
 
 Trigger | Description
 --- | ---
-syBootstrap | yaml snippet to add the bootstrap theme to our form display form_themes
-syEncoder | snippet to generate encoder password in yaml file
-syNewProvider | new provider for your user
-syProvider | symfony main fierwall for add the provider and login logout path
-syMappingsVich | yaml snippet to add vich uploader configration
-<hr>
-## Author
-<hr>
+sfBootstrap | yaml snippet to add the bootstrap theme to our form display form_themes
+sfEncoder | snippet to generate encoder password in yaml file
+sfNewProvider | new provider for your user
+sfProvider | symfony main fierwall for add the provider and login logout path
+sfMappingsVich | yaml snippet to add vich uploader configration
+
+## 🤝 Contributing
+
 👤 **Nadim Al Abdou**
 
 * Github: [@nalabdou](https://github.com/nalabdou)

@@ -3,7 +3,7 @@
         "body": [
             "form_themes: ['bootstrap_4_layout.html.twig']"
         ],
-        "prefix": "syBootstrap",
+        "prefix": "sfBootstrap",
         "description": "yaml snippet to add the bootstrap theme to our form display"
     },
     "symfony yaml password encoder": {
@@ -12,7 +12,7 @@
             "\tApp\\Entity\\User:\r",
             "\t\talgorithm: auto"
         ],
-        "prefix": "syEncoder",
+        "prefix": "sfEncoder",
         "description": "snippet for yaml files generate encoder password in yaml file "
     },
     "add new provider": {
@@ -22,7 +22,7 @@
             "        property: username\r",
             "        class: App\\Entity\\User"
         ],
-        "prefix": "syNewProvider",
+        "prefix": "sfNewProvider",
         "description": "new provider for your users"
     },
     "symfony main fierwall for add the provider and login logout path": {
@@ -35,7 +35,7 @@
             "    path: $4\r",
             "    target: $5"
         ],
-        "prefix": "syProvider",
+        "prefix": "sfProvider",
         "description": "symfony main fierwall for add the provider and login logout path"
     },
     "symfonyMappingsVich": {
@@ -46,7 +46,7 @@
             "\t\tupload_destination: '%kernel.project_dir%/public/${path}/${to}/${folder}'\r",
             "\t\tnamer: Vich\\UploaderBundle\\Naming\\SmartUniqueNamer\r"
         ],
-        "prefix": "syMappingsVich",
+        "prefix": "sfMappingsVich",
         "description": "yaml snippet to add vich uploader configration"
     }
 }
