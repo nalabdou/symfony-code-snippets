@@ -5,39 +5,39 @@
             " * @Route(\"${Route}\", name=\"${RouteName}\")\r",
             " * @IsGranted(\"${ROLE_ADMIN}\")",
             " */\r",
-            "public function ${FunctionName}()\r",
+            "public function ${FunctionName}(): Reponse\r",
             "{\r",
             "    return \\$this->render('$0.html.twig', []);\r",
             "}"
         ],
         "prefix": "sfControllerFunction",
-        "description": "use this snippets to gereate function in the controller with Route,RouteName,FunctionName,Template for rendering in twig"
+        "description": "use this snippets to generate function in the controller with Route, RouteName, FunctionName, Template for rendering in twig"
     },
     "Symfony Generate $form variable": {
         "body": [
-            "\\$form = \\$this->createForm(${FormType}::class,\\$${Entity});"
+            "\\$form = \\$this->createForm(${FormType}::class, \\$${Entity});"
         ],
         "prefix": "sfFormGen",
-        "description": "use this snippet to generate form variable into the controller function change the formtype and the entity"
+        "description": "use this snippet to generate form variable into the controller function change the form type and the entity"
     },
     "Symfoy Form HandleRequest": {
         "body": [
-            "\\$form->handleRequest(\\$${requestVar});",
+            "\\$form->handleRequest(\\$${request});",
             "",
             "if (\\$form->isSubmitted() && \\$form->isValid()) { \r",
             "\t$0",
             "}"
         ],
         "prefix": "sfHandleRequest",
-        "description": "use this snippet to Generate handleRequest Function change the RequestVar with your requestvar name"
+        "description": "use this snippet to Generate handleRequest Function"
     },
     "Symfony manager persist and Flush": {
         "body": [
-            "\\$manager->persist(\\$${varName});",
-            "\\$manager->flush();"
+            "\\$entityManager->persist(\\$${varName});",
+            "\\$entityManager->flush();"
         ],
         "prefix": "sfPersist",
-        "description": "use this snippet to generate $manager persist "
+        "description": "use this snippet to generate $entityManager persist "
     },
     "Symfony RedirectToRoute": {
         "body": [
@@ -49,7 +49,7 @@
     "Symfony generate the function to hash the users password": {
         "body": [
             "\\$passwordHash = \\$encoder->encodePassword(\\$${userClassName}, \\$${userClassName}->getPassword());\r",
-            "\\$${userClassName}->setPassword($passwordHash);"
+            "\\$${userClassName}->setPassword(\\$passwordHash);"
         ],
         "prefix": "sfUserHash",
         "description": "use this function to generate function for hashing the users password don not forgot to setup the file security.yaml"
@@ -59,14 +59,13 @@
             "'form' => \\$form->createView(),"
         ],
         "prefix": "sfTwigForm",
-        "description": "use this function to send the form var to the frontend using twig "
+        "description": "pass the entire form object to the twig template with given variable name: form"
     },
     "Symfony Generate Logout function": {
         "body": [
             "/**\r",
-            "* @Route(\"/logout\",name=\"logout\")\r",
-            "*\r",
-            "*/\r",
+            " * @Route(\"/logout\",name=\"logout\")\r",
+            " */\r",
             "public function logout()\r",
             "{\r",
             "}"
@@ -295,7 +294,7 @@
     },
     "public function": {
         "body": [
-            "public function ${FunctionName}(${Type} $$var = ${null})\r",
+            "public function ${FunctionName}(${Type} $$var = ${null}): void\r",
             "{\r",
             "    # code...$0\r",
             "}"
