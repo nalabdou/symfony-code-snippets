@@ -5,7 +5,7 @@
             " * @Route(\"${Route}\", name=\"${RouteName}\")\r",
             " * @IsGranted(\"${ROLE_ADMIN}\")",
             " */\r",
-            "public function ${FunctionName}()\r",
+            "public function ${FunctionName}(): Response\r",
             "{\r",
             "    return \\$this->render('$0.html.twig', []);\r",
             "}"
@@ -15,14 +15,14 @@
     },
     "Symfony Generate $form variable": {
         "body": [
-            "\\$form = \\$this->createForm(${FormType}::class,\\$${Entity});"
+            "\\$form = \\$this->createForm(${FormType}::class, \\$${Entity});"
         ],
         "prefix": "sfFormGen",
         "description": "use this snippet to generate form variable into the controller function change the formtype and the entity"
     },
     "Symfoy Form HandleRequest": {
         "body": [
-            "\\$form->handleRequest(\\$${requestVar});",
+            "\\$form->handleRequest(\\$${request});",
             "",
             "if (\\$form->isSubmitted() && \\$form->isValid()) { \r",
             "\t$0",
@@ -49,7 +49,7 @@
     "Symfony generate the function to hash the users password": {
         "body": [
             "\\$passwordHash = \\$encoder->encodePassword(\\$${userClassName}, \\$${userClassName}->getPassword());\r",
-            "\\$${userClassName}->setPassword($passwordHash);"
+            "\\$${userClassName}->setPassword(\\$passwordHash);"
         ],
         "prefix": "sfUserHash",
         "description": "use this function to generate function for hashing the users password don not forgot to setup the file security.yaml"
@@ -64,9 +64,8 @@
     "Symfony Generate Logout function": {
         "body": [
             "/**\r",
-            "* @Route(\"/logout\",name=\"logout\")\r",
-            "*\r",
-            "*/\r",
+            " * @Route(\"/logout\", name=\"logout\")\r",
+            " */\r",
             "public function logout()\r",
             "{\r",
             "}"
@@ -137,11 +136,11 @@
     },
     "Symfony generate the remove function for the manager": {
         "body": [
-            "\\$manager->remove(\\$${varName});\r",
-            "\\$manager->flush();"
+            "\\$entityManager->remove(\\$${varName});\r",
+            "\\$entiyManager->flush();"
         ],
         "prefix": "sfRemove",
-        "description": "use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters"
+        "description": "use this snippet to remove the given entity object from the database. Do not forgot to inject the EntityManagerInterface in the function."
     },
     "Symfony redirect to url": {
         "body": [
@@ -295,7 +294,7 @@
     },
     "public function": {
         "body": [
-            "public function ${FunctionName}(${Type} $$var = ${null})\r",
+            "${public} function ${functionName}(${Type} $$var = ${null}): void\r",
             "{\r",
             "    # code...$0\r",
             "}"
