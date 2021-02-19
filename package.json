@@ -2,7 +2,7 @@
     "name": "symfony-code-snippets",
     "displayName": "Symfony code snippets And Twig Support & Yaml",
     "icon": "icon.png",
-    "description": "Over 80 Symfony Code Snippets for PhP code And Over 80 Twig Code Snippets.\r Just type the letters 'sy' to get a list of all available Symfony Code Snippets.\rFor Twig Just Type the Tag name and you will get AutoCompletion. ",
+    "description": "Over 80 Symfony Code Snippets for PhP code And Over 80 Twig Code Snippets. Just type the letters 'sy' to get a list of all available Symfony Code Snippets. For Twig Just Type the Tag name and you will get AutoCompletion.",
     "publisher": "nadim-vscode",
     "author": {
         "name": "Nadim Al Abdou",
