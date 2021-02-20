@@ -223,7 +223,13 @@ sfMappingsVich | yaml snippet to add vich uploader configration
 
 * Github: [@nalabdou](https://github.com/nalabdou)
 
-## 🤝 Contributing
+👤 **Xun Zhou**
+
+* Github [@vikbert](https://github.com/vikbert)
+
+👤 **Oliver Freyermuth**
+
+* Github [@olifre](https://github.com/olifre)
 
 Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/nalabdou/Symfony-code-snippets/issues).
 

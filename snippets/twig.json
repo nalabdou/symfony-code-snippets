@@ -12,9 +12,9 @@
     "autoescape": {
         "prefix": "autoescape",
         "body": [
-        "{% autoescape %}",
-        "\t$0",
-        "{% endautoescape %}"
+            "{% autoescape %}",
+            "\t$0",
+            "{% endautoescape %}"
         ],
         "description": "Whether automatic escaping is enabled or not, you can mark a section of a template to be escaped or not by using the autoescape tag",
         "example": "{% autoescape %}\n    Everything will be automatically escaped in this block\n    using the HTML strategy\n{% endautoescape %}\n\n{% autoescape 'html' %}\n    Everything will be automatically escaped in this block\n    using the HTML strategy\n{% endautoescape %}\n\n{% autoescape 'js' %}\n    Everything will be automatically escaped in this block\n    using the js escaping strategy\n{% endautoescape %}\n\n{% autoescape false %}\n    Everything will be outputted as is in this block\n{% endautoescape %}"
@@ -31,10 +31,10 @@
     "do": {
         "prefix": "do",
         "body": [
-        "{% do $0 %}"
+            "{% do $0 %}"
         ],
         "description": "The do tag works exactly like the regular variable expression ({{ ... }}) just that it doesn't print anything",
-        "example":"{% do 1 + 2 %}"
+        "example": "{% do 1 + 2 %}"
     },
     "embed": {
         "prefix": "embed",
@@ -63,10 +63,10 @@
     "flush": {
         "prefix": "flush",
         "body": [
-        "{% flush %}"
+            "{% flush %}"
         ],
         "description": "The flush tag tells Twig to flush the output buffer",
-        "example":"{% flush %}"
+        "example": "{% flush %}"
     },
     "for": {
         "prefix": "for",
@@ -110,7 +110,7 @@
     },
     "loop": {
         "prefix": "loop",
-        "body":"loop.",
+        "body": "loop.",
         "description": "special variables inside of a for loop block"
     },
     "if": {
@@ -135,12 +135,12 @@
     },
     "else": {
         "prefix": "else",
-        "body":"{% else %}",
+        "body": "{% else %}",
         "description": "The if statement in Twig is comparable with the if statements of PHP"
     },
     "else if": {
         "prefix": "else if",
-        "body":"{% elseif ${condition} %}",
+        "body": "{% elseif ${condition} %}",
         "description": "The if statement in Twig is comparable with the if statements of PHP"
     },
     "import": {
@@ -161,43 +161,43 @@
     "macro": {
         "prefix": "macro",
         "body": [
-        "{% macro ${name}($0) %}",
-        "\t$2",
-        "{% endmacro %}"
+            "{% macro ${name}($0) %}",
+            "\t$2",
+            "{% endmacro %}"
         ],
         "description": "Twig snippets"
     },
     "sandbox": {
         "prefix": "sandbox",
         "body": [
-        "{% sandbox %}",
-        "\t$0",
-        "{% endsandbox %}"
+            "{% sandbox %}",
+            "\t$0",
+            "{% endsandbox %}"
         ],
         "description": "The sandbox tag can be used to enable the sandboxing mode for an included template, when sandboxing is not enabled globally for the Twig environment"
     },
     "set": {
         "prefix": "set",
         "body": [
-        "{% set ${name} = ${value} %}"
+            "{% set ${name} = ${value} %}"
         ],
         "description": "Assign values to variables"
     },
     "set block": {
         "prefix": "set (block)",
         "body": [
-        "{% set ${name} %}",
-        "\t$0",
-        "{% endset %}"
+            "{% set ${name} %}",
+            "\t$0",
+            "{% endset %}"
         ],
         "description": "Inside code blocks you can also assign values to variables. Assignments use the set tag and can have multiple targets"
     },
     "spaceless": {
         "prefix": "spaceless",
         "body": [
-        "{% spaceless %}",
-        "\t$0",
-        "{% endspaceless %}"
+            "{% spaceless %}",
+            "\t$0",
+            "{% endspaceless %}"
         ],
         "description": "Use the spaceless tag to remove whitespace between HTML tags, not whitespace within HTML tags or whitespace in plain text"
     },
@@ -206,14 +206,20 @@
         "body": "{% use \"${fileName}.html.twig\" %}",
         "description": "Twig snippets"
     },
-    "verbatim":{
+    "verbatim": {
         "prefix": "verbatim",
         "body": [
-        "{% verbatim %}",
-        "\t$0",
-        "{% endverbatim %}"
+            "{% verbatim %}",
+            "\t$0",
+            "{% endverbatim %}"
         ],
         "description": "The verbatim tag marks sections as being raw text that should not be parsed. For example to put Twig syntax as example into a template you can use this snippet"
+    },
+    "Symfony provides a specialized Twig tag trans to help with message translation of static blocks of text": {
+        "prefix": "trans",
+        "body": [
+            "{% trans %}$1{% endtrans %}"
+        ],
+        "description": "Symfony provides a specialized Twig tag trans to help with message translation of static blocks of text"
     }
-
 }
