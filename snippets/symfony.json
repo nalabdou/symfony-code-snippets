@@ -5,7 +5,7 @@
             " * @Route(\"${Route}\", name=\"${RouteName}\")\r",
             " * @IsGranted(\"${ROLE_ADMIN}\")",
             " */\r",
-            "public function ${FunctionName}(): Reponse\r",
+            "public function ${FunctionName}(): Response\r",
             "{\r",
             "    return \\$this->render('$0.html.twig', []);\r",
             "}"
