@@ -9,6 +9,11 @@
         "body": "{% $1 %}",
         "description": "{% %}"
     },
+    "dd": {
+        "prefix": "dd",
+        "body": "{% dd $1 %}",
+        "description": "Dump and die the variable outputting the data to the page"
+    },
     "autoescape": {
         "prefix": "autoescape",
         "body": [
