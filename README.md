@@ -1,10 +1,14 @@
 # Symfony Code Snippets And Twig Support
 
-Over 50 Symfony Code Snippets for PhP code And Over 50 Twig Code Snippets.
-Just type the letters 'sf' to get a list of all available Symfony Code Snippets.
-For Twig Just Type the Tag name and you will get AutoCompletion.
+Over 100 <strong>symfony snippets</strong> for php code And Over 50 <strong>twig snippets</strong>.
+Just type the letters 'sf' to get a list of all available symfony snippets.
+For twig just type the tag name and you will get AutoCompletion.
 
-## For using the snippets in the Annotations Comments you need to add this Code To Your Settings.json File
+### You can use it in the annotations comments
+
+![Image-of-Snippets-comments](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/in-comments.gif)
+
+### For annotations you need to add this code to your settings.json file
 
 ```json
     "editor.quickSuggestions": {
@@ -14,19 +18,15 @@ For Twig Just Type the Tag name and you will get AutoCompletion.
     }
 ```
 
-### You Can Use It In The Annotations Comments
-
-![Image-of-Snippets-comments](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/in-comments.gif)
-
-### You Can Use It In The PHP Code :elephant:
+### You can use it in the .php files
 
 ![Image-of-Snippets-php-code](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/Controller.gif)
 
-### You Can Use It In Twig Files :green_heart:
+### You can use it in .twig files
 
 ![Image-of-Snippets-twig](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/twig.gif)
 
-### You Can Use It In Yaml Files :zap:
+### You can use it in .yaml files
 
 ![Image-of-Snippets-yaml](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/yaml.png)
 
@@ -106,7 +106,7 @@ sfVichUploadable | use this snippets to gereate the Annotation for Vich Uploader
 sfVichField | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\UploadableField(...)
 
 # Twig 
-## Add these lines to your VS Code settings to get emmet working and also to associate HTML files as twig syntax.
+### Add these lines to your VS Code settings to get emmet working and also to associate HTML files as twig syntax.
 
 ```json
 "files.associations": {
@@ -216,20 +216,11 @@ sfEncoder | snippet to generate encoder password in yaml file
 sfNewProvider | new provider for your user
 sfProvider | symfony main fierwall for add the provider and login logout path
 sfMappingsVich | yaml snippet to add vich uploader configration
+sfRoute | symfony yaml new Route
 
 ## 🤝 Contributing
 
-👤 **Nadim Al Abdou**
-
-* Github: [@nalabdou](https://github.com/nalabdou)
-
-👤 **Xun Zhou**
-
-* Github [@vikbert](https://github.com/vikbert)
-
-👤 **Oliver Freyermuth**
-
-* Github [@olifre](https://github.com/olifre)
+see [contributors](https://github.com/nalabdou/Symfony-code-snippets/graphs/contributors)
 
 Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/nalabdou/Symfony-code-snippets/issues).
 
@@ -241,5 +232,5 @@ Give a ⭐️ if this project helped you !
 
 ## 📝 License
 
-Copyright © 2020 [Nadim Al Abdou](https://github.com/nalabdou).<br />
+Copyright © 2020 [Nadim Al Abdou](https://linkedin.com/in/nalabdou).<br />
 This project is [GPL3](https://github.com/nalabdou/Symfony-code-snippets/blob/master/LICENSE) licensed.

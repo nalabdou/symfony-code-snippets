@@ -1,9 +1,14 @@
 {
     "symfonyTwigTheme": {
         "body": [
-            "form_themes: ['bootstrap_4_layout.html.twig']"
+            "form_themes: ['${1|form_div_layout.html.twig,form_table_layout.html.twig,bootstrap_3_layout.html.twig,bootstrap_3_horizontal_layout.html.twig,bootstrap_4_layout.html.twig,bootstrap_4_horizontal_layout.html.twig,foundation_5_layout.html.twig,foundation_6_layout.html.twig|}']"
         ],
-        "prefix": "sfBootstrap",
+        "prefix": [
+            "NewFormTheme",
+            "theme",
+            "formTheme",
+            "sfFormTheme"
+        ],
         "description": "yaml snippet to add the bootstrap theme to our form display"
     },
     "symfony yaml password encoder": {
@@ -12,7 +17,12 @@
             "\tApp\\Entity\\User:\r",
             "\t\talgorithm: auto"
         ],
-        "prefix": "sfEncoder",
+        "prefix": [
+            "NewEncoder",
+            "encoder",
+            "userPasswordEncoder",
+            "sfEncoder"
+        ],
         "description": "snippet for yaml files generate encoder password in yaml file "
     },
     "add new provider": {
@@ -22,7 +32,11 @@
             "        property: username\r",
             "        class: App\\Entity\\User"
         ],
-        "prefix": "sfNewProvider",
+        "prefix": [
+            "NewProvider",
+            "provider",
+            "sfNewProvider"
+        ],
         "description": "new provider for your users"
     },
     "symfony main fierwall for add the provider and login logout path": {
@@ -35,7 +49,10 @@
             "    path: $4\r",
             "    target: $5"
         ],
-        "prefix": "sfProvider",
+        "prefix": [
+            "NewProviderInFierwall",
+            "sfProvider"
+        ],
         "description": "symfony main fierwall for add the provider and login logout path"
     },
     "symfonyMappingsVich": {
@@ -46,7 +63,26 @@
             "\t\tupload_destination: '%kernel.project_dir%/public/${path}/${to}/${folder}'\r",
             "\t\tnamer: Vich\\UploaderBundle\\Naming\\SmartUniqueNamer\r"
         ],
-        "prefix": "sfMappingsVich",
+        "prefix": [
+            "NewMappingsVich",
+            "vich",
+            "vichMapping",
+            "sfMappingsVich"
+        ],
         "description": "yaml snippet to add vich uploader configration"
+    },
+    "symfony yaml new Route": {
+        "body": [
+            "${route_name}:",
+            "    path: /${routePath}",
+            "    controller: App\\Controller\\\\${YourController}::${ControllerFunction}"
+        ],
+        "prefix": [
+            "NewRoute",
+            "Route",
+            "route",
+            "sfRoute"
+        ],
+        "description": "symfony yaml new Route"
     }
 }

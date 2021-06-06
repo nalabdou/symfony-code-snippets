@@ -43,27 +43,7 @@
         "snippets": [
             {
                 "language": "twig",
-                "path": "./snippets/filters.json"
-            },
-            {
-                "language": "twig",
                 "path": "./snippets/twig.json"
-            },
-            {
-                "language": "twig",
-                "path": "./snippets/functions.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/filters.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/twig.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/functions.json"
             },
             {
                 "language": "php",
@@ -92,23 +72,16 @@
             {
                 "language": "twig",
                 "scopeName": "text.html.twig",
-                "path": "./syntaxes/twig.tmLanguage",
-                "embeddedLanguages": {
-                    "source.json": "json",
-                    "source.css": "css",
-                    "source.css.scss": "scss",
-                    "source.js": "javascript",
-                    "source.ts": "typescript"
-                }
-            },
-            {
-                "language": "html",
-                "scopeName": "text.html.twig",
                 "path": "./syntaxes/twig.tmLanguage"
             }
         ]
     },
     "devDependencies": {
         "vscode": "^1.1.36"
-    }
+    },
+    "galleryBanner": {
+        "color": "#353091",
+        "theme": "dark"
+    },
+    "qna": "marketplace"
 }
