@@ -162,6 +162,7 @@ date | `date("m/d/Y")` | Filter
 datef | `{% set currentDate = date() %}` | Function
 date_modify | `date_modify("+1 day")` | Function
 default | `default('defaultValue')` | Function
+defined | `is defined` | Test
 dump | `<pre>{{ dump(array) }}</pre>` | Function
 do | `{% do someOp %}` | Tag
 else | `{% else %}` | Tag
