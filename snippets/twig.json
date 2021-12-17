@@ -39,6 +39,13 @@
         ],
         "description": "The do tag works exactly like the regular variable expression ({{ ... }}) just that it doesn't print anything"
     },
+    "defined": {
+        "prefix": "defined",
+        "body": [
+            "is defined"
+        ],
+        "description": "Is defined is used for checks if a variable is defined in the current context."
+    },
     "embed": {
         "prefix": "embed",
         "body": [
