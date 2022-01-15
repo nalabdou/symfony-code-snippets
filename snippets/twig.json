@@ -570,5 +570,10 @@
         "prefix": "comment",
         "body": "$BLOCK_COMMENT_START ${comment} $BLOCK_COMMENT_END",
         "description": "add block comment"
+    },
+    "end": {
+        "prefix": "end",
+        "body": "{% end${condition} %}",
+        "description": "The if statement in Twig is comparable with the if statements of PHP"
     }
 }
