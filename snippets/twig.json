@@ -153,7 +153,7 @@
     },
     "import": {
         "prefix": "import",
-        "body": "{% import \"${fileName}.html.twig\" as ${alias}%}",
+        "body": "{% import \"${fileName}.html.twig\" as ${alias} %}",
         "description": "Twig supports putting often used code into macros. These macros can go into different templates and get imported from there."
     },
     "_self": {
@@ -570,5 +570,10 @@
         "prefix": "comment",
         "body": "$BLOCK_COMMENT_START ${comment} $BLOCK_COMMENT_END",
         "description": "add block comment"
+    },
+    "end": {
+        "prefix": "end",
+        "body": "{% end${condition} %}",
+        "description": "The if statement in Twig is comparable with the if statements of PHP"
     }
 }
