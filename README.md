@@ -132,6 +132,7 @@ csrf | `{{ csrf_token(intention) }}` | Symfony
 isGranted | `{% if is_granted('ROLE_NAME',object,field) %} {% endif %}` |Symfony
 url | `{{ url(route_name,{options}) }}` | Symfony
 formErrors | `{{ form_errors(form) }}` | Symfony
+formLabel | `{{ form_label(form) }}` | Symfony
 formRow | `{{ form_row(form.name) }}` | Symfony
 formRest | `{{ form_rest(form) }}` | Symfony
 formTheme | `{% form_theme form resourcesPath %}` | Symfony
