@@ -405,9 +405,16 @@
             "{{ form_errors(form) }}"
         ],
         "prefix": "formErrors",
-        "description": "Renders the HTML widget of a given field. If you apply this to an entire form or collection of fields, each underlying form row will be rendered."
+        "description": "Renders any errors for the given field."
     },
-    "twig  form row": {
+    "twig form label": {
+        "body": [
+            "{{ form_label(form) }}"
+        ],
+        "prefix": "formLabel",
+        "description": "Renders the label for the given field. You can optionally pass the specific label you want to display as the second argument."
+    },
+    "twig form row": {
         "body": [
             "{{ form_row(form.name) }}"
         ],
@@ -569,11 +576,11 @@
     "block comment": {
         "prefix": "comment",
         "body": "$BLOCK_COMMENT_START ${comment} $BLOCK_COMMENT_END",
-        "description": "add block comment"
+        "description": "Add block comment"
     },
     "end": {
         "prefix": "end",
         "body": "{% end${condition} %}",
-        "description": "The if statement in Twig is comparable with the if statements of PHP"
+        "description": "Add end block"
     }
 }
