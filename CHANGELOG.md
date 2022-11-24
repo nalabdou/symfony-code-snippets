@@ -47,3 +47,14 @@
 - Add Support For Symfony Yaml file Syntaxes And Snippets (working 10%)
 - Add More Symfony Php Code Snippets (working 20%)
 - Add Custom Snippets
+
+## [1.3.0] 2020-04-10
+
+### Drop Twig and Yaml Support
+
+#### Future Goals
+
+- Update Symfony Snippets to use Symfony 6.0
+- Create A New Extension For Twig
+- Create A New Extension For Yaml
+- Add More Symfony Php Code Snippets (working 20%)
