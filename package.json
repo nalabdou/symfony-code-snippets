@@ -1,8 +1,8 @@
 {
     "name": "symfony-code-snippets",
-    "displayName": "Symfony code snippets And Twig Support & Yaml",
+    "displayName": "Symfony code snippets",
     "icon": "icon.png",
-    "description": "Over 100 Symfony Code Snippets for PhP code And Over 80 Twig Code Snippets. Just type the letters 'sf' to get a list of all available Symfony Code Snippets. For Twig Just Type the Tag name and you will get AutoCompletion.",
+    "description": "Over 100 Symfony code snippets. Just type the letters 'sf' to get a list of all available Symfony code snippets.",
     "publisher": "nadim-vscode",
     "author": {
         "name": "Nadim Al Abdou",
@@ -27,52 +27,20 @@
         "Other"
     ],
     "keywords": [
-        "twig",
         "snippets",
         "completion",
-        "template",
         "symfony",
-        "php",
-        "yaml"
+        "php"
     ],
     "activationEvents": [
-        "*"
+        "onLanguage:php"
     ],
     "main": "./extension",
     "contributes": {
         "snippets": [
             {
-                "language": "twig",
-                "path": "./snippets/twig.json"
-            },
-            {
                 "language": "php",
                 "path": "./snippets/symfony.json"
-            },
-            {
-                "language": "yaml",
-                "path": "./snippets/yaml.json"
-            }
-        ],
-        "languages": [
-            {
-                "id": "twig",
-                "aliases": [
-                    "HTML (Twig)",
-                    "twig"
-                ],
-                "extensions": [
-                    ".twig",
-                    ".html.twig"
-                ],
-                "configuration": "./twig.configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "twig",
-                "scopeName": "text.html.twig",
-                "path": "./syntaxes/twig.tmLanguage"
             }
         ]
     },
