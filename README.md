@@ -1,8 +1,8 @@
-# Symfony Code Snippets And Twig Support
+# Symfony code snippets
 
-Over 100 <strong>symfony snippets</strong> for php code And Over 50 <strong>twig snippets</strong>.
+Over 100 <strong>symfony snippets</strong> for php code in Visual Studio Code.
+
 Just type the letters 'sf' to get a list of all available symfony snippets.
-For twig just type the tag name and you will get AutoCompletion.
 
 ### You can use it in the annotations comments
 
@@ -21,14 +21,6 @@ For twig just type the tag name and you will get AutoCompletion.
 ### You can use it in the .php files
 
 ![Image-of-Snippets-php-code](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/Controller.gif)
-
-### You can use it in .twig files
-
-![Image-of-Snippets-twig](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/twig.gif)
-
-### You can use it in .yaml files
-
-![Image-of-Snippets-yaml](https://cdn.statically.io/gh/nalabdou/Symfony-code-snippets/e8ea6e26/images/yaml.png)
 
 ## Snippets Symfony
 
@@ -104,120 +96,6 @@ sfPre | use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate .
 sfRoute | use this snippet to get the @Route of symfony
 sfVichUploadable | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\Uploadable
 sfVichField | use this snippets to gereate the Annotation for Vich Uploader Bundle @Vich\UploadableField(...)
-
-# Twig 
-### Add these lines to your VS Code settings to get emmet working and also to associate HTML files as twig syntax.
-
-```json
-"files.associations": {
-    "*.html": "twig"
-},
-"emmet.includeLanguages": {
-    "twig": "html"
-},
-```
-
-## Symfony Twig Snippets
-
-Trigger | Twig Code | Type
----|---|---
-asset | `{{ asset('') }}` | Symfony
-formStart | `{{ form_start(form) }}` | Symfony
-formWidget | `{{ form_widget(form) }}` | Symfony
-formEnd | `{{ form_end(form) }}` | Symfony
-path | `{{ path(route) }}` | Symfony
-render | `{{ render(uri, {options}) }}` | Symfony
-controller | `{{ controller(controller, {attributes}, {query}) }}` |Symfony
-csrf | `{{ csrf_token(intention) }}` | Symfony
-isGranted | `{% if is_granted('ROLE_NAME',object,field) %} {% endif %}` |Symfony
-url | `{{ url(route_name,{options}) }}` | Symfony
-formErrors | `{{ form_errors(form) }}` | Symfony
-formRow | `{{ form_row(form.name) }}` | Symfony
-formRest | `{{ form_rest(form) }}` | Symfony
-formTheme | `{% form_theme form resourcesPath %}` | Symfony
-absolute_url |`{{ absolute_url(${path}) }}` | Symfony
-relative_path | `{{ relative_path(${path}) }}` | Symfony
-humanize | `humanize` | Symfony
-yaml_encode | `yaml_encode()` | Symfony
-yaml_dump | `yaml_dump()` | Symfony
-abbr_class | `abbr_class` | Symfony
-abbr_method | `abbr_method` | Symfony
-format_args | `format_args` | Symfony
-format_args_as_text | `format_args_as_text` | Symfony
-encoreJs | `{{ encore_entry_scropt_tags('app') }}` | Symfony
-encoreCss | `{{ encore_entry_link_tags('app') }}` | Symfony
-
-### Syntaxes Twig
-
-Trigger | Twig Code | Type
----|---|---
-attribute | `{{ attribute() }}` | Function
-autoescape | `{% autoescape %}{% endautoescape %}` | Tag
-block | `{% block name %}{% endblock %}` | Tag
-batch | `batch(size, fill)` | Filter
-constant | `{{ constant('constName') }}` | Test
-convert_encoding | `convert_encoding('to', 'from')` | Filter
-cycle | `{{ cycle(array, position) }}` | Filter
-date | `date("m/d/Y")` | Filter
-datef | `{% set currentDate = date() %}` | Function
-date_modify | `date_modify("+1 day")` | Function
-default | `default('defaultValue')` | Function
-defined | `is defined` | Test
-dump | `<pre>{{ dump(array) }}</pre>` | Function
-do | `{% do someOp %}` | Tag
-else | `{% else %}` | Tag
-else if | `{% elseif condition %}` | Tag
-embed | `{% embed "fileName.html.twig" %}{% endembed  %}` | Tag
-execute | `{%  %}` | NULL
-extends |`{% extends "fileName.html.twig" %}`| Tag
-filter |`{% filter filterName %}{% endfilter  %}` | Tag
-flush | `{% flush %}` | Tag
-for | `{% for row in array %}{% endfor %}` | Tag
-for else | `{% for row in array %}{% else %}{% endfor %}` | Tag
-for if else | `{% for row in array if condition %}{% else %}{% endfor %}` | Tag
-format | `format()` | Filter
-formTwig | `{{form_start(form)}}{{form_widget(form)}}{{form_end(form)}}` | Function
-if | `{% if condition %}{% endif %}` | Tag
-if else | `{% if condition %}{% else %}{% endif %}` | Tag
-import | `{% import "fileName.html.twig" as alias %}` | Tag
-include | `{% include "fileName.html.twig" %}` | Tag
-join | `join('separator')` | Filter
-json_encode | `json_encode()` | Filter
-loop | `loop.` | Filter With AutoComplation
-macro | `{% macro name() %}{% endmacro %}` | Tag
-max | `{% set result = max(array) %}` | Filter
-merge | `merge(array)` | Filter
-min | `{% set result = min(array) %}` | Filter
-number_format | `number_format(1, '${.}', '${,}')` | Filter
-parent | `{{ parent() }}` | Function
-random | `{% set result = random() %}` | Function
-range | `range(low, high, step)` | Function
-range set | `{% set result = range(low, high, step) %}` | Function
-replace | `replace('search' : 'replace')` | Filter
-round | `round(, 'floor')` | Filter
-sandbox | `{% sandbox %}{% endsandbox %}` | Tag
-set | `{% set varName = value %}` | Tag
-show | `{{  }}` | Null
-slice | `slice(start, length)` | Filter
-source | `{{ source('fileName.html.twig') }}` | Tag
-spaceless | `{% spaceless %}{% endspaceless %}` | Tag
-split | `split('')` | Filter
-self | `_self` | Null
-template | `{{ include(template_from_string("strings")) }}` | Function
-trim | `trim('')` | Filter
-use | `{% use "fileName.html.twig" %}` | Tag
-verbatim | `{% verbatim %}{% endverbatim %}` | Tag
-
-### Yaml Snippets
-
-Trigger | Description
---- | ---
-sfBootstrap | yaml snippet to add the bootstrap theme to our form display form_themes
-sfEncoder | snippet to generate encoder password in yaml file
-sfNewProvider | new provider for your user
-sfProvider | symfony main fierwall for add the provider and login logout path
-sfMappingsVich | yaml snippet to add vich uploader configration
-sfRoute | symfony yaml new Route
 
 ## 🤝 Contributing
 
