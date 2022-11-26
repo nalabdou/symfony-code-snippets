@@ -1,0 +1,151 @@
+{
+    "symfony controller": {
+        "prefix": "sf:controller",
+        "body": [
+            "namespace ${1:App\\Controller};\n",
+            "use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;",
+            "use Symfony\\Component\\HttpFoundation\\\\${2|Response,JsonResponse,BinaryFileResponse,RedirectResponse,StreamedResponse|};",
+            "use Symfony\\Component\\nouting\\Annotation\\noute;\n",
+            "class ${3:${TM_FILENAME/.php//}} extends AbstractController",
+            "{",
+            "\t#[Route('${4:/}', name: '${5:home}')]",
+            "\tpublic function ${6:action}(): ${7|Response,JsonResponse,BinaryFileResponse,RedirectResponse,StreamedResponse|}",
+            "\t{",
+            "\t\t${8:// ...}",
+            "\t}${0}",
+            "}"
+        ],
+        "description": "Create a new controller class"
+    },
+    "symfony controller function": {
+        "prefix": "sf:function",
+        "body": [
+            "#[Route('${1:/}', name: '${2:home}')]",
+            "public function ${3:action}(): ${4|Response,JsonResponse,BinaryFileResponse,RedirectResponse,StreamedResponse|}",
+            "{",
+            "\treturn ${5|$this->render('template.html.twig'),$this->renderForm('template.html.twig'),$this->json($json),$this->redirect($url),$this->redirectToRoute($route),new JsonResponse($data),new Response($data),new RedirectResponse($url)|};",
+            "}${0}"
+        ],
+        "description": "controller function",
+    },
+    "symfony route": {
+        "prefix": "sf:route",
+        "body": "#[Route(path: '${1:/}', name: '${2:home}', methods: ${3:['${4|GET,POST,PUT,PATCH,DELETE|}']})]${0}",
+        "description": "Route attribute"
+    },
+    "symfony controller function return": {
+        "prefix": "sf:return",
+        "body": "return ${1|$this->render('template.html.twig'),$this->renderForm('template.html.twig'),$this->json($json),$this->redirect($url),$this->redirectToRoute($route),new JsonResponse($data),new Response($data),new RedirectResponse($url)|};",
+        "description": "controller function return"
+    },
+    "symfony controller function render": {
+        "prefix": "sf:render",
+        "body": "\\$this->${1|render,renderForm,renderView|}('${2:${3:template}.html.twig}', ${4:['${5:var}' => ${6:\\$var}]});",
+        "description": "controller function render"
+    },
+    "symfony controller function json": {
+        "prefix": "sf:json",
+        "body": "\\$this->json(${1:\\$data});",
+        "description": "Returns a JsonResponse that uses the serializer component if enabled, or json_encode."
+    },
+    "symfony controller function redirect": {
+        "prefix": "sf:redirect",
+        "body": "\\$this->${1|redirect,redirectToRoute|}('${2:${3:path}}');",
+        "description": "Returns a RedirectResponse to the given URL or given route with the given parameters."
+    },
+    "symfony controller function response": {
+        "prefix": "sf:response",
+        "body": "new ${1|Response,JsonResponse,BinaryFileResponse,RedirectResponse,StreamedResponse|}(${2:\\$data});",
+        "description": "controller function response"
+    },
+    "symfony controller is granted": {
+        "prefix": "sf:attr:isGranted",
+        "body": "#[IsGranted('${1|ROLE_USER,ROLE_ADMIN|}')]${0}",
+        "description": "isGranted attribute"
+    },
+    "symfony controller set container": {
+        "prefix": "sf:container",
+        "body": "\\$this->setContainer(${1:\\$container});",
+        "description": "controller function setContainer"
+    },
+    "symfony controller get parameter": {
+        "prefix": "sf:parameter",
+        "body": "\\$this->getParameter('${1:parameter}');",
+        "description": "Gets a container parameter by its name."
+    },
+    "symfony controller get subscribed services": {
+        "prefix": "sf:subscribedServices",
+        "body": "\\$this->getSubscribedServices();",
+        "description": "controller function getSubscribedServices"
+    },
+    "symfony controller generate url": {
+        "prefix": "sf:url",
+        "body": "\\$this->generateUrl('${1:route}');",
+        "description": "Generates a URL from the given parameters."
+    },
+    "symfony controller forward": {
+        "prefix": "sf:forward",
+        "body": "\\$this->forward('${1:controller}', ${2:['${3:var}' => ${4:\\$var}]});",
+        "description": "Forwards the request to another controller."
+    },
+    "symfony controller file": {
+        "prefix": "sf:file",
+        "body": "\\$this->file('${1:file}');",
+        "description": "Returns a BinaryFileResponse object with original or customized file name and disposition header."
+    },
+    "symfony controller add flash": {
+        "prefix": "sf:flash",
+        "body": "\\$this->addFlash('${1|notice,info,error,success,warning|}', '${2:Your changes were saved!}');",
+        "description": "Adds a flash message to the current session for type."
+    },
+    "symfony controller isGranted": {
+        "prefix": "sf:isGranted",
+        "body": "\\$this->isGranted('${1|ROLE_USER,ROLE_ADMIN|}');",
+        "description": "Checks if the attribute is granted against the current authentication token and optionally supplied subject."
+    },
+    "symfony controller denyAccessUnlessGranted": {
+        "prefix": "sf:deny",
+        "body": "\\$this->denyAccessUnlessGranted('${1|ROLE_USER,ROLE_ADMIN|}');",
+        "description": "Throws an exception unless the attribute is granted against the current authentication token and optionally supplied subject."
+    },
+    "symfony controller stream": {
+        "prefix": "sf:stream",
+        "body": "\\$this->stream(${1:'template.html.twig'}, ${2:['${3:var}' => ${4:\\$var}]});",
+        "description": "Streams a view."
+    },
+    "symfony controller createNotFoundException": {
+        "prefix": "sf:notFound",
+        "body": "\\$this->createNotFoundException('${1:Not found');",
+        "description": "Returns a NotFoundHttpException."
+    },
+    "symfony controller createAccessDeniedException": {
+        "prefix": "sf:accessDenied",
+        "body": "\\$this->createAccessDeniedException('${1:Access denied');",
+        "description": "Returns an AccessDeniedException."
+    },
+    "symfony controller createForm": {
+        "prefix": "sf:createForm",
+        "body": "\\$this->createForm(${1:Type::class}, ${2:\\$data});",
+        "description": "Creates and returns a Form instance from the type of the form."
+    },
+    "symfony controller createFormBuilder": {
+        "prefix": "sf:createFormBuilder",
+        "body": "\\$this->createFormBuilder(${1:\\$data});",
+        "description": "Creates and returns a form builder instance."
+    },
+    "symfony controller getUser": {
+        "prefix": "sf:getUser",
+        "body": "\\$this->getUser();",
+        "description": "Get a user from the Security Token Storage."
+    },
+    "symfony controller isCsrfTokenValid": {
+        "prefix": "sf:isCsrfTokenValid",
+        "body": "\\$this->isCsrfTokenValid('${1:token}', '${2:token}');",
+        "description": "Checks the validity of a CSRF token."
+    },
+    "symfony controller addLink": {
+        "prefix": "sf:addLink",
+        "body": "\\$this->addLink(${1:\\$link});",
+        "description": "Adds a Link HTTP header to the current response."
+    },
+}

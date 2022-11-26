@@ -1,0 +1,51 @@
+{
+    "symfony twig component": {
+        "prefix": "sf:twig:component",
+        "body": [
+            "namespace ${1:App\\Twig\\Components};\n",
+            "use Symfony\\UX\\TwigComponent\\Attribute\\\\${2|AsLiveComponent,AsTwigComponent|};\n",
+            "#[${2|AsTwigComponent,AsLiveComponent|}('${3:component_name}')]",
+            "final class ${4:${TM_FILENAME/.php//}}",
+            "{",
+            "\t${5:use DefaultActionTrait;}",
+            "\t${6:use LiveCollectionTrait;}",
+            "}"
+        ],
+        "description": "Create a new twig component class"
+    },
+    "symfony twig component #[ExposeInTemplate]": {
+        "prefix": "sf:exposeInTemplate",
+        "body": "#[ExposeInTemplate('${1:var_name}')]",
+        "description": "ExposeInTemplate attribute"
+    },
+    "symfony twig component preMount": {
+        "prefix": "sf:preMount",
+        "body": [
+            "#[PreMount]",
+            "\tpublic function preMount(): void",
+            "\t{",
+            "\t}"
+        ],
+        "description": "preMount method"
+    },
+    "symfony twig component postMount": {
+        "prefix": "sf:postMount",
+        "body": [
+            "#[postMount]",
+            "\tpublic function postMount(): void",
+            "\t{",
+            "\t}"
+        ],
+        "description": "postMount method"
+    },
+    "symfony twig component #[LiveProp]": {
+        "prefix": "sf:liveProp",
+        "body": "#[LiveProp${1:(writable: ${2|true,false|})}]",
+        "description": "LiveProp attribute"
+    },
+    "symfony twig component #[LiveAction]": {
+        "prefix": "sf:liveAction",
+        "body": "#[LiveAction]",
+        "description": "LiveAction attribute"
+    },
+}

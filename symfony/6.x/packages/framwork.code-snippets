@@ -1,0 +1,58 @@
+{
+    "validator createValidator": {
+        "prefix": "val:createValidator",
+        "body": "\\$${1:validator} = Validation::createValidator();",
+        "description": "Validator createValidator"
+    },
+    "symfony event dispatcher EventListener": {
+        "prefix": "sf:listener",
+        "body": [
+            "namespace ${1:App\\EventListener};\n",
+            "use Symfony\\Component\\EventDispatcher\\Attribute\\AsEventListener;\n",
+            "#[AsEventListener(event: '${2:bar}', method: '${3:onBarEvent}')]",
+            "final class ${4:${TM_FILENAME/.php//}}",
+            "{\n",
+            "\tpublic function ${3:onBarEvent}(): void",
+            "\t{",
+            "\t\t// ...",
+            "\t}",
+            "}"
+        ],
+        "description": "Create a new event listener class"
+    },
+    "symfony event dispatcher EventSubscriber": {
+        "prefix": "sf:subscriber",
+        "body": [
+            "namespace ${1:App\\EventSubscriber};\n",
+            "use Symfony\\Component\\EventDispatcher\\EventSubscriberInterface;",
+            "use Symfony\\Component\\HttpKernel\\Event\\RequestEvent;\n",
+            "class ${4:${TM_FILENAME/.php//}} implements EventSubscriberInterface",
+            "{",
+            "\tpublic static function getSubscribedEvents(): array",
+            "\t{",
+            "\t\treturn [",
+            "\t\t\tRequestEvent::class => 'onKernelRequest',",
+            "\t\t];",
+            "\t}",
+            "",
+            "\tpublic function onKernelRequest(RequestEvent \\$event)",
+            "\t{",
+            "\t\t// ...",
+            "\t}",
+            "}"
+        ],
+        "description": "Create a new event subscriber class"
+    },
+    "symfony event dispatcher Event": {
+        "prefix": "sf:event",
+        "body": [
+            "namespace ${1:App\\Event};\n",
+            "use Symfony\\Contracts\\EventDispatcher\\Event;",
+            "class ${4:${TM_FILENAME/.php//}} extends Event",
+            "{",
+            "\t// ...",
+            "}"
+        ],
+        "description": "Create a new event class"
+    },
+}
