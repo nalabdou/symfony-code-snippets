@@ -1,0 +1,345 @@
+{
+    "assert constraint #[Assert\\All]": {
+        "prefix": "asrt:all",
+        "body": "#[Assert\\All(${1:constraints: [$0]})]",
+        "description": "Assert constraint #[Assert\\All]"
+    },
+    "assert constraint #[Assert\\AtLeastOneOf]": {
+        "prefix": "asrt:atLeastOneOf",
+        "body": "#[Assert\\AtLeastOneOf(${1:constraints: [$0]})]",
+        "description": "Assert constraint #[Assert\\AtLeastOneOf]"
+    },
+    "assert constraint #[Assert\\Bic]": {
+        "prefix": "asrt:bic",
+        "body": "#[Assert\\Bic(${1:message: '${2:This value is not a valid BIC}'})]",
+        "description": "Assert constraint #[Assert\\Bic]"
+    },
+    "assert constraint #[Assert\\Blank]": {
+        "prefix": "asrt:blank",
+        "body": "#[Assert\\Blank(${1:message: '${2:This value should be blank}'})]",
+        "description": "Assert constraint #[Assert\\Blank]"
+    },
+    "assert constraint #[Assert\\Callback]": {
+        "prefix": "asrt:callback",
+        "body": "#[Assert\\Callback(${1:callback: '${2:callback}'})]",
+        "description": "Assert constraint #[Assert\\Callback]"
+    },
+    "assert constraint #[Assert\\CardScheme]": {
+        "prefix": "asrt:cardScheme",
+        "body": "#[Assert\\CardScheme(${1:schemes: ${2:['${3:visa}']}})]",
+        "description": "Assert constraint #[Assert\\CardScheme]"
+    },
+    "assert constraint #[Assert\\Choice]": {
+        "prefix": "asrt:choice",
+        "body": "#[Assert\\Choice(${1:choices: ${2:['${3:choice}']}}, message: '${4:This value is not valid}')]",
+        "description": "Assert constraint #[Assert\\Choice]"
+    },
+    "assert constraint #[Assert\\Cidr]": {
+        "prefix": "asrt:cidr",
+        "body": "#[Assert\\Cidr(${1:message: '${2:This value is not a valid CIDR}'})]",
+        "description": "Assert constraint #[Assert\\Cidr]"
+    },
+    "assert constraint #[Assert\\Collection]": {
+        "prefix": "asrt:collection",
+        "body": "#[Assert\\Collection(${1:fields: ${2:['${3:field}' => ${4:['${5:constraints}' => ${6:['${7:constraint}']}]}}}])]",
+        "description": "Assert constraint #[Assert\\Collection]"
+    },
+    "assert constraint #[Assert\\Count]": {
+        "prefix": "asrt:count",
+        "body": "#[Assert\\Count(${1:min: ${2:0}}, ${3:max: ${4:0}}, ${5:minMessage: '${6:This collection should contain # elements or more}'}, ${7:maxMessage: '${8:This collection should contain # elements or less}'}, ${9:exactMessage: '${10:This collection should contain exactly # elements}'})]",
+        "description": "Assert constraint #[Assert\\Count]"
+    },
+    "assert constraint #[Assert\\Country]": {
+        "prefix": "asrt:country",
+        "body": "#[Assert\\Country(${1:message: '${2:This value is not a valid country}'})]",
+        "description": "Assert constraint #[Assert\\Country]"
+    },
+    "assert constraint #[Assert\\CssColor]": {
+        "prefix": "asrt:cssColor",
+        "body": "#[Assert\\CssColor(${1:message: '${2:This value is not a valid CSS color}'})]",
+        "description": "Assert constraint #[Assert\\CssColor]"
+    },
+    "assert constraint #[Assert\\Currency]": {
+        "prefix": "asrt:currency",
+        "body": "#[Assert\\Currency(${1:message: '${2:This value is not a valid currency}'})]",
+        "description": "Assert constraint #[Assert\\Currency]"
+    },
+    "assert constraint #[Assert\\Date]": {
+        "prefix": "asrt:date",
+        "body": "#[Assert\\Date(${1:message: '${2:This value is not a valid date}'})]",
+        "description": "Assert constraint #[Assert\\Date]"
+    },
+    "assert constraint #[Assert\\DateTime]": {
+        "prefix": "asrt:dateTime",
+        "body": "#[Assert\\DateTime(${1:message: '${2:This value is not a valid datetime}'})]",
+        "description": "Assert constraint #[Assert\\DateTime]"
+    },
+    "assert constraint #[Assert\\DivisibleBy]": {
+        "prefix": "asrt:divisibleBy",
+        "body": "#[Assert\\DivisibleBy(${1:value: ${2:0}}, ${3:message: '${4:This value should be divisible by ${5:compared_value} '}})]",
+        "description": "Assert constraint #[Assert\\DivisibleBy]"
+    },
+    "assert constraint #[Assert\\Email]": {
+        "prefix": "asrt:email",
+        "body": "#[Assert\\Email(${1:message: '${2:This value is not a valid email address}'})]",
+        "description": "Assert constraint #[Assert\\Email]"
+    },
+    "assert constraint #[Assert\\EqualTo]": {
+        "prefix": "asrt:equalTo",
+        "body": "#[Assert\\EqualTo(${1:value: ${2:0}}, ${3:message: '${4:This value should be equal to ${5:compared_value} '}})]",
+        "description": "Assert constraint #[Assert\\EqualTo]"
+    },
+    "assert constraint #[Assert\\NotBlank]": {
+        "prefix": "asrt:notBlank",
+        "body": "#[Assert\\NotBlank(${1:message: '${2:This value should not be blank}'})]",
+        "description": "Assert constraint #[Assert\\NotBlank]"
+    },
+    "assert constraint #[Assert\\NotNull]": {
+        "prefix": "asrt:notNull",
+        "body": "#[Assert\\NotNull(${1:message: '${2:This value should not be null}'})]",
+        "description": "Assert constraint #[Assert\\NotNull]"
+    },
+    "assert constraint #[Assert\\IsNull]": {
+        "prefix": "asrt:isNull",
+        "body": "#[Assert\\NotNull(${1:message: '${2:This value should be null}'})]",
+        "description": "Assert constraint #[Assert\\IsNull]"
+    },
+    "assert constraint #[Assert\\IsTrue]": {
+        "prefix": "asrt:isTrue",
+        "body": "#[Assert\\IsTrue(${1:message: '${2:This value should be true}'})]",
+        "description": "Assert constraint #[Assert\\IsTrue]"
+    },
+    "assert constraint #[Assert\\IsFalse]": {
+        "prefix": "asrt:isFalse",
+        "body": [
+            "#[Assert\\IsFalse(${1:message: '${2:This value should be false}'})]"
+        ],
+        "description": "Assert constraint #[Assert\\IsFalse]"
+    },
+    "assert constraint #[Assert\\Type]": {
+        "prefix": "asrt:type",
+        "body": [
+            "#[Assert\\Type(",
+            "\t${1:type: '${2|string,array,bool,callable,float,double,int,integer,iterable,long,null,numeric,object,real,resource,scalar|}'},",
+            "\t${3:message: '${4:This value should be of type ${2}.}'},",
+            ")]"
+        ],
+        "description": "Assert constraint #[Assert\\Type]"
+    },
+    "assert constraint #[Assert\\ExpressionSyntax]": {
+        "prefix": "asrt:expressionSyntax",
+        "body": "#[Assert\\ExpressionSyntax(${1:message: '${2:This value is not a valid expression}'})]",
+        "description": "Assert constraint #[Assert\\ExpressionSyntax]"
+    },
+    "assert constraint #[Assert\\Length]": {
+        "prefix": "asrt:length",
+        "body": [
+            "#[Assert\\Length(",
+            "\t${1:min: ${2:0}},",
+            "\t${3:max: ${4:0}},",
+            ")]"
+        ],
+        "description": "Assert constraint #[Assert\\Length]"
+    },
+    "assert constraint #[Assert\\Url]": {
+        "prefix": "asrt:url",
+        "body": "#[Assert\\Url(${1:message: '${2:This value is not a valid URL}'})]",
+        "description": "Assert constraint #[Assert\\Url]"
+    },
+    "assert constraint #[Assert\\Regex]": {
+        "prefix": "asrt:regex",
+        "body": [
+            "#[Assert\\Regex(${1:message: '${2:This value is not valid}'})]"
+        ],
+        "description": "Assert constraint #[Assert\\Regex]"
+    },
+    "assert constraint #[Assert\\Hostname]": {
+        "prefix": "asrt:hostname",
+        "body": [
+            "#[Assert\\Hostname(${1:message: '${2:This value is not a valid hostname}'})]"
+        ],
+        "description": "Assert constraint #[Assert\\Hostname]"
+    },
+    "assert constraint #[Assert\\Ip]": {
+        "prefix": "asrt:ip",
+        "body": [
+            "#[Assert\\Ip(${1:message: '${2:This value is not a valid IP address}'})]"
+        ],
+        "description": "Assert constraint #[Assert\\Ip]"
+    },
+    "assert constraint #[Assert\\Json]": {
+        "prefix": "asrt:json",
+        "body": "#[Assert\\Json(${1:message: '${2:This value is not a valid JSON string}'})]",
+        "description": "Assert constraint #[Assert\\Json]"
+    },
+    "assert constraint #[Assert\\Uuid]": {
+        "prefix": "asrt:uuid",
+        "body": "#[Assert\\Uuid(${1:message: '${2:This value is not a valid UUID}'})]",
+        "description": "Assert constraint #[Assert\\Uuid]"
+    },
+    "assert constraint #[Assert\\Ulid]": {
+        "prefix": "asrt:ulid",
+        "body": "#[Assert\\Ulid(${1:message: '${2:This value is not a valid ULID}'})]",
+        "description": "Assert constraint #[Assert\\Ulid]"
+    },
+    "assert constraint #[UserPassword]": {
+        "prefix": "asrt:userPassword",
+        "body": "#[UserPassword(${1:message: '${2:This value is not a valid password}'})]",
+        "description": "Assert constraint #[UserPassword]"
+    },
+    "assert constraint #[Assert\\NotCompromisedPassword]": {
+        "prefix": "asrt:notCompromisedPassword",
+        "body": "#[Assert\\NotCompromisedPassword(${1:message: '${2:This value is not a valid password}'})]",
+        "description": "Assert constraint #[Assert\\NotCompromisedPassword]"
+    },
+    "assert constraint #[Assert\\NotEqualTo]": {
+        "prefix": "asrt:notEqualTo",
+        "body": "#[Assert\\NotEqualTo(${1:value: '${2:value}'}, ${3:message: '${4:This value should not be equal to compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\NotEqualTo]"
+    },
+    "assert constraint #[Assert\\IdenticalTo]": {
+        "prefix": "asrt:identicalTo",
+        "body": "#[Assert\\IdenticalTo(${1:value: '${2:value}'}, ${3:message: '${4:This value should be identical to compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\IdenticalTo]"
+    },
+    "assert constraint #[Assert\\NotIdenticalTo]": {
+        "prefix": "asrt:notIdenticalTo",
+        "body": "#[Assert\\NotIdenticalTo(${1:value: '${2:value}'}, ${3:message: '${4:This value should not be identical to compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\NotIdenticalTo]"
+    },
+    "assert constraint #[Assert\\LessThan]": {
+        "prefix": "asrt:lessThan",
+        "body": "#[Assert\\LessThan(${1:value: '${2:value}'}, ${3:message: '${4:This value should be less than compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\LessThan]"
+    },
+    "assert constraint #[Assert\\LessThanOrEqual]": {
+        "prefix": "asrt:lessThanOrEqual",
+        "body": "#[Assert\\LessThanOrEqual(${1:value: '${2:value}'}, ${3:message: '${4:This value should be less than or equal to compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\LessThanOrEqual]"
+    },
+    "assert constraint #[Assert\\GreaterThan]": {
+        "prefix": "asrt:greaterThan",
+        "body": "#[Assert\\GreaterThan(${1:value: '${2:value}'}, ${3:message: '${4:This value should be greater than compared_value .'}})]",
+        "description": "Assert constraint #[Assert\\GreaterThan]"
+    },
+    "assert constraint #[Assert\\GreaterThanOrEqual]": {
+        "prefix": "asrt:greaterThanOrEqual",
+        "body": "#[Assert\\GreaterThanOrEqual(${1:value: '${2:value}'}, ${3:message: '${4:This value should be greater than or equal to compared_value.'}})]",
+        "description": "Assert constraint #[Assert\\GreaterThanOrEqual]"
+    },
+    "assert constraint #[Assert\\Range]": {
+        "prefix": "asrt:range",
+        "body": "#[Assert\\Range(${1:min: '${2:0}'}, ${3:max: '${4:100}'}, ${5:message: '${6:This value should be between # and #.'}})]",
+        "description": "Assert constraint #[Assert\\Range]"
+    },
+    "assert constraint #[Assert\\Unique]": {
+        "prefix": "asrt:unique",
+        "body": "#[Assert\\Unique(${1:message: '${2:This collection should contain only unique elements.'}})]",
+        "description": "Assert constraint #[Assert\\Unique]"
+    },
+    "assert constraint #[Assert\\Positive]": {
+        "prefix": "asrt:positive",
+        "body": "#[Assert\\Positive(${1:message: '${2:This value should be positive.'}})]",
+        "description": "Assert constraint #[Assert\\Positive]"
+    },
+    "assert constraint #[Assert\\PositiveOrZero]": {
+        "prefix": "asrt:positiveOrZero",
+        "body": "#[Assert\\PositiveOrZero(${1:message: '${2:This value should be positive or zero.'}})]",
+        "description": "Assert constraint #[Assert\\PositiveOrZero]"
+    },
+    "assert constraint #[Assert\\Negative]": {
+        "prefix": "asrt:negative",
+        "body": "#[Assert\\Negative(${1:message: '${2:This value should be negative.'}})]",
+        "description": "Assert constraint #[Assert\\Negative]"
+    },
+    "assert constraint #[Assert\\NegativeOrZero]": {
+        "prefix": "asrt:negativeOrZero",
+        "body": "#[Assert\\NegativeOrZero(${1:message: '${2:This value should be negative or zero.'}})]",
+        "description": "Assert constraint #[Assert\\NegativeOrZero]"
+    },
+    "assert constraint #[Assert\\Time]": {
+        "prefix": "asrt:time",
+        "body": "#[Assert\\Time(${1:message: '${2:This value is not a valid time.'}})]",
+        "description": "Assert constraint #[Assert\\Time]"
+    },
+    "assert constraint #[Assert\\Timezone]": {
+        "prefix": "asrt:timezone",
+        "body": "#[Assert\\Timezone(${1:message: '${2:This value is not a valid timezone.'}})]",
+        "description": "Assert constraint #[Assert\\Timezone]"
+    },
+    "assert language #[Assert\\Language]": {
+        "prefix": "asrt:language",
+        "body": "#[Assert\\Language(${1:message: '${2:This value is not a valid language.'}})]",
+        "description": "Assert language #[Assert\\Language]"
+    },
+    "assert locale #[Assert\\Locale]": {
+        "prefix": "asrt:locale",
+        "body": "#[Assert\\Locale(${1:message: '${2:This value is not a valid locale.'}})]",
+        "description": "Assert locale #[Assert\\Locale]"
+    },
+    "assert constraint #[Assert\\File]": {
+        "prefix": "asrt:file",
+        "body": "#[Assert\\File(${1:maxSize: '${2:1M}'}, ${3:maxSizeMessage: '${4:The file is too large #. Allowed maximum size is #.'}})]",
+        "description": "Assert constraint #[Assert\\File]"
+    },
+    "assert constraint #[Assert\\Image]": {
+        "prefix": "asrt:image",
+        "body": "#[Assert\\Image($0)]",
+        "description": "Assert constraint #[Assert\\Image]"
+    },
+    "assert constraint #[Assert\\Luhn]": {
+        "prefix": "asrt:luhn",
+        "body": "#[Assert\\Luhn(${1:message: '${2:This value is not a valid credit card number.'}})]",
+        "description": "Assert constraint #[Assert\\Luhn]"
+    },
+    "assert constraint #[Assert\\Iban]": {
+        "prefix": "asrt:iban",
+        "body": "#[Assert\\Iban(${1:message: '${2:This value is not a valid IBAN.'}})]",
+        "description": "Assert constraint #[Assert\\Iban]"
+    },
+    "assert constraint #[Assert\\Isbn]": {
+        "prefix": "asrt:isbn",
+        "body": "#[Assert\\Isbn(${1:message: '${2:This value is not a valid ISBN.'}})]",
+        "description": "Assert constraint #[Assert\\Isbn]"
+    },
+    "assert constraint #[Assert\\Issn]": {
+        "prefix": "asrt:issn",
+        "body": "#[Assert\\Issn(${1:message: '${2:This value is not a valid ISSN.'}})]",
+        "description": "Assert constraint #[Assert\\Issn]"
+    },
+    "assert constraint #[Assert\\Isin]": {
+        "prefix": "asrt:isin",
+        "body": "#[Assert\\Isin(${1:message: '${2:This value is not a valid ISIN.'}})]",
+        "description": "Assert constraint #[Assert\\Isin]"
+    },
+    "assert constraint #[Assert\\Sequentially]": {
+        "prefix": "asrt:sequentially",
+        "body": "#[Assert\\Sequentially(${1:constraints: [${2:}}])]",
+        "description": "Assert constraint #[Assert\\Sequentially]"
+    },
+    "assert constraint #[Assert\\Compound]": {
+        "prefix": "asrt:compound",
+        "body": "#[Assert\\Compound(${1:constraints: [${2:}}])]",
+        "description": "Assert constraint #[Assert\\Compound]"
+    },
+    "assert expression #[Assert\\Expression]": {
+        "prefix": "asrt:expression",
+        "body": "#[Assert\\Expression()]",
+        "description": "Assert expression #[Assert\\Expression]"
+    },
+    "assert valid #[Assert\\Valid]": {
+        "prefix": "asrt:valid",
+        "body": "#[Assert\\Valid()]",
+        "description": "Assert valid #[Assert\\Valid]"
+    },
+    "assert traverse #[Assert\\Traverse]": {
+        "prefix": "asrt:traverse",
+        "body": "#[Assert\\Traverse()]",
+        "description": "Assert traverse #[Assert\\Traverse]"
+    },
+    "assert unique entity #[UniqueEntity]": {
+        "prefix": "asrt:uniqueEntity",
+        "body": "#[UniqueEntity(fields:${1:['${2:}']}, message:'${3:This value is already used.}')]",
+        "description": "Assert unique entity #[UniqueEntity]"
+    },
+}
