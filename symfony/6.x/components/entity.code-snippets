@@ -1,0 +1,188 @@
+{
+    "symfony entity": {
+        "prefix": "sf:entity",
+        "body": [
+            "namespace ${1:App\\Entity};\n",
+            "use Doctrine\\ORM\\Mapping as ORM;\n",
+            "#[ORM\\Entity]",
+            "#[ORM\\Table(name: '`${2:${TM_FILENAME/.php//}}`')]",
+            "class ${3:${TM_FILENAME/.php//}}",
+            "{",
+            "\t#[ORM\\Id]",
+            "\t#[ORM\\GeneratedValue]",
+            "\t#[ORM\\Column]",
+            "\tprivate ?int \\$id = null;\n",
+            "\tpublic function getId(): ?int",
+            "\t{",
+            "\t\treturn \\$this->id;",
+            "\t}",
+            "}"
+        ],
+        "description": "Create a new entity class"
+    },
+    "symfony entity #[ORM\\Column]": {
+        "prefix": "sf:column",
+        "body": "#[ORM\\Column(${1:type: Types::${2|TEXT,STRING,ASCII_STRING,BIGINT,BINARY,BLOB,BOOLEAN,DATE_MUTABLE,DATE_IMMUTABLE,DATEINTERVAL,DATETIME_MUTABLE,DATETIME_IMMUTABLE,DATETIMETZ_MUTABLE,DATETIMETZ_IMMUTABLE,DECIMAL,FLOAT,GUID,INTEGER,JSON,SIMPLE_ARRAY,SMALLINT,TIME_MUTABLE,TIME_IMMUTABLE|}, ${4:nullable: ${5|true,false|}}})]",
+        "description": "ORM\\Column attribute"
+    },
+    "symfony entity #[ORM\\Id]": {
+        "prefix": "sf:id",
+        "body": "#[ORM\\Id]",
+        "description": "ORM\\Id attribute"
+    },
+    "symfony entity #[ORM\\GeneratedValue]": {
+        "prefix": "sf:generatedValue",
+        "body": "#[ORM\\GeneratedValue]",
+        "description": "ORM\\GeneratedValue attribute"
+    },
+    "symfony entity #[ORM\\ManyToOne]": {
+        "prefix": "sf:manyToOne",
+        "body": "#[ORM\\ManyToOne(${1:targetEntity: '${2:App\\Entity\\${3:EntityName}}}')]",
+        "description": "ORM\\ManyToOne attribute"
+    },
+    "symfony entity #[ORM\\OneToMany]": {
+        "prefix": "sf:oneToMany",
+        "body": "#[ORM\\OneToMany(${1:targetEntity: '${2:App\\Entity\\${3:EntityName}}}')]",
+        "description": "ORM\\OneToMany attribute"
+    },
+    "symfony entity #[ORM\\ManyToMany]": {
+        "prefix": "sf:manyToMany",
+        "body": "#[ORM\\ManyToMany(${1:targetEntity: '${2:App\\Entity\\${3:EntityName}}}')]",
+        "description": "ORM\\ManyToMany attribute"
+    },
+    "symfony entity #[ORM\\JoinColumn]": {
+        "prefix": "sf:joinColumn",
+        "body": "#[ORM\\JoinColumn(${1:name: '${2:name}'})]",
+        "description": "ORM\\JoinColumn attribute"
+    },
+    "symfony entity #[ORM\\JoinTable]": {
+        "prefix": "sf:joinTable",
+        "body": "#[ORM\\JoinTable(${1:name: '${2:name}'})]",
+        "description": "ORM\\JoinTable attribute"
+    },
+    "symfony entity #[ORM\\Cache]": {
+        "prefix": "sf:cache",
+        "body": "#[ORM\\Cache(${1:usage: ${2|READ_ONLY,NONSTRICT_READ_WRITE,READ_WRITE|}}, ${3:region: '${4:region}'})]",
+        "description": "ORM\\Cache attribute"
+    },
+    "symfony entity #[ORM\\ChangeTrackingPolicy]": {
+        "prefix": "sf:changeTrackingPolicy",
+        "body": "#[ORM\\ChangeTrackingPolicy(${1:policy: ${2|DEFERRED_EXPLICIT,DEFERRED_IMPLICIT,NOTIFY|}})]",
+        "description": "ORM\\ChangeTrackingPolicy attribute"
+    },
+    "symfony entity  #[ORM\\CustomIdGenerator]": {
+        "prefix": "sf:customIdGenerator",
+        "body": "#[ORM\\CustomIdGenerator(${1:class: '${2:App\\Entity\\${3:EntityName}}'})]",
+        "description": "ORM\\CustomIdGenerator attribute"
+    },
+    "symfony entity #[ORM\\DiscriminatorColumn]": {
+        "prefix": "sf:discriminatorColumn",
+        "body": "#[ORM\\DiscriminatorColumn(${1:name: '${2:name}'}, ${3:type: Types::${4|STRING,INTEGER|}}, ${5:length: ${6:255}})]",
+        "description": "ORM\\DiscriminatorColumn attribute"
+    },
+    "symfony entity #[ORM\\DiscriminatorMap]": {
+        "prefix": "sf:discriminatorMap",
+        "body": "#[ORM\\DiscriminatorMap(${1:discriminatorMap: ${2:['${3:discriminatorName}' => ${4:Entity::class}]})}]",
+        "description": "ORM\\DiscriminatorMap attribute"
+    },
+    "symfony entity #[ORM\\Embeddable]": {
+        "prefix": "sf:embeddable",
+        "body": "#[ORM\\Embeddable]",
+        "description": "ORM\\Embeddable attribute"
+    },
+    "symfony entity #[ORM\\Embedded]": {
+        "prefix": "sf:embedded",
+        "body": "#[ORM\\Embedded(${1:columnPrefix: '${2:prefix}'}, ${3:class: ${4:Entity::class}})]",
+        "description": "ORM\\Embedded attribute"
+    },
+    "symfony entity #[ORM\\EntityListeners]": {
+        "prefix": "sf:entityListeners",
+        "body": "#[ORM\\EntityListeners(${1:['$0']})]",
+        "description": "ORM\\EntityListeners attribute"
+    },
+    "symfony entity #[ORM\\HasLifecycleCallbacks]": {
+        "prefix": "sf:hasLifecycleCallbacks",
+        "body": "#[ORM\\HasLifecycleCallbacks]",
+        "description": "ORM\\HasLifecycleCallbacks attribute"
+    },
+    "symfony entity #[ORM\\Index]": {
+        "prefix": "sf:index",
+        "body": "#[ORM\\Index(${1:name: '${2:name}'}, ${3:columns: ${4:['${5:column}']}})]",
+        "description": "ORM\\Index attribute"
+    },
+    "symfony entity #[ORM\\InheritanceType]": {
+        "prefix": "sf:inheritanceType",
+        "body": "#[ORM\\InheritanceType(${1:value: '${2|SINGLE_TABLE,JOINED,TABLE_PER_CLASS,NONE|}'})]",
+        "description": "ORM\\InheritanceType attribute"
+    },
+    "symfony entity #[ORM\\InverseJoinColumn]": {
+        "prefix": "sf:inverseJoinColumn",
+        "body": "#[ORM\\InverseJoinColumn()]",
+        "description": "ORM\\InverseJoinColumn attribute"
+    },
+    "symfony entity #[ORM\\MappedSuperclass]": {
+        "prefix": "sf:mappedSuperclass",
+        "body": "#[ORM\\MappedSuperclass]",
+        "description": "ORM\\MappedSuperclass attribute"
+    },
+    "symfony entity #[ORM\\PostLoad]": {
+        "prefix": "sf:postLoad",
+        "body": "#[ORM\\PostLoad]",
+        "description": "ORM\\PostLoad attribute"
+    },
+    "symfony entity #[ORM\\PostPersist]": {
+        "prefix": "sf:postPersist",
+        "body": "#[ORM\\PostPersist]",
+        "description": "ORM\\PostPersist attribute"
+    },
+    "symfony entity #[ORM\\PostRemove]": {
+        "prefix": "sf:postRemove",
+        "body": "#[ORM\\PostRemove]",
+        "description": "ORM\\PostRemove attribute"
+    },
+    "symfony entity #[ORM\\PostUpdate]": {
+        "prefix": "sf:postUpdate",
+        "body": "#[ORM\\PostUpdate]",
+        "description": "ORM\\PostUpdate attribute"
+    },
+    "symfony entity #[ORM\\PrePersist]": {
+        "prefix": "sf:prePersist",
+        "body": "#[ORM\\PrePersist]",
+        "description": "ORM\\PrePersist attribute"
+    },
+    "symfony entity #[ORM\\PreRemove]": {
+        "prefix": "sf:preRemove",
+        "body": "#[ORM\\PreRemove]",
+        "description": "ORM\\PreRemove attribute"
+    },
+    "symfony entity #[ORM\\PreUpdate]": {
+        "prefix": "sf:preUpdate",
+        "body": "#[ORM\\PreUpdate]",
+        "description": "ORM\\PreUpdate attribute"
+    },
+    "symfony entity #[ORM\\PreFlush]": {
+        "prefix": "sf:preFlush",
+        "body": "#[ORM\\PreFlush]",
+        "description": "ORM\\PreFlush attribute"
+    },
+    "symfony entity #[ORM\\SequenceGenerator]": {
+        "prefix": "sf:sequenceGenerator",
+        "body": "#[ORM\\SequenceGenerator(${1:sequenceName: '${2:sequenceName}'}, ${3:allocationSize: ${4:1}}, ${5:initialValue: ${6:1}})]",
+        "description": "ORM\\SequenceGenerator attribute"
+    },
+    "symfony entity #[ORM\\Table]": {
+        "prefix": "sf:table",
+        "body": "#[ORM\\Table(${1:name: '${2:table_name}'}, ${3:options: ${4:['${5:option}' => '${6:value}']}})]",
+        "description": "ORM\\Table attribute"
+    },
+    "symfony entity #[ORM\\UniqueConstraint]": {
+        "prefix": "sf:uniqueConstraint",
+        "body": "#[ORM\\UniqueConstraint(${1:name: '${2:name}'}, ${3:columns: ${4:['${5:column}']}})]",
+        "description": "ORM\\UniqueConstraint attribute"
+    },
+    "symfony entity #[ORM\\Version]": {
+        "prefix": "sf:version",
+        "body": "#[ORM\\Version]",
+        "description": "ORM\\Version attribute"
+    },
+}

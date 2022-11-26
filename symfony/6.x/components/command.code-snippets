@@ -1,0 +1,300 @@
+{
+    "symfony command": {
+        "prefix": "sf:command",
+        "body": [
+            "namespace ${1:App\\Command};\n",
+            "use Symfony\\Component\\Console\\Attribute\\AsCommand;",
+            "use Symfony\\Component\\Console\\Command\\Command;",
+            "use Symfony\\Component\\Console\\Input\\InputArgument;",
+            "use Symfony\\Component\\Console\\Input\\InputInterface;",
+            "use Symfony\\Component\\Console\\Input\\InputOption;",
+            "use Symfony\\Component\\Console\\Output\\OutputInterface;",
+            "use Symfony\\Component\\Console\\Style\\SymfonyStyle;\n",
+            "#[AsCommand(",
+            "\tname: '${2:command:name}',",
+            "\tdescription: '${3:Add a short description for your command}',",
+            ")]",
+            "class ${4:${TM_FILENAME/.php//}} extends Command",
+            "{",
+            "\tprotected function configure(): void",
+            "\t{",
+            "\t\t\\$this",
+            "\t\t\t->addArgument('${5:arg1}', InputArgument::${6|OPTIONAL,REQUIRED,IS_ARRAY|}, '${7:Argument description}')",
+            "\t\t\t->addOption('${8:option1}', null, InputOption::${9|VALUE_NONE,VALUE_REQUIRED,VALUE_OPTIONAL,VALUE_IS_ARRAY,VALUE_NEGATABLE|}, '${10:Option description}');",
+            "\t}\n",
+            "\tprotected function execute(InputInterface \\$input, OutputInterface \\$output): int",
+            "\t{",
+            "\t\t\\$io = new SymfonyStyle(\\$input, \\$output);",
+            "\t\t$${5:arg1} = \\$input->getArgument('${5:arg1}');\n",
+            "\t\tif ($${5:arg1}) {",
+            "\t\t\t\\$io->note(sprintf('You passed an argument: %s', $${5:arg1}));",
+            "\t\t}\n",
+            "\t\tif (\\$input->getOption('${8:option1}')) {",
+            "\t\t\t// ...",
+            "\t\t}\n",
+            "\t\t\\$io->success('You have a new command! Now make it your own! Pass --help to see your options.');\n",
+            "\t\treturn Command::SUCCESS;",
+            "\t}",
+            "}\n"
+        ],
+        "description": "Create a new symfony command"
+    },
+    "symfony command AsCommand": {
+        "prefix": "sf:AsCommand",
+        "body": [
+            "#[AsCommand(",
+            "\tname: '${1:command:name}',",
+            "\tdescription: '${2:Add a short description for your command}',",
+            ")]"
+        ],
+        "description": "Service tag to autoconfigure commands"
+    },
+    "symfony command addArgument": {
+        "prefix": "sf:addArgument",
+        "body": [
+            "\t\t->addArgument('${1:arg1}', InputArgument::${2|OPTIONAL,REQUIRED,IS_ARRAY|}, '${3:Argument description}')"
+        ],
+        "description": "Adds an argument."
+    },
+    "symfony command addOption": {
+        "prefix": "sf:addOption",
+        "body": [
+            "\t\t->addOption('${1:option1}', null, InputOption::${2|VALUE_NONE,VALUE_REQUIRED,VALUE_OPTIONAL,VALUE_IS_ARRAY,VALUE_NEGATABLE|}, '${3:Option description}')"
+        ],
+        "description": "Adds an option."
+    },
+    "symfony command ignoreValidationErrors": {
+        "prefix": "sf:ignoreValidationErrors",
+        "body": [
+            "\\$this->ignoreValidationErrors()"
+        ],
+        "description": "Ignores validation errors. (This is mainly useful for the help command.)"
+    },
+    "symfony command setApplication": {
+        "prefix": "sf:setApplication",
+        "body": [
+            "\\$this->setApplication(${1:\\$application})"
+        ],
+        "description": "Sets the application instance for this command."
+    },
+    "symfony command setHelperSet": {
+        "prefix": "sf:setHelperSet",
+        "body": [
+            "\\$this->setHelperSet(${1:\\$helperSet})"
+        ],
+        "description": "Sets the HelperSet instance for this command."
+    },
+    "symfony command getHelperSet": {
+        "prefix": "sf:getHelperSet",
+        "body": [
+            "\\$this->getHelperSet()"
+        ],
+        "description": "Gets the HelperSet instance associated with this command."
+    },
+    "symfony command getApplication": {
+        "prefix": "sf:getApplication",
+        "body": [
+            "\\$this->getApplication()"
+        ],
+        "description": "Gets the application instance for this command."
+    },
+    "symfony command isEnabled": {
+        "prefix": "sf:isEnabled",
+        "body": [
+            "\\$this->isEnabled()"
+        ],
+        "description": "Returns true if the command is enabled."
+    },
+    "symfony command interact": {
+        "prefix": "sf:interact",
+        "body": [
+            "\tprotected function interact(InputInterface \\$input, OutputInterface \\$output)",
+            "\t{",
+            "\t}"
+        ],
+        "description": "Interacts with the user."
+    },
+    "symfony command configure": {
+        "prefix": "sf:configure",
+        "body": [
+            "\tprotected function configure()",
+            "\t{",
+            "\t}"
+        ],
+        "description": "Configures the current command."
+    },
+    "symfony command execute": {
+        "prefix": "sf:execute",
+        "body": [
+            "\tprotected function execute(InputInterface \\$input, OutputInterface \\$output)",
+            "\t{",
+            "\t}"
+        ],
+        "description": "Executes the current command."
+    },
+    "symfony command initialize": {
+        "prefix": "sf:initialize",
+        "body": [
+            "\tprotected function initialize(InputInterface \\$input, OutputInterface \\$output)",
+            "\t{",
+            "\t}"
+        ],
+        "description": "Initializes the command just after the input has been validated."
+    },
+    "symfony command run": {
+        "prefix": "sf:run",
+        "body": [
+            "\\$this->run(\\$input, \\$output)"
+        ],
+        "description": "Runs the command."
+    },
+    "symfony command complete": {
+        "prefix": "sf:complete",
+        "body": [
+            "\\$this->complete(\\$input, \\$suggestions)"
+        ],
+        "description": "Completes the command."
+    },
+    "symfony command setCode": {
+        "prefix": "sf:setCode",
+        "body": [
+            "\\$this->setCode(function (InputInterface \\$input, OutputInterface \\$output) {",
+            "\t// ...",
+            "});"
+        ],
+        "description": "Sets the code to execute when the command is called."
+    },
+    "symfony command setDefinition": {
+        "prefix": "sf:setDefinition",
+        "body": [
+            "\\$this->setDefinition(${1:\\$definition})"
+        ],
+        "description": "Sets the InputDefinition attached to this Command."
+    },
+    "symfony command getDefinition": {
+        "prefix": "sf:getDefinition",
+        "body": [
+            "\\$this->getDefinition()"
+        ],
+        "description": "Gets the InputDefinition attached to this Command."
+    },
+    "symfony command getNativeDefinition": {
+        "prefix": "sf:getNativeDefinition",
+        "body": [
+            "\\$this->getNativeDefinition()"
+        ],
+        "description": "Gets the native definition of the command."
+    },
+    "symfony command mergeApplicationDefinition": {
+        "prefix": "sf:mergeApplicationDefinition",
+        "body": [
+            "\\$this->mergeApplicationDefinition(${1:mergeArgs})"
+        ],
+        "description": "Merges the application definition with the command definition."
+    },
+    "symfony command setName": {
+        "prefix": "sf:setName",
+        "body": [
+            "\\$this->setName('${1:command:name}')"
+        ],
+        "description": "Sets the name of the command."
+    },
+    "symfony command getName": {
+        "prefix": "sf:getName",
+        "body": [
+            "\\$this->getName()"
+        ],
+        "description": "Gets the name of the command."
+    },
+    "symfony command setProcessTitle": {
+        "prefix": "sf:setProcessTitle",
+        "body": [
+            "\\$this->setProcessTitle('${1:process:title}')"
+        ],
+        "description": "Sets the process title of the command."
+    },
+    "symfony command isHidden": {
+        "prefix": "sf:isHidden",
+        "body": [
+            "\\$this->isHidden()"
+        ],
+        "description": "Returns true if the command should not be listed in the help command."
+    },
+    "symfony command setDescription ": {
+        "prefix": "sf:setDescription",
+        "body": [
+            "\\$this->setDescription('${1:command:description}')"
+        ],
+        "description": "Sets the description of the command."
+    },
+    "symfony command getDescription": {
+        "prefix": "sf:getDescription",
+        "body": [
+            "\\$this->getDescription()"
+        ],
+        "description": "Gets the description of the command."
+    },
+    "symfony command setHelp": {
+        "prefix": "sf:setHelp",
+        "body": [
+            "\\$this->setHelp('${1:command:help}')"
+        ],
+        "description": "Sets the help of the command."
+    },
+    "symfony command getHelp": {
+        "prefix": "sf:getHelp",
+        "body": [
+            "\\$this->getHelp()"
+        ],
+        "description": "Gets the help of the command."
+    },
+    "symfony command getProcessedHelp": {
+        "prefix": "sf:getProcessedHelp",
+        "body": [
+            "\\$this->getProcessedHelp()"
+        ],
+        "description": "Gets the processed help of the command."
+    },
+    "symfony command setAliases": {
+        "prefix": "sf:setAliases",
+        "body": [
+            "\\$this->setAliases(${1:\\$aliases})"
+        ],
+        "description": "Sets the aliases of the command."
+    },
+    "symfony command getAliases": {
+        "prefix": "sf:getAliases",
+        "body": [
+            "\\$this->getAliases()"
+        ],
+        "description": "Gets the aliases of the command."
+    },
+    "symfony command getSynopsis": {
+        "prefix": "sf:getSynopsis",
+        "body": [
+            "\\$this->getSynopsis(${1:short})"
+        ],
+        "description": "Gets the synopsis of the command."
+    },
+    "symfony command addUsage": {
+        "prefix": "sf:addUsage",
+        "body": [
+            "\\$this->addUsage('${1:usage}')"
+        ],
+        "description": "Adds an usage example."
+    },
+    "symfony command getUsages": {
+        "prefix": "sf:getUsages",
+        "body": [
+            "\\$this->getUsages()"
+        ],
+        "description": "Gets the usages of the command."
+    },
+    "symfony command getHelper": {
+        "prefix": "sf:getHelper",
+        "body": [
+            "\\$this->getHelper('${1:helper}')"
+        ],
+        "description": "Returns a helper by name."
+    },
+}
