@@ -5,3 +5,5 @@
 /.vscode
 /test00
 test.*
+/out
+/_next

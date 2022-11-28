@@ -1,0 +1,184 @@
+{
+    "symfony doctrine persist": {
+        "prefix": "sf:persist",
+        "body": "\\$${1:entityManager}->persist(${2:\\$entity});",
+        "description": "Schedules an entity for insertion."
+    },
+    "symfony doctrine flush": {
+        "prefix": "sf:flush",
+        "body": "\\$${1:entityManager}->flush();",
+        "description": "Executes all scheduled entity insertions, updates and deletions in the database."
+    },
+    "symfony doctrine remove": {
+        "prefix": "sf:remove",
+        "body": "\\$${1:entityManager}->remove(${2:\\$entity});",
+        "description": "Schedules an entity for deletion."
+    },
+    "symfony doctrine find": {
+        "prefix": "sf:find",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class)->find(${3:\\$id});",
+        "description": "Finds an entity by its primary key / identifier."
+    },
+    "symfony doctrine findAll": {
+        "prefix": "sf:findAll",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class)->findAll();",
+        "description": "Finds all entities in the repository."
+    },
+    "symfony doctrine findBy": {
+        "prefix": "sf:findBy",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class)->findBy(${3:[${4:'${5:field}' => ${6:value}}]});",
+        "description": "Finds entities by a set of criteria."
+    },
+    "symfony doctrine findOneBy": {
+        "prefix": "sf:findOneBy",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class)->findOneBy(${3:[${4:'${5:field}' => ${6:value}}]});",
+        "description": "Finds a single entity by a set of criteria."
+    },
+    "symfony doctrine count": {
+        "prefix": "sf:count",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class)->count(${3:[${4:'${5:field}' => ${6:value}}]});",
+        "description": "Returns the number of entities matching the criteria."
+    },
+    "symfony doctrine createQuery": {
+        "prefix": "sf:createQuery",
+        "body": "\\$${1:entityManager}->createQuery(${2:'${3:sql query}'});",
+        "description": "Creates a new Query object."
+    },
+    "symfony doctrine createQueryBuilder": {
+        "prefix": "sf:createQueryBuilder",
+        "body": [
+            "\\$qb = \\$${1:entityManager}->createQueryBuilder(${2:'${3:p}'})",
+            "\t->where(${5:'${6:p.arg > :param}'})",
+            "\t->setParameter(${8:'${9:param}'}, ${10:\\$param})",
+            "\t->orderBy(${12:'${13:p.arg}'}, ${14:'${15|ASC,DESC|}'})",
+            "\t->setMaxResults(${16:10})",
+            "\t->getQuery()",
+            "\t->getResult();"
+        ],
+        "description": "Creates a new QueryBuilder instance that is prepopulated for this entity name."
+    },
+    "symfony doctrine createResultSetMappingBuilder": {
+        "prefix": "sf:createResultSetMappingBuilder",
+        "body": "\\$${1:entityManager}->createResultSetMappingBuilder(${2:'${3:alias}'});",
+        "description": "Creates a new ResultSetMappingBuilder instance that is prepopulated for this entity name."
+    },
+    "symfony doctrine getRepository": {
+        "prefix": "sf:getRepository",
+        "body": "\\$${1:entityManager}->getRepository(${2:\\$entity}::class);",
+        "description": "Gets the repository for an entity class."
+    },
+    "symfony doctrine getManager": {
+        "prefix": "sf:getManager",
+        "body": "\\$${1:entityManager}->getManager(${2:\\$entity}::class);",
+        "description": "Gets the repository for an entity class."
+    },
+    "symfony doctrine andWhere": {
+        "prefix": "sf:andWhere",
+        "body": [
+            "->andWhere(${1:'${2:p.arg > :param}'})",
+            "\t->setParameter(${4:'${5:param}'}, ${6:\\$param})"
+        ],
+        "description": "Adds an AND WHERE clause to the query."
+    },
+    "symfony doctrine orWhere": {
+        "prefix": "sf:orWhere",
+        "body": [
+            "->orWhere(${1:'${2:p.arg > :param}'})",
+            "\t->setParameter(${4:'${5:param}'}, ${6:\\$param})"
+        ],
+        "description": "Adds an OR WHERE clause to the query."
+    },
+    "symfony doctrine andHaving": {
+        "prefix": "sf:andHaving",
+        "body": [
+            "->andHaving(${1:'${2:p.arg > :param}'})",
+            "\t->setParameter(${4:'${5:param}'}, ${6:\\$param})"
+        ],
+        "description": "Adds an AND HAVING clause to the query."
+    },
+    "symfony doctrine orderBy": {
+        "prefix": "sf:orderBy",
+        "body": [
+            "->orderBy(${1:'${2:p.arg}'}, ${3:'${4|ASC,DESC|}'})"
+        ],
+        "description": "Adds an ORDER BY clause to the query."
+    },
+    "symfony doctrine setMaxResults": {
+        "prefix": "sf:setMaxResults",
+        "body": [
+            "->setMaxResults(${1:10})"
+        ],
+        "description": "Sets the maximum number of results to retrieve (the LIMIT value)."
+    },
+    // $this->matching($criteria);
+    "symfony doctrine matching": {
+        "prefix": "sf:matching",
+        "body": [
+            "\\$criteria = Criteria::create()",
+            "\t->where(Criteria::expr()->eq(${1:'${2:field}'}, ${3:\\$value}))",
+            "\t->andWhere(Criteria::expr()->eq(${5:'${6:field}'}, ${7:\\$value}))",
+            "\t->orderBy(${9:['${10:field}' => ${11:'${12|ASC,DESC|}'}]})",
+            "\t->setFirstResult(${13:0})",
+            "\t->setMaxResults(${14:10});",
+            "\\$${15:collection}->matching(${16:\\$criteria});"
+        ],
+        "description": "Returns a new collection with the elements of this collection that satisfy the predicate p."
+    },
+    "symfony doctrine getDql": {
+        "prefix": "sf:getDql",
+        "body": [
+            "\t->getDql();"
+        ],
+        "description": "Returns the DQL string."
+    },
+    "symfony doctrine getSQL": {
+        "prefix": "sf:getSQL",
+        "body": [
+            "\t->getSQL();"
+        ],
+        "description": "Returns the SQL string."
+    },
+    "symfony doctrine getFirstResult": {
+        "prefix": "sf:getFirstResult",
+        "body": [
+            "\t->getFirstResult();"
+        ],
+        "description": "Returns the first result to retrieve (the OFFSET value)."
+    },
+    "symfony doctrine leftJoin": {
+        "prefix": "sf:leftJoin",
+        "body": [
+            "\t->leftJoin(${1:'${2:alias}'}, ${3:'${4:join}'}, ${5:'${6:conditionType}'}, ${7:'${8:condition}'}, ${9:'${10:indexBy}'})"
+        ],
+        "description": "Adds a LEFT JOIN clause to the query."
+    },
+    "symfony doctrine innerJoin": {
+        "prefix": "sf:innerJoin",
+        "body": [
+            "\t->innerJoin(${1:'${2:alias}'}, ${3:'${4:join}'}, ${5:'${6:conditionType}'}, ${7:'${8:condition}'}, ${9:'${10:indexBy}'})"
+        ],
+        "description": "Adds a INNER JOIN clause to the query."
+    },
+    "symfony doctrine join": {
+        "prefix": "sf:join",
+        "body": [
+            "\t->join(${1:'${2:alias}'}, ${3:'${4:join}'}, ${5:'${6:conditionType}'}, ${7:'${8:condition}'}, ${9:'${10:indexBy}'})"
+        ],
+        "description": "Adds a JOIN clause to the query."
+    },
+    "symfony doctrine groupBy": {
+        "prefix": "sf:groupBy",
+        "body": [
+            "\t->groupBy(${1:'${2:alias}'})"
+        ],
+        "description": "Adds a GROUP BY clause to the query."
+    },
+    "symfony doctrine orHaving": {
+        "prefix": "sf:orHaving",
+        "body": [
+            "\t->orHaving(${1:'${2:p.arg > :param}'})",
+            "\t->setParameter(${4:'${5:param}'}, ${6:\\$param})"
+        ],
+        "description": "Adds an OR HAVING clause to the query."
+    },
+}

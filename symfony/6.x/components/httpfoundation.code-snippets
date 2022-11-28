@@ -1,0 +1,7 @@
+{
+    "symfony controller handleRequest": {
+        "prefix": "sf:handleRequest",
+        "body": "\\$${1:form}->handleRequest(${2:\\$request});",
+        "description": "Processes the request."
+    },
+}
