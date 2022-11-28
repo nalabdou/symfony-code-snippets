@@ -40,15 +40,15 @@
         "snippets": [
             {
                 "language": "php",
-                "path": "./symfony/6.x/components/controller.code-snippets"
-            },
-            {
-                "language": "php",
                 "path": "./symfony/6.x/components/command.code-snippets"
             },
             {
                 "language": "php",
-                "path": "./symfony/6.x/components/twig-component.code-snippets"
+                "path": "./symfony/6.x/components/httpfoundation.code-snippets"
+            },
+            {
+                "language": "php",
+                "path": "./symfony/6.x/components/controller.code-snippets"
             },
             {
                 "language": "php",
@@ -61,14 +61,34 @@
             {
                 "language": "php",
                 "path": "./symfony/6.x/packages/framwork.code-snippets"
+            },
+            {
+                "language": "php",
+                "path": "./symfony/6.x/3rdparty/doctrine.code-snippets"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Symfony code snippets",
+            "properties": {
+                "symfony.code.snippets.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable all Symfony code snippets."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "lint": "eslint \"src/**/*.ts\"",
         "watch": "tsc -watch -p ./"
+    },
+    "dependencies": {
+        "@types/mocha": "^10.0.0",
+        "graceful-fs": "^4.2.10",
+        "php-parser": "^3.1.2",
+        "strip-json-comments": "^5.0.0"
     },
     "devDependencies": {
         "@types/node": "^16.18.3",

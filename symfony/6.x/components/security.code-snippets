@@ -1,0 +1,17 @@
+{
+    "symfony security hashPassword": {
+        "prefix": "sf:hashPassword",
+        "body": "\\$${1:hashedPassword} = ${2:\\$passwordHasher}->hashPassword(${3:\\$user},${4:\\$plaintextPassword});",
+        "description": "Hashes the plain password."
+    },
+    "symfony security getLastAuthenticationError": {
+        "prefix": "sf:getLastAuthenticationError",
+        "body": "\\$${1:error} = ${2:\\$authenticationUtils}->getLastAuthenticationError();",
+        "description": "Returns the last authentication error."
+    },
+    "symfony security getLastUsername": {
+        "prefix": "sf:getLastUsername",
+        "body": "\\$${1:lastUsername} = ${2:\\$authenticationUtils}->getLastUsername();",
+        "description": "Returns the last username entered by the user."
+    },
+}
