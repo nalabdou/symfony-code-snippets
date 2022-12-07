@@ -1,0 +1,13 @@
+{
+    "symfony dump and die": {
+        "prefix": "sf:dd",
+        "body": "dd($1);",
+        "description": "Symfony vardummper dump and die"
+    },
+    "symfony dump": {
+        "prefix": "sf:d",
+        "body": "dump($1);",
+        "description": "Symfony vardummper dump"
+    },
+    
+}

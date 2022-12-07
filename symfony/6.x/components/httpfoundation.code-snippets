@@ -4,4 +4,504 @@
         "body": "\\$${1:form}->handleRequest(${2:\\$request});",
         "description": "Processes the request."
     },
+    "symfony request HEADER_FORWARDED const": {
+        "prefix": "sf:HEADER_FORWARDED",
+        "body": "Request::HEADER_FORWARDED",
+        "description": "The value of the Forwarded header."
+    },
+    "symfony request HEADER_X_FORWARDED_FOR const": {
+        "prefix": "sf:HEADER_X_FORWARDED_FOR",
+        "body": "Request::HEADER_X_FORWARDED_FOR",
+        "description": "The value of the X-Forwarded-For header."
+    },
+    "symfony request HEADER_X_FORWARDED_HOST const": {
+        "prefix": "sf:HEADER_X_FORWARDED_HOST",
+        "body": "Request::HEADER_X_FORWARDED_HOST",
+        "description": "The value of the X-Forwarded-Host header."
+    },
+    "symfony request HEADER_X_FORWARDED_PROTO const": {
+        "prefix": "sf:HEADER_X_FORWARDED_PROTO",
+        "body": "Request::HEADER_X_FORWARDED_PROTO",
+        "description": "The value of the X-Forwarded-Port header."
+    },
+    "symfony request HEADER_X_FORWARDED_PORT const": {
+        "prefix": "sf:HEADER_X_FORWARDED_PORT",
+        "body": "Request::HEADER_X_FORWARDED_PORT",
+        "description": "The value of the X-Forwarded-Proto header."
+    },
+    "symfony request HEADER_X_FORWARDED_PREFIX const": {
+        "prefix": "sf:HEADER_X_FORWARDED_PREFIX",
+        "body": "Request::HEADER_X_FORWARDED_PREFIX",
+        "description": "The value of the X-Forwarded-Prefix header."
+    },
+    "symfony request HEADER_X_FORWARDED_AWS_ELB const": {
+        "prefix": "sf:HEADER_X_FORWARDED_AWS_ELB",
+        "body": "Request::HEADER_X_FORWARDED_AWS_ELB",
+        "description": "The value of the X-Forwarded-For header when the request comes from an AWS ELB."
+    },
+    "symfony request HEADER_X_FORWARDED_TRAEFIK const": {
+        "prefix": "sf:HEADER_X_FORWARDED_TRAEFIK",
+        "body": "Request::HEADER_X_FORWARDED_TRAEFIK",
+        "description": "The value of the X-Forwarded-For header when the request comes from Traefik."
+    },
+    "symfony request METHOD_HEAD const": {
+        "prefix": "sf:HEAD",
+        "body": "Request::METHOD_HEAD",
+        "description": "The HEAD method requests a representation of the specified resource. Requests using HEAD should be identical to GET requests, except that the server MUST NOT return a message-body in the response."
+    },
+    "symfony request METHOD_GET const": {
+        "prefix": "sf:GET",
+        "body": "Request::METHOD_GET",
+        "description": "The GET method requests a representation of the specified resource. Requests using GET should only retrieve data."
+    },
+    "symfony request METHOD_POST const": {
+        "prefix": "sf:POST",
+        "body": "Request::METHOD_POST",
+        "description": "The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server."
+    },
+    "symfony request METHOD_PUT const": {
+        "prefix": "sf:PUT",
+        "body": "Request::METHOD_PUT",
+        "description": "The PUT method replaces all current representations of the target resource with the request payload."
+    },
+    "symfony request METHOD_DELETE const": {
+        "prefix": "sf:DELETE",
+        "body": "Request::METHOD_DELETE",
+        "description": "The DELETE method deletes the specified resource."
+    },
+    "symfony request METHOD_CONNECT const": {
+        "prefix": "sf:CONNECT",
+        "body": "Request::METHOD_CONNECT",
+        "description": "The CONNECT method establishes a tunnel to the server identified by the target resource."
+    },
+    "symfony request METHOD_OPTIONS const": {
+        "prefix": "sf:OPTIONS",
+        "body": "Request::METHOD_OPTIONS",
+        "description": "The OPTIONS method is used to describe the communication options for the target resource."
+    },
+    "symfony request METHOD_TRACE const": {
+        "prefix": "sf:TRACE",
+        "body": "Request::METHOD_TRACE",
+        "description": "The TRACE method performs a message loop-back test along the path to the target resource."
+    },
+    "symfony request METHOD_PATCH const": {
+        "prefix": "sf:PATCH",
+        "body": "Request::METHOD_PATCH",
+        "description": "The PATCH method is used to apply partial modifications to a resource."
+    },
+    "symfony request METHOD_PURGE const": {
+        "prefix": "sf:PURGE",
+        "body": "Request::METHOD_PURGE",
+        "description": "The PURGE method invalidates a resource."
+    },
+    "symfony request request public attribute": {
+        "prefix": "sf:request",
+        "body": "\\$${1:request}->${2:attributes}->${3:get}('${4:foo}');",
+        "description": "Returns a request attribute."
+    },
+    "symfony request createFromGlobals static method": {
+        "prefix": "sf:createFromGlobals",
+        "body": "Request::createFromGlobals()",
+        "description": "Creates a new request with values from PHP's super globals."
+    },
+    "symfony request create static method": {
+        "prefix": "sf:create",
+        "body": "Request::create('${1:uri}', '${2:method}', ${3:parameters}, ${4:cookies}, ${5:files}, ${6:server}, ${7:content});",
+        "description": "Creates a new request with values from PHP's super globals."
+    },
+    "symfony request setFactory static method": {
+        "prefix": "sf:setFactory",
+        "body": "Request::setFactory(${1:factory});",
+        "description": "Sets a factory callable able to create a Request instance."
+    },
+    "symfony request setTrustedProxies static method": {
+        "prefix": "sf:setTrustedProxies",
+        "body": "Request::setTrustedProxies(${1:proxies}, ${2:trustedHeaderSet});",
+        "description": "Sets the trusted proxies."
+    },
+    "symfony request getTrustedProxies static method": {
+        "prefix": "sf:getTrustedProxies",
+        "body": "Request::getTrustedProxies()",
+        "description": "Gets the trusted proxies."
+    },
+    "symfony request getTrustedHeaderSet static method": {
+        "prefix": "sf:getTrustedHeaderSet",
+        "body": "Request::getTrustedHeaderSet(${1:name})",
+        "description": "Gets the trusted header set."
+    },
+    "symfony request setTrustedHosts static method": {
+        "prefix": "sf:setTrustedHosts",
+        "body": "Request::setTrustedHosts(${1:hosts});",
+        "description": "Sets the trusted hosts."
+    },
+    "symfony request getTrustedHosts static method": {
+        "prefix": "sf:getTrustedHosts",
+        "body": "Request::getTrustedHosts()",
+        "description": "Gets the trusted hosts."
+    },
+    "symfony request normalizeQueryString static method": {
+        "prefix": "sf:normalizeQueryString",
+        "body": "Request::normalizeQueryString(${1:qs})",
+        "description": "Normalizes a query string."
+    },
+    "symfony request enableHttpMethodParameterOverride static method": {
+        "prefix": "sf:enableHttpMethodParameterOverride",
+        "body": "Request::enableHttpMethodParameterOverride()",
+        "description": "Enables support for the _method request parameter to determine the intended HTTP method."
+    },
+    "symfony request getHttpMethodParameterOverride static method": {
+        "prefix": "sf:getHttpMethodParameterOverride",
+        "body": "Request::getHttpMethodParameterOverride()",
+        "description": "Gets the HTTP method override."
+    },
+    "symfony request getMimeTypes static method": {
+        "prefix": "sf:getMimeTypes",
+        "body": "Request::getMimeTypes(${1:format})",
+        "description": "Gets the mime types associated with the format."
+    },
+    "symfony response HTTP_CONTINUE const": {
+        "prefix": "sf:HTTP_CONTINUE",
+        "body": "Response::HTTP_CONTINUE",
+        "description": "HTTP_CONTINUE"
+    },
+    "symfony response HTTP_SWITCHING_PROTOCOLS const": {
+        "prefix": "sf:HTTP_SWITCHING_PROTOCOLS",
+        "body": "Response::HTTP_SWITCHING_PROTOCOLS",
+        "description": "HTTP_SWITCHING_PROTOCOLS"
+    },
+    "symfony response HTTP_PROCESSING const": {
+        "prefix": "sf:HTTP_PROCESSING",
+        "body": "Response::HTTP_PROCESSING",
+        "description": "HTTP_PROCESSING"
+    },
+    "symfony response HTTP_EARLY_HINTS const": {
+        "prefix": "sf:HTTP_EARLY_HINTS",
+        "body": "Response::HTTP_EARLY_HINTS",
+        "description": "HTTP_EARLY_HINTS"
+    },
+    "symfony response HTTP_OK const": {
+        "prefix": "sf:HTTP_OK",
+        "body": "Response::HTTP_OK",
+        "description": "HTTP_OK"
+    },
+    "symfony response HTTP_CREATED const": {
+        "prefix": "sf:HTTP_CREATED",
+        "body": "Response::HTTP_CREATED",
+        "description": "HTTP_CREATED"
+    },
+    "symfony response HTTP_ACCEPTED const": {
+        "prefix": "sf:HTTP_ACCEPTED",
+        "body": "Response::HTTP_ACCEPTED",
+        "description": "HTTP_ACCEPTED"
+    },
+    "symfony response HTTP_NON_AUTHORITATIVE_INFORMATION const": {
+        "prefix": "sf:HTTP_NON_AUTHORITATIVE_INFORMATION",
+        "body": "Response::HTTP_NON_AUTHORITATIVE_INFORMATION",
+        "description": "HTTP_NON_AUTHORITATIVE_INFORMATION"
+    },
+    "symfony response HTTP_NO_CONTENT const": {
+        "prefix": "sf:HTTP_NO_CONTENT",
+        "body": "Response::HTTP_NO_CONTENT",
+        "description": "HTTP_NO_CONTENT"
+    },
+    "symfony response HTTP_RESET_CONTENT const": {
+        "prefix": "sf:HTTP_RESET_CONTENT",
+        "body": "Response::HTTP_RESET_CONTENT",
+        "description": "HTTP_RESET_CONTENT"
+    },
+    "symfony response HTTP_PARTIAL_CONTENT const": {
+        "prefix": "sf:HTTP_PARTIAL_CONTENT",
+        "body": "Response::HTTP_PARTIAL_CONTENT",
+        "description": "HTTP_PARTIAL_CONTENT"
+    },
+    "symfony response HTTP_MULTI_STATUS const": {
+        "prefix": "sf:HTTP_MULTI_STATUS",
+        "body": "Response::HTTP_MULTI_STATUS",
+        "description": "HTTP_MULTI_STATUS"
+    },
+    "symfony response HTTP_ALREADY_REPORTED const": {
+        "prefix": "sf:HTTP_ALREADY_REPORTED",
+        "body": "Response::HTTP_ALREADY_REPORTED",
+        "description": "HTTP_ALREADY_REPORTED"
+    },
+    "symfony response HTTP_IM_USED const": {
+        "prefix": "sf:HTTP_IM_USED",
+        "body": "Response::HTTP_IM_USED",
+        "description": "HTTP_IM_USED"
+    },
+    "symfony response HTTP_MULTIPLE_CHOICES const": {
+        "prefix": "sf:HTTP_MULTIPLE_CHOICES",
+        "body": "Response::HTTP_MULTIPLE_CHOICES",
+        "description": "HTTP_MULTIPLE_CHOICES"
+    },
+    "symfony response HTTP_MOVED_PERMANENTLY const": {
+        "prefix": "sf:HTTP_MOVED_PERMANENTLY",
+        "body": "Response::HTTP_MOVED_PERMANENTLY",
+        "description": "HTTP_MOVED_PERMANENTLY"
+    },
+    "symfony response HTTP_FOUND const": {
+        "prefix": "sf:HTTP_FOUND",
+        "body": "Response::HTTP_FOUND",
+        "description": "HTTP_FOUND"
+    },
+    "symfony response HTTP_SEE_OTHER const": {
+        "prefix": "sf:HTTP_SEE_OTHER",
+        "body": "Response::HTTP_SEE_OTHER",
+        "description": "HTTP_SEE_OTHER"
+    },
+    "symfony response HTTP_NOT_MODIFIED const": {
+        "prefix": "sf:HTTP_NOT_MODIFIED",
+        "body": "Response::HTTP_NOT_MODIFIED",
+        "description": "HTTP_NOT_MODIFIED"
+    },
+    "symfony response HTTP_USE_PROXY const": {
+        "prefix": "sf:HTTP_USE_PROXY",
+        "body": "Response::HTTP_USE_PROXY",
+        "description": "HTTP_USE_PROXY"
+    },
+    "symfony response HTTP_RESERVED const": {
+        "prefix": "sf:HTTP_RESERVED",
+        "body": "Response::HTTP_RESERVED",
+        "description": "HTTP_RESERVED"
+    },
+    "symfony response HTTP_TEMPORARY_REDIRECT const": {
+        "prefix": "sf:HTTP_TEMPORARY_REDIRECT",
+        "body": "Response::HTTP_TEMPORARY_REDIRECT",
+        "description": "HTTP_TEMPORARY_REDIRECT"
+    },
+    "symfony response HTTP_PERMANENTLY_REDIRECT const": {
+        "prefix": "sf:HTTP_PERMANENTLY_REDIRECT",
+        "body": "Response::HTTP_PERMANENTLY_REDIRECT",
+        "description": "HTTP_PERMANENTLY_REDIRECT"
+    },
+    "symfony response HTTP_BAD_REQUEST const": {
+        "prefix": "sf:HTTP_BAD_REQUEST",
+        "body": "Response::HTTP_BAD_REQUEST",
+        "description": "HTTP_BAD_REQUEST"
+    },
+    "symfony response HTTP_UNAUTHORIZED const": {
+        "prefix": "sf:HTTP_UNAUTHORIZED",
+        "body": "Response::HTTP_UNAUTHORIZED",
+        "description": "HTTP_UNAUTHORIZED"
+    },
+    "symfony response HTTP_PAYMENT_REQUIRED const": {
+        "prefix": "sf:HTTP_PAYMENT_REQUIRED",
+        "body": "Response::HTTP_PAYMENT_REQUIRED",
+        "description": "HTTP_PAYMENT_REQUIRED"
+    },
+    "symfony response HTTP_FORBIDDEN const": {
+        "prefix": "sf:HTTP_FORBIDDEN",
+        "body": "Response::HTTP_FORBIDDEN",
+        "description": "HTTP_FORBIDDEN"
+    },
+    "symfony response HTTP_NOT_FOUND const": {
+        "prefix": "sf:HTTP_NOT_FOUND",
+        "body": "Response::HTTP_NOT_FOUND",
+        "description": "HTTP_NOT_FOUND"
+    },
+    "symfony response HTTP_METHOD_NOT_ALLOWED const": {
+        "prefix": "sf:HTTP_METHOD_NOT_ALLOWED",
+        "body": "Response::HTTP_METHOD_NOT_ALLOWED",
+        "description": "HTTP_METHOD_NOT_ALLOWED"
+    },
+    "symfony response HTTP_NOT_ACCEPTABLE const": {
+        "prefix": "sf:HTTP_NOT_ACCEPTABLE",
+        "body": "Response::HTTP_NOT_ACCEPTABLE",
+        "description": "HTTP_NOT_ACCEPTABLE"
+    },
+    "symfony response HTTP_PROXY_AUTHENTICATION_REQUIRED const": {
+        "prefix": "sf:HTTP_PROXY_AUTHENTICATION_REQUIRED",
+        "body": "Response::HTTP_PROXY_AUTHENTICATION_REQUIRED",
+        "description": "HTTP_PROXY_AUTHENTICATION_REQUIRED"
+    },
+    "symfony response HTTP_REQUEST_TIMEOUT const": {
+        "prefix": "sf:HTTP_REQUEST_TIMEOUT",
+        "body": "Response::HTTP_REQUEST_TIMEOUT",
+        "description": "HTTP_REQUEST_TIMEOUT"
+    },
+    "symfony response HTTP_CONFLICT const": {
+        "prefix": "sf:HTTP_CONFLICT",
+        "body": "Response::HTTP_CONFLICT",
+        "description": "HTTP_CONFLICT"
+    },
+    "symfony response HTTP_GONE const": {
+        "prefix": "sf:HTTP_GONE",
+        "body": "Response::HTTP_GONE",
+        "description": "HTTP_GONE"
+    },
+    "symfony response HTTP_LENGTH_REQUIRED const": {
+        "prefix": "sf:HTTP_LENGTH_REQUIRED",
+        "body": "Response::HTTP_LENGTH_REQUIRED",
+        "description": "HTTP_LENGTH_REQUIRED"
+    },
+    "symfony response HTTP_PRECONDITION_FAILED const": {
+        "prefix": "sf:HTTP_PRECONDITION_FAILED",
+        "body": "Response::HTTP_PRECONDITION_FAILED",
+        "description": "HTTP_PRECONDITION_FAILED"
+    },
+    "symfony response HTTP_REQUEST_ENTITY_TOO_LARGE const": {
+        "prefix": "sf:HTTP_REQUEST_ENTITY_TOO_LARGE",
+        "body": "Response::HTTP_REQUEST_ENTITY_TOO_LARGE",
+        "description": "HTTP_REQUEST_ENTITY_TOO_LARGE"
+    },
+    "symfony response HTTP_REQUEST_URI_TOO_LONG const": {
+        "prefix": "sf:HTTP_REQUEST_URI_TOO_LONG",
+        "body": "Response::HTTP_REQUEST_URI_TOO_LONG",
+        "description": "HTTP_REQUEST_URI_TOO_LONG"
+    },
+    "symfony response HTTP_UNSUPPORTED_MEDIA_TYPE const": {
+        "prefix": "sf:HTTP_UNSUPPORTED_MEDIA_TYPE",
+        "body": "Response::HTTP_UNSUPPORTED_MEDIA_TYPE",
+        "description": "HTTP_UNSUPPORTED_MEDIA_TYPE"
+    },
+    "symfony response HTTP_REQUESTED_RANGE_NOT_SATISFIABLE const": {
+        "prefix": "sf:HTTP_REQUESTED_RANGE_NOT_SATISFIABLE",
+        "body": "Response::HTTP_REQUESTED_RANGE_NOT_SATISFIABLE",
+        "description": "HTTP_REQUESTED_RANGE_NOT_SATISFIABLE"
+    },
+    "symfony response HTTP_EXPECTATION_FAILED const": {
+        "prefix": "sf:HTTP_EXPECTATION_FAILED",
+        "body": "Response::HTTP_EXPECTATION_FAILED",
+        "description": "HTTP_EXPECTATION_FAILED"
+    },
+    "symfony response HTTP_I_AM_A_TEAPOT const": {
+        "prefix": "sf:HTTP_I_AM_A_TEAPOT",
+        "body": "Response::HTTP_I_AM_A_TEAPOT",
+        "description": "HTTP_I_AM_A_TEAPOT"
+    },
+    "symfony response HTTP_MISDIRECTED_REQUEST const": {
+        "prefix": "sf:HTTP_MISDIRECTED_REQUEST",
+        "body": "Response::HTTP_MISDIRECTED_REQUEST",
+        "description": "HTTP_MISDIRECTED_REQUEST"
+    },
+    "symfony response HTTP_UNPROCESSABLE_ENTITY const": {
+        "prefix": "sf:HTTP_UNPROCESSABLE_ENTITY",
+        "body": "Response::HTTP_UNPROCESSABLE_ENTITY",
+        "description": "HTTP_UNPROCESSABLE_ENTITY"
+    },
+    "symfony response HTTP_LOCKED const": {
+        "prefix": "sf:HTTP_LOCKED",
+        "body": "Response::HTTP_LOCKED",
+        "description": "HTTP_LOCKED"
+    },
+    "symfony response HTTP_FAILED_DEPENDENCY const": {
+        "prefix": "sf:HTTP_FAILED_DEPENDENCY",
+        "body": "Response::HTTP_FAILED_DEPENDENCY",
+        "description": "HTTP_FAILED_DEPENDENCY"
+    },
+    "symfony response HTTP_TOO_EARLY const": {
+        "prefix": "sf:HTTP_TOO_EARLY",
+        "body": "Response::HTTP_TOO_EARLY",
+        "description": "HTTP_TOO_EARLY"
+    },
+    "symfony response HTTP_UPGRADE_REQUIRED const": {
+        "prefix": "sf:HTTP_UPGRADE_REQUIRED",
+        "body": "Response::HTTP_UPGRADE_REQUIRED",
+        "description": "HTTP_UPGRADE_REQUIRED"
+    },
+    "symfony response HTTP_PRECONDITION_REQUIRED const": {
+        "prefix": "sf:HTTP_PRECONDITION_REQUIRED",
+        "body": "Response::HTTP_PRECONDITION_REQUIRED",
+        "description": "HTTP_PRECONDITION_REQUIRED"
+    },
+    "symfony response HTTP_TOO_MANY_REQUESTS const": {
+        "prefix": "sf:HTTP_TOO_MANY_REQUESTS",
+        "body": "Response::HTTP_TOO_MANY_REQUESTS",
+        "description": "HTTP_TOO_MANY_REQUESTS"
+    },
+    "symfony response HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE const": {
+        "prefix": "sf:HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE",
+        "body": "Response::HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE",
+        "description": "HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE"
+    },
+    "symfony response HTTP_UNAVAILABLE_FOR_LEGAL_REASONS const": {
+        "prefix": "sf:HTTP_UNAVAILABLE_FOR_LEGAL_REASONS",
+        "body": "Response::HTTP_UNAVAILABLE_FOR_LEGAL_REASONS",
+        "description": "HTTP_UNAVAILABLE_FOR_LEGAL_REASONS"
+    },
+    "symfony response HTTP_INTERNAL_SERVER_ERROR const": {
+        "prefix": "sf:HTTP_INTERNAL_SERVER_ERROR",
+        "body": "Response::HTTP_INTERNAL_SERVER_ERROR",
+        "description": "HTTP_INTERNAL_SERVER_ERROR"
+    },
+    "symfony response HTTP_NOT_IMPLEMENTED const": {
+        "prefix": "sf:HTTP_NOT_IMPLEMENTED",
+        "body": "Response::HTTP_NOT_IMPLEMENTED",
+        "description": "HTTP_NOT_IMPLEMENTED"
+    },
+    "symfony response HTTP_BAD_GATEWAY const": {
+        "prefix": "sf:HTTP_BAD_GATEWAY",
+        "body": "Response::HTTP_BAD_GATEWAY",
+        "description": "HTTP_BAD_GATEWAY"
+    },
+    "symfony response HTTP_SERVICE_UNAVAILABLE const": {
+        "prefix": "sf:HTTP_SERVICE_UNAVAILABLE",
+        "body": "Response::HTTP_SERVICE_UNAVAILABLE",
+        "description": "HTTP_SERVICE_UNAVAILABLE"
+    },
+    "symfony response HTTP_GATEWAY_TIMEOUT const": {
+        "prefix": "sf:HTTP_GATEWAY_TIMEOUT",
+        "body": "Response::HTTP_GATEWAY_TIMEOUT",
+        "description": "HTTP_GATEWAY_TIMEOUT"
+    },
+    "symfony response HTTP_VERSION_NOT_SUPPORTED const": {
+        "prefix": "sf:HTTP_VERSION_NOT_SUPPORTED",
+        "body": "Response::HTTP_VERSION_NOT_SUPPORTED",
+        "description": "HTTP_VERSION_NOT_SUPPORTED"
+    },
+    "symfony response HTTP_VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL const": {
+        "prefix": "sf:HTTP_VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL",
+        "body": "Response::HTTP_VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL",
+        "description": "HTTP_VARIANT_ALSO_NEGOTIATES_EXPERIMENTAL"
+    },
+    "symfony response HTTP_INSUFFICIENT_STORAGE const": {
+        "prefix": "sf:HTTP_INSUFFICIENT_STORAGE",
+        "body": "Response::HTTP_INSUFFICIENT_STORAGE",
+        "description": "HTTP_INSUFFICIENT_STORAGE"
+    },
+    "symfony response HTTP_LOOP_DETECTED const": {
+        "prefix": "sf:HTTP_LOOP_DETECTED",
+        "body": "Response::HTTP_LOOP_DETECTED",
+        "description": "HTTP_LOOP_DETECTED"
+    },
+    "symfony response HTTP_NOT_EXTENDED const": {
+        "prefix": "sf:HTTP_NOT_EXTENDED",
+        "body": "Response::HTTP_NOT_EXTENDED",
+        "description": "HTTP_NOT_EXTENDED"
+    },
+    "symfony response HTTP_NETWORK_AUTHENTICATION_REQUIRED const": {
+        "prefix": "sf:HTTP_NETWORK_AUTHENTICATION_REQUIRED",
+        "body": "Response::HTTP_NETWORK_AUTHENTICATION_REQUIRED",
+        "description": "HTTP_NETWORK_AUTHENTICATION_REQUIRED"
+    },
+    "symfony response static statusTexts const ": {
+        "prefix": "sf:statusTexts",
+        "body": "Response::$statusTexts[${1:code}]",
+        "description": "statusTexts"
+    },
+    "symfony response static closeOutputBuffers method": {
+        "prefix": "sf:closeOutputBuffers",
+        "body": "Response::closeOutputBuffers(${1:level}, ${2:flush})",
+        "description": "closeOutputBuffers"
+    },
+    "symfony AcceptHeader static fromString method": {
+        "prefix": "sf:AcceptHeader::fromString",
+        "body": "AcceptHeader::fromString(${1:header})",
+        "description": "fromString"
+    },
+    "symfony BinaryFileResponse static trustXSendfileTypeHeader method": {
+        "prefix": "sf:trustXSendfileTypeHeader",
+        "body": "BinaryFileResponse::trustXSendfileTypeHeader()",
+        "description": "trustXSendfileTypeHeader"
+    },
+    "symfony Cookie static create method": {
+        "prefix": "sf:Cookie::create",
+        "body": "Cookie::create(${1:name}, ${2:value}, ${3:expires}, ${4:path}, ${5:domain}, ${6:secure}, ${7:httpOnly}, ${8:raw}, ${9:sameSite})",
+        "description": "create"
+    },
+    "symfony Cookie static expiresTimestamp method": {
+        "prefix": "sf:expiresTimestamp",
+        "body": "Cookie::expiresTimestamp(${1:expire})",
+        "description": "fromString"
+    },
 }

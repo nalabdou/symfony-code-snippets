@@ -65,15 +65,19 @@
             {
                 "language": "php",
                 "path": "./symfony/6.x/3rdparty/doctrine.code-snippets"
+            },
+            {
+                "language": "php",
+                "path": "./symfony/6.x/contributes/nalabdou.code-snippets"
             }
         ],
         "configuration": {
             "title": "Symfony code snippets",
             "properties": {
-                "symfony.code.snippets.enable": {
+                "symfony.code.snippets.hideWelcomeMessage": {
                     "type": "boolean",
-                    "default": true,
-                    "description": "Enable/disable all Symfony code snippets."
+                    "default": false,
+                    "description": "Hide the wellcome message."
                 }
             }
         }
