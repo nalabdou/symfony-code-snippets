@@ -5,7 +5,7 @@
             "namespace ${1:App\\Controller};\n",
             "use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;",
             "use Symfony\\Component\\HttpFoundation\\\\${2|Response,JsonResponse,BinaryFileResponse,RedirectResponse,StreamedResponse|};",
-            "use Symfony\\Component\\nouting\\Annotation\\noute;\n",
+            "use Symfony\\Component\\Routing\\Annotation\\Route;\n",
             "class ${3:${TM_FILENAME/.php//}} extends AbstractController",
             "{",
             "\t#[Route('${4:/}', name: '${5:home}')]",
