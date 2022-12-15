@@ -14,7 +14,7 @@ If you spot a problem, search if an issue already exists. If a related issue doe
 1. Fork the repository.
 2. Clone the forked repository
 
- `git clone https://github.com/YOUR-GH-USERNAME/symfony-code-snippets`
+ `git clone https://github.com/YOUR-GH-USERNAME/symfony-code-snippets.git`
 
 3. Create `YOUR-GH-USERNAME.code-snippets` file inside `symfony-code-snippets/symfony/6.x/contributes`
 4. Add your snippets using vscode snippets format
