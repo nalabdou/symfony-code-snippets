@@ -10,11 +10,8 @@
             "}"
         ],
         "prefix": [
-            "sfControllerFunction",
-            "function",
-            "controllerFunction",
-            "fun",
-            "public"
+            "sf5ControllerFunction",
+            "controllerFunction"
         ],
         "description": "use this snippets to generate function in the controller with Route, RouteName, FunctionName, Template for rendering in twig"
     },
@@ -23,7 +20,7 @@
             "\\$${form} = \\$this->createForm(${FormType}::class, \\$${Entity});"
         ],
         "prefix": [
-            "sfFormGen",
+            "sf5FormGen",
             "form",
             "createForm"
         ],
@@ -38,7 +35,7 @@
             "}"
         ],
         "prefix": [
-            "sfHandleRequest",
+            "sf5HandleRequest",
             "handle",
             "handleRequest"
         ],
@@ -49,7 +46,7 @@
             "\\$${entityManager}->persist(\\$${Entity});"
         ],
         "prefix": [
-            "sfPersist",
+            "sf5Persist",
             "persist"
         ],
         "description": "use this snippet to generate $entityManager persist "
@@ -59,7 +56,7 @@
             "\\$${entityManager}->flush();"
         ],
         "prefix": [
-            "sfFlush",
+            "sf5Flush",
             "flush"
         ],
         "description": "use this snippet to generate $entityManager flush "
@@ -70,7 +67,7 @@
             "\\$${entityManager}->flush();"
         ],
         "prefix": [
-            "sfPersistAndFlush",
+            "sf5PersistAndFlush",
             "persistAndFlush",
             "flushAndPersist"
         ],
@@ -81,7 +78,7 @@
             "return \\$this->redirectToRoute('${RouteName}');"
         ],
         "prefix": [
-            "sfRedirectToRoute",
+            "sf5RedirectToRoute",
             "redirectToRoute",
             "toRoute"
         ],
@@ -93,7 +90,7 @@
             "\\$${userClassName}->setPassword(\\$${passwordHash});"
         ],
         "prefix": [
-            "sfUserHash",
+            "sf5UserHash",
             "hash",
             "passwordHash"
         ],
@@ -104,7 +101,7 @@
             "'form' => \\$${form}->createView(),"
         ],
         "prefix": [
-            "sfTwigForm",
+            "sf5TwigForm",
             "createView",
             "twigForm"
         ],
@@ -120,7 +117,7 @@
             "}"
         ],
         "prefix": [
-            "sfLogout",
+            "sf5Logout",
             "logout"
         ],
         "description": "use this snippet to generate logout function withe symfony you just need to setup the file security.yaml"
@@ -133,7 +130,7 @@
             ");"
         ],
         "prefix": [
-            "sfAddFlash",
+            "sf5AddFlash",
             "addFlash",
             "flash"
         ],
@@ -144,7 +141,7 @@
             "\\$${VarName} = \\$${repo}->findAll();"
         ],
         "prefix": [
-            "sfFindAll",
+            "sf5FindAll",
             "findAll"
         ],
         "description": "use this snippet to generate the function findAll from one repository you need to inject the repo you want in the function parameters"
@@ -154,7 +151,7 @@
             "\\$${VarName} = \\$${repo}->findOneBy(['${property}' => '${value}']);"
         ],
         "prefix": [
-            "sfFindOneBy",
+            "sf5FindOneBy",
             "findOneBy"
         ],
         "description": "use this snippet to generate the function findOneBy to get one value from repo do not forgot to inject the repository in this function parameters"
@@ -164,7 +161,7 @@
             "\\$${VarName} = \\$${repo}->find(${id});"
         ],
         "prefix": [
-            "sfFind",
+            "sf5Find",
             "findOne",
             "find"
         ],
@@ -175,7 +172,7 @@
             "\\$$VarName = \\$${repo}->findBy(['${property}'=>${value}]);"
         ],
         "prefix": [
-            "sfFindBy",
+            "sf5FindBy",
             "findBy"
         ],
         "description": "use this function to generate the function findBy from one repo do not forgot to incject the repo you want in this function parameters"
@@ -197,7 +194,7 @@
             "'${varName}' => ${value},"
         ],
         "prefix": [
-            "sfTwigVar",
+            "sf5TwigVar",
             "var",
             "twigVar"
         ],
@@ -210,7 +207,7 @@
             "]);"
         ],
         "prefix": [
-            "sfRender",
+            "sf5Render",
             "render"
         ],
         "description": "use this snippet to generate render function to send the view into twig"
@@ -220,7 +217,7 @@
             "\\$${user} = \\$this->getUser();"
         ],
         "prefix": [
-            "sfGetUser",
+            "sf5GetUser",
             "user",
             "getUser"
         ],
@@ -232,7 +229,7 @@
             "\\$${manager}->flush();"
         ],
         "prefix": [
-            "sfRemove",
+            "sf5Remove",
             "remove"
         ],
         "description": "use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters"
@@ -242,7 +239,7 @@
             "return \\$this->redirect('${1:url}',${2|200,300,301,302,404,403,201,221,500|});"
         ],
         "prefix": [
-            "sfRedirect",
+            "sf5Redirect",
             "redirect",
             "redirectToUrl"
         ],
@@ -253,7 +250,7 @@
             "dump(\\$${var});"
         ],
         "prefix": [
-            "sfDump",
+            "sf5Dump",
             "dump",
             "varDump"
         ],
@@ -264,7 +261,7 @@
             "return \\$this->json(['${1:property}'=>'${2:value}'],${3|200,300,301,302,404,403,201,221,500|});"
         ],
         "prefix": [
-            "sfJson",
+            "sf5Json",
             "json",
             "returnJson"
         ],
@@ -284,7 +281,7 @@
             "}"
         ],
         "prefix": [
-            "sfQueryBuilder",
+            "sf5QueryBuilder",
             "query",
             "queryBuilder",
             "builder"
@@ -298,7 +295,7 @@
             "}"
         ],
         "prefix": [
-            "sfGetSalt",
+            "sf5GetSalt",
             "salt"
         ],
         "description": "use this snippet to generate the function getSalt for the user entity when you implaments the UserInterFace"
@@ -311,7 +308,7 @@
             "}"
         ],
         "prefix": [
-            "sfGetUsername",
+            "sf5GetUsername",
             "getUserName"
         ],
         "description": "use this snippet to generate the function getUsername for the user entity when you implaments the UserInterFace"
@@ -323,7 +320,7 @@
             "}"
         ],
         "prefix": [
-            "sfEraseCredentials",
+            "sf5EraseCredentials",
             "eraseCredentials"
         ],
         "description": "use this snippet to generate the function eraseCredentials for the user entity when you implaments the UserInterFace"
@@ -333,7 +330,7 @@
             "@Assert\\EqualTo(propertyPath=\"${propertyName}\", message=\"${errorMessage}\")"
         ],
         "prefix": [
-            "sfEqualTo",
+            "sf5EqualTo",
             "EqualTo",
             "equalTo",
             "assertEqualTo"
@@ -345,7 +342,7 @@
             "@Assert\\Length(min=${10},max=${50}, minMessage=\"${minErrorMessage}\",maxMessage=\"${MaxErrorMessage}\")"
         ],
         "prefix": [
-            "sfLength",
+            "sf5Length",
             "length"
         ],
         "description": "use this snippet to generate the assert Length in the symfony Annotations"
@@ -355,7 +352,7 @@
             "@Assert\\NotBlank"
         ],
         "prefix": [
-            "sfNotBlank",
+            "sf5NotBlank",
             "NotBlank",
             "notBlank"
         ],
@@ -365,35 +362,35 @@
         "body": [
             "@Assert\\Email(message = \"The email  is not a valid email.\")"
         ],
-        "prefix": "sfEmail",
+        "prefix": "sf5Email",
         "description": "use this snippet to generate the assert Email in the symfony Annotations"
     },
     "Symfony Assert Url": {
         "body": [
             "@Assert\\Url()"
         ],
-        "prefix": "sfUrl",
+        "prefix": "sf5Url",
         "description": "use this snippet to generate the assert Url in the symfony Annotations"
     },
     "Symfony Assert NotEqualTo": {
         "body": [
             "@Assert\\NotEqualTo(value=\"${value}\", message=\"${errorMessage}\")"
         ],
-        "prefix": "sfNotEqualTo",
+        "prefix": "sf5NotEqualTo",
         "description": "use this snippet to generate the assert notequalto in the symfony Annotations"
     },
     "Symfony Assert GreaterThan": {
         "body": [
             "@Assert\\GreaterThan(\"today\")"
         ],
-        "prefix": "sfGreaterThan",
+        "prefix": "sf5GreaterThan",
         "description": "use this snippet to generate the assert GreaterThan in the symfony Annotations"
     },
     "Symfony UniqueEntity on entity": {
         "body": [
             "@UniqueEntity(fields = {\"${field1},${field2}\"},message =\"${errorMessage}\")"
         ],
-        "prefix": "sfUniqueEntity",
+        "prefix": "sf5UniqueEntity",
         "description": "use this snippent to generate uniqueEntity to make sure that the fields"
     },
     "use this snippet to generate the assert validation constraints in the symfony Annotations": {
@@ -413,7 +410,7 @@
             "@ORM\\HasLifecycleCallbacks()"
         ],
         "prefix": [
-            "sfhasLife",
+            "sf5hasLife",
             "hasLife",
             "HasLife"
         ],
@@ -425,7 +422,7 @@
             "* @ORM\\PreUpdate "
         ],
         "prefix": [
-            "sfPre",
+            "sf5Pre",
             "PrePersist",
             "PreUpdate"
         ],
@@ -436,7 +433,7 @@
             "\\$${manager} = \\$this->getDoctrine()->getManager();"
         ],
         "prefix": [
-            "sfManager",
+            "sf5Manager",
             "manager",
             "entityManager"
         ],
@@ -447,7 +444,7 @@
             "@Route(\"/${path}\",name=\"${name}\")"
         ],
         "prefix": [
-            "sfRoute",
+            "sf5Route",
             "Route",
             "route"
         ],
@@ -458,7 +455,7 @@
             "@Assert\\Blank(message=\"must be blank\")"
         ],
         "prefix": [
-            "sfBlank",
+            "sf5Blank",
             "Blank"
         ],
         "description": "use this snippet to genarete Assert blank type = Blank"
@@ -468,7 +465,7 @@
             "@Assert\\NotNull(message=\"can not be null :/\")"
         ],
         "prefix": [
-            "sfNotNull",
+            "sf5NotNull",
             "NotNull"
         ],
         "description": "use this snippet to generate the assert NotNull in the symfony Annotations."
@@ -478,7 +475,7 @@
             "@Assert\\IsNull(message=\"is null\")"
         ],
         "prefix": [
-            "sfIsNull",
+            "sf5IsNull",
             "IsNull"
         ],
         "description": "use this snippet to generate the assert IsNull in the symfony Annotations"
@@ -488,7 +485,7 @@
             "@Assert\\IsTrue(message = \"The token is invalid.\")"
         ],
         "prefix": [
-            "sfTrue",
+            "sf5True",
             "IsTrue"
         ],
         "description": "use this snippet to generate the assert IsTrue in the symfony Annotations"
@@ -498,7 +495,7 @@
             " @Assert\\IsFalse(message = \"You've entered an invalid state.\")"
         ],
         "prefix": [
-            "sfFalse",
+            "sf5False",
             "IsFalse"
         ],
         "description": "symfony assert isFalse"
@@ -507,168 +504,168 @@
         "body": [
             "@Assert\\Type(type=\"${1|integer,string,array|}\",message=\"The value {{ value }} is not a valid {{ type }}.\""
         ],
-        "prefix": "sfType",
+        "prefix": "sf5Type",
         "description": "use this snippet to generate the assert Type in the symfony Annotations."
     },
     "symfony assert regex": {
         "body": [
             "@Assert\\Regex(pattern=\"${/\\d/}\",match=false,message=\"Your name cannot contain a number\")"
         ],
-        "prefix": "sfRegex",
+        "prefix": "sf5Regex",
         "description": "use this snippet to generate the assert Regex in the symfony Annotations."
     },
     "symfony assert ip": {
         "body": [
             "@Assert\\Ip()"
         ],
-        "prefix": "sfIp",
+        "prefix": "sf5Ip",
         "description": "use this snippet to generate the assert Ip in the symfony Annotations."
     },
     "symfony assert json": {
         "body": [
             "@Assert\\Json(message = \"You've entered an invalid Json.\")"
         ],
-        "prefix": "sfAJson",
+        "prefix": "sf5AJson",
         "description": "use this snippet to generate the assert Json in the symfony Annotations."
     },
     "symfony assert uuid": {
         "body": [
             "@Assert\\Uuid(message=\"\")"
         ],
-        "prefix": "sfUuid",
+        "prefix": "sf5Uuid",
         "description": "use this snippet to generate the assert Uuid in the symfony Annotations."
     },
     "symfony securty assert userpassword": {
         "body": [
             "@SecurityAssert\\UserPassword(message = \"Wrong value for your current password\")"
         ],
-        "prefix": "sfUserPassword",
+        "prefix": "sf5UserPassword",
         "description": "use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations."
     },
     "symfony assert identicalto": {
         "body": [
             "@Assert\\IdenticalTo(propertyPath=\"$0\")"
         ],
-        "prefix": "sfIdenticalTo",
+        "prefix": "sf5IdenticalTo",
         "description": "use this snippet to generate the assert IdenticalTo in the symfony Annotations."
     },
     "symfony assert lessThanOrEqual": {
         "body": [
             "@Assert\\LessThanOrEqual($0)"
         ],
-        "prefix": "sfLessThanOrEqual",
+        "prefix": "sf5LessThanOrEqual",
         "description": "use this snippet to generate the assert LessThanOrEqual in the symfony Annotations."
     },
     "symfony assert lessthan": {
         "body": [
             "@Assert\\LessThan($0)"
         ],
-        "prefix": "sfLessThan",
+        "prefix": "sf5LessThan",
         "description": "use this snippet to generate the assert LessThan in the symfony Annotations."
     },
     "symfony GreaterThanOrEqual": {
         "body": [
             "@Assert\\GreaterThanOrEqual($0)"
         ],
-        "prefix": "sfGreaterThanOrEqual",
+        "prefix": "sf5GreaterThanOrEqual",
         "description": "use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations."
     },
     "symfony assert range": {
         "body": [
             "@Assert\\Range(min = $1,max = $2,minMessage = \"You must be at least {{ limit }}cm tall to enter\",maxMessage = \"You cannot be taller than {{ limit }}cm to enter\")"
         ],
-        "prefix": "sfRange",
+        "prefix": "sf5Range",
         "description": "use this snippet to generate the assert Range in the symfony Annotations."
     },
     "symfony DivisibleBy": {
         "body": [
             "@Assert\\DivisibleBy($0)"
         ],
-        "prefix": "sfDivisibleBy",
+        "prefix": "sf5DivisibleBy",
         "description": "use this snippet to generate the assert DivisibleBy in the symfony Annotations."
     },
     "symfony Unique": {
         "body": [
             "@Assert\\Unique(message=\"$0\")"
         ],
-        "prefix": "sfUnique",
+        "prefix": "sf5Unique",
         "description": "use this snippet to generate the assert Unique in the symfony Annotations."
     },
     "symfony Positive": {
         "body": [
             "@Assert\\Positive(message=\"$0\")"
         ],
-        "prefix": "sfPositive",
+        "prefix": "sf5Positive",
         "description": "use this snippet to generate the assert Positive in the symfony Annotations."
     },
     "symfony assert PositiveOrZero": {
         "body": [
             "@Assert\\PositiveOrZero(message=\"$0\")"
         ],
-        "prefix": "sfPositiveOrZero",
+        "prefix": "sf5PositiveOrZero",
         "description": "use this snippet to generate the assert PositiveOrZero in the symfony Annotations."
     },
     "symfony Negative": {
         "body": [
             "@Assert\\Negative(message=\"$0\")"
         ],
-        "prefix": "sfNegative",
+        "prefix": "sf5Negative",
         "description": "use this snippet to generate the assert Negative in the symfony Annotations."
     },
     "symfony NegativeOrZero": {
         "body": [
             "@Assert\\NegativeOrZero(message=\"$0\")"
         ],
-        "prefix": "sfNegativeOrZero",
+        "prefix": "sf5NegativeOrZero",
         "description": "use this snippet to generate the assert NegativeOrZero in the symfony Annotations."
     },
     "symfony Date": {
         "body": [
             "@Assert\\Date(message=\"$0\")"
         ],
-        "prefix": "sfDate",
+        "prefix": "sf5Date",
         "description": "use this snippet to generate the assert Date in the symfony Annotations."
     },
     "symfony DateTime": {
         "body": [
             "@Assert\\DateTime(message=\"$0\")"
         ],
-        "prefix": "sfDateTime",
+        "prefix": "sf5DateTime",
         "description": "use this snippet to generate the assert DateTime in the symfony Annotations."
     },
     "symfony Time": {
         "body": [
             "@Assert\\Time(message=\"$0\")"
         ],
-        "prefix": "sfTime",
+        "prefix": "sf5Time",
         "description": "use this snippet to generate the assert Time in the symfony Annotations."
     },
     "symfony Timezone": {
         "body": [
             "@Assert\\Timezone(message=\"$0\")"
         ],
-        "prefix": "sfTimezone",
+        "prefix": "sf5Timezone",
         "description": "use this snippet to generate the assert Timezone in the symfony Annotations."
     },
     "symfony Language": {
         "body": [
             "@Assert\\Language(message=\"$0\")"
         ],
-        "prefix": "sfLanguage",
+        "prefix": "sf5Language",
         "description": "use this snippet to generate the assert Language in the symfony Annotations."
     },
     "symfony ": {
         "body": [
             "@Assert\\Locale(canonicalize = true)"
         ],
-        "prefix": "sfLocale",
+        "prefix": "sf5Locale",
         "description": "use this snippet to generate the assert Locale in the symfony Annotations."
     },
     "symfony Country": {
         "body": [
             "@Assert\\Country(message=\"$0\")"
         ],
-        "prefix": "sfCountry",
+        "prefix": "sf5Country",
         "description": "use this snippet to generate the assert Country in the symfony Annotations."
     },
     "Symfony Generate Vich Annotation uploader": {
@@ -676,7 +673,7 @@
             "* @Vich\\Uploadable"
         ],
         "prefix": [
-            "sfVichUploadable",
+            "sf5VichUploadable",
             "Uploadable",
             "vichUploadable"
         ],
@@ -687,7 +684,7 @@
             "* @Vich\\UploadableField(mapping = \"${mapping_name}\", fileNameProperty = \"${imageName}\", size = \"${imageSize}\")"
         ],
         "prefix": [
-            "sfVichField",
+            "sf5VichField",
             "UploadableField",
             "vichUploadableField"
         ],
@@ -695,7 +692,7 @@
     },
     "create symfony controller body": {
         "prefix": [
-            "sfNewController",
+            "sf5NewController",
             "controller",
             "NewController"
         ],
@@ -718,7 +715,7 @@
     },
     "The generateUrl() method is just a helper method that generates the URL for a given route:": {
         "prefix": [
-            "sfGenerateUrl",
+            "sf5GenerateUrl",
             "generateUrl",
             "urlFromRoute"
         ],
@@ -729,7 +726,7 @@
     },
     "Add log message via Logger Service": {
         "prefix": [
-            "sfLogger",
+            "sf5Logger",
             "logger",
             "log",
             "addLog"
@@ -741,7 +738,7 @@
     },
     "throw new NotFoundException": {
         "prefix": [
-            "sfNotFoundException",
+            "sf5NotFoundException",
             "NotFoundException"
         ],
         "body": [
@@ -751,7 +748,7 @@
     },
     "set the container": {
         "prefix": [
-            "sfSetContainer",
+            "sf5SetContainer",
             "setContainer"
         ],
         "body": [
@@ -761,7 +758,7 @@
     },
     "Gets a container parameter by its name.": {
         "prefix": [
-            "sfGetParameter",
+            "sf5GetParameter",
             "getParameter"
         ],
         "body": [
@@ -771,7 +768,7 @@
     },
     "Returns true if the service id is defined.": {
         "prefix": [
-            "sfHas",
+            "sf5Has",
             "has"
         ],
         "body": [
@@ -781,7 +778,7 @@
     },
     "print CURRENT DATE": {
         "prefix": [
-            "sfToday",
+            "sf5Today",
             "today"
         ],
         "body": [
@@ -791,7 +788,7 @@
     },
     "Add new Block comment": {
         "prefix": [
-            "sfBlockComment",
+            "sf5BlockComment",
             "blockComment"
         ],
         "body": [
@@ -801,7 +798,7 @@
     },
     "Add new Line comment": {
         "prefix": [
-            "sfLineComment",
+            "sf5LineComment",
             "lineComment",
             "comment"
         ],
@@ -812,7 +809,7 @@
     },
     "Gets a container service by its id.": {
         "prefix": [
-            "sfGet",
+            "sf5Get",
             "get",
             "service"
         ],
@@ -823,7 +820,7 @@
     },
     "Forwards the request to another controller.": {
         "prefix": [
-            "sfForward",
+            "sf5Forward",
             "forward",
             "forwardRequest"
         ],
@@ -834,7 +831,7 @@
     },
     "Returns a BinaryFileResponse object with original or customized file name and disposition header.": {
         "prefix": [
-            "sfFile",
+            "sf5File",
             "file",
             "returnFile"
         ],
@@ -845,7 +842,7 @@
     },
     "Checks if the attribute is granted against the current authentication token and optionally supplied subject.": {
         "prefix": [
-            "sfIsGranted",
+            "sf5IsGranted",
             "isGranted"
         ],
         "body": [
@@ -854,7 +851,7 @@
         "description": "Checks if the attribute is granted against the current authentication token and optionally supplied subject."
     },
     "Throws an exception unless the attribute is granted against the current authentication token and optionally supplied subject.": {
-        "prefix": "sfDenyAccessUnlessGranted",
+        "prefix": "sf5DenyAccessUnlessGranted",
         "body": [
             "\\$this->denyAccessUnlessGranted(\\$${attribute}, ${null},'Access Denied.');"
         ],
@@ -862,7 +859,7 @@
     },
     "get a rendered view.": {
         "prefix": [
-            "sfRenderView",
+            "sf5RenderView",
             "renderView"
         ],
         "body": [
@@ -872,7 +869,7 @@
     },
     "Renders a view and sets the appropriate status code when a form is listed in parameters.": {
         "prefix": [
-            "sfRenderForm",
+            "sf5RenderForm",
             "renderForm"
         ],
         "body": [
@@ -882,7 +879,7 @@
     },
     "Streams a view.": {
         "prefix": [
-            "sfStream",
+            "sf5Stream",
             "stream"
         ],
         "body": [
@@ -892,7 +889,7 @@
     },
     "Returns an AccessDeniedException.": {
         "prefix": [
-            "sfCreateAccessDeniedException",
+            "sf5CreateAccessDeniedException",
             "createAccessDeniedException",
             "AccessDeniedException"
         ],
@@ -903,7 +900,7 @@
     },
     "Creates and returns a form builder instance.": {
         "prefix": [
-            "sfCreateFormBuilder",
+            "sf5CreateFormBuilder",
             "createFormBuilder",
             "formBulder"
         ],
@@ -916,7 +913,7 @@
     },
     "Shortcut to return the Doctrine Registry service.": {
         "prefix": [
-            "sfGetDoctrine",
+            "sf5GetDoctrine",
             "getDoctrine",
             "doctrine"
         ],
@@ -927,7 +924,7 @@
     },
     "Dispatches a message to the bus.": {
         "prefix": [
-            "sfDispatchMessage",
+            "sf5DispatchMessage",
             "dispatchMessage"
         ],
         "body": [
@@ -937,7 +934,7 @@
     },
     "Adds a Link HTTP header to the current response.": {
         "prefix": [
-            "sfAddLink",
+            "sf5AddLink",
             "addLink",
             "link"
         ],
@@ -948,7 +945,7 @@
     },
     "Add new Field to the form builder": {
         "prefix": [
-            "sfField",
+            "sf5Field",
             "addField",
             "add",
             "formField"
@@ -960,7 +957,7 @@
     },
     "get all form's data": {
         "prefix": [
-            "sfFormData",
+            "sf5FormData",
             "formData",
             "getData",
             "data"

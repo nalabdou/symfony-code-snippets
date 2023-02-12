@@ -2,7 +2,7 @@
     "name": "symfony-code-snippets",
     "displayName": "Symfony code snippets",
     "icon": "icon.png",
-    "description": "Over 100 Symfony code snippets. Just type the letters 'sf' to get a list of all available Symfony code snippets.",
+    "description": "Over 400 Symfony code snippets. Just type the letters 'sf:' or 'sf5' ( for symfony 5.x ) to get a list of all available Symfony code snippets.",
     "publisher": "nadim-vscode",
     "author": {
         "name": "Nadim Al Abdou",
@@ -15,9 +15,9 @@
         "url": "https://github.com/nalabdou/Symfony-code-snippets"
     },
     "bugs": "https://github.com/nalabdou/Symfony-code-snippets/issues",
-    "version": "2.0.5",
+    "version": "2.1.1",
     "engines": {
-        "vscode": "*"
+        "vscode": "^1.73.1"
     },
     "categories": [
         "Snippets",
@@ -69,6 +69,10 @@
             {
                 "language": "php",
                 "path": "./symfony/6.x/contributes/nalabdou.code-snippets"
+            },
+            {
+                "language": "php",
+                "path": "./symfony/5.x/symfony.json"
             }
         ],
         "configuration": {
@@ -102,5 +106,9 @@
         "eslint": "^8.28.0",
         "typescript": "^4.9.3"
     },
-    "qna": "marketplace"
+    "qna": "marketplace",
+    "extensionPack": [
+        "nadim-vscode.twig-code-snippets",
+        "nadim-vscode.infinity-dark-theme"
+    ]
 }
