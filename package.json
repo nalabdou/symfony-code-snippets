@@ -95,7 +95,7 @@
     "dependencies": {
         "@types/mocha": "^10.0.0",
         "graceful-fs": "^4.2.10",
-        "php-parser": "^3.1.2",
+        "php-parser": "^3.1.5",
         "strip-json-comments": "^5.0.0"
     },
     "devDependencies": {
