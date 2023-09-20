@@ -7,7 +7,9 @@ Thank you for investing your time in contributing to our project! :zap:
 ### Issues
 #### Create a new issue
 
-If you spot a problem, search if an issue already exists. If a related issue doesn't exist, you can open a new issue using [issue page](https://github.com/nalabdou/symfony-code-snippets/issues).
+If you spot a problem, search if an issue already exists. If a related issue doesn't exist, you can open a new issue using [issue page](https://github.com/nalabdou/symf![Screenshot_20230906-030601](https://github.com/nalabdou/symfony-code-snippets/assets/144628967/08b6eeeb-7a0b-4c41-8041-be4a7709807a)
+![Screenshot_20230920-001811](https://github.com/nalabdou/symfony-code-snippets/assets/144628967/f6682528-9d89-4ffa-83aa-79e7a5f91e03)
+ony-code-snippets/issues).
 
 ### Add code snippets
 
