@@ -93,7 +93,7 @@
         "watch": "tsc -watch -p ./"
     },
     "dependencies": {
-        "@types/mocha": "^10.0.0",
+        "@types/mocha": "^10.0.6",
         "graceful-fs": "^4.2.10",
         "php-parser": "^3.1.2",
         "strip-json-comments": "^5.0.0"
